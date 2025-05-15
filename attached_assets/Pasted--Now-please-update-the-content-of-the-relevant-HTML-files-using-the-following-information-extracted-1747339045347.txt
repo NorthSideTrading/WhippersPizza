@@ -1,0 +1,91 @@
+ Now, please update the content of the relevant HTML files using the following information extracted from the Whippers Pizza Facebook page (https://www.facebook.com/profile.php?id=100057050006369&sk=about).
+Key Information to Integrate:
+Contact Information & Location:
+Phone: +1 207-623-3500
+Email: whipperspizza@gmail.com
+Address: 97 Bangor St, Augusta, ME, United States, Maine (Use "97 Bangor St, Augusta, ME 04330" for consistency if a ZIP is needed, otherwise use as listed)
+Facebook Page URL: https://www.facebook.com/profile.php?id=100057050006369
+Hours of Operation:
+Monday: 11:00 AM - 9:00 PM
+Tuesday: 11:00 AM - 9:00 PM
+Wednesday: 11:00 AM - 9:00 PM
+Thursday: 11:00 AM - 9:00 PM
+Friday: 11:00 AM - 9:00 PM
+Saturday: 11:00 AM - 9:00 PM
+Sunday: 11:00 AM - 9:00 PM
+About/Description:
+"Whipper's Pizza is an Augusta, Maine Landmark for over 40 years. Homemade Dough and sauce. Delicious Pizza and Sandwiches at a great price."
+"Family run local pizza shop"
+Category: "Pizza place · Sandwich shop"
+Price Range (for JSON-LD):
+$
+Instructions for Updating Files:
+index.html:
+Footer:
+Replace placeholder address with 97 Bangor St, Augusta, ME 04330.
+Replace placeholder phone number with (207) 623-3500.
+Update one of the social media placeholder texts (e.g., "[FB]") to be a functional link to their Facebook page: <a href="https://www.facebook.com/profile.php?id=100057050006369" target="_blank" rel="noopener noreferrer">Facebook</a> (or use an icon if previously instructed).
+Mini "About Us" Blurb Section:
+Replace placeholder text with a concise version of their description, e.g., "An Augusta, Maine Landmark for over 40 years, Whipper's Pizza offers delicious, homemade pizza and sandwiches. A family-run local shop you'll love!"
+JSON-LD Schema (in the footer <script> tag):
+Update "streetAddress" to "97 Bangor St".
+Update "addressLocality" to "Augusta".
+Update "addressRegion" to "ME".
+Update "postalCode" to "04330".
+Update "telephone" to "+1-207-623-3500".
+Update "email" (if present, add if not) to "whipperspizza@gmail.com".
+Update "servesCuisine" to "Pizza, Sandwiches".
+Update "priceRange" to "$"
+Update the openingHoursSpecification array to accurately reflect all 7 days:
+"openingHoursSpecification": [
+  { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00" }
+]
+Use code with caution.
+Json
+Update "url" to the actual Facebook page URL for now, or leave as a placeholder if you have a domain in mind: "url": "https://www.facebook.com/profile.php?id=100057050006369" (or "YOUR_WEBSITE_URL_HERE").
+Update "menu" URL to "YOUR_WEBSITE_URL_HERE/menu.html".
+about.html:
+"Our Story" Section:
+Replace placeholder text with: "Whipper's Pizza has been an Augusta, Maine Landmark for over 40 years. We pride ourselves on our homemade dough and sauce, crafting delicious pizzas and sandwiches at a great price. As a family-run local pizza shop, we're dedicated to serving our community with quality food and a friendly atmosphere."
+"Our Mission & Values" Section:
+Based on the above, replace placeholder text with something like: "Our mission is simple: to provide the Augusta community with high-quality, homemade food that tastes great and offers excellent value. We believe in the importance of family, tradition, and supporting our local patrons who have made us a landmark for decades."
+Footer:
+Update address and phone number as specified for index.html.
+Update the Facebook link.
+menu.html:
+Introductory Text (Optional - if a space was created for it):
+Add a line like: "Discover our delicious, homemade pizzas, classic sandwiches, tasty sides, and refreshing drinks."
+Menu Sections:
+Ensure there's a section for "Pizzas".
+Add a new section for "Sandwiches" if it doesn't exist, and populate with a few placeholder sandwich names and prices (e.g., "Italian Cold Cut - $8.99", "Steak & Cheese - $9.49").
+Footer:
+Update address and phone number as specified for index.html.
+Update the Facebook link.
+contact.html:
+Contact Information (Left Column or main info area):
+Replace placeholder Address with 97 Bangor St, Augusta, ME 04330.
+Replace placeholder Phone with (207) 623-3500 (ensure it's a tel: link).
+Replace placeholder Email with whipperspizza@gmail.com (ensure it's a mailto: link).
+Update Hours of Operation to:
+"Monday: 11:00 AM - 9:00 PM
+Tuesday: 11:00 AM - 9:00 PM
+Wednesday: 11:00 AM - 9:00 PM
+Thursday: 11:00 AM - 9:00 PM
+Friday: 11:00 AM - 9:00 PM
+Saturday: 11:00 AM - 9:00 PM
+Sunday: 11:00 AM - 9:00 PM"
+Map Placeholder:
+Update the text inside the map placeholder div to reflect the new address: Google Map Embed for 97 Bangor St, Augusta, ME Here.
+Footer:
+Update address and phone number as specified for index.html.
+Update the Facebook link.
+404.html:
+Footer:
+Update address and phone number as specified for index.html.
+Update the Facebook link.
+General Instructions:
+Maintain all existing HTML structure, CSS classes, and JavaScript functionality from the previous generation.
+Only modify the content within the specified placeholders or add the new "Sandwiches" section to menu.html.
+Ensure all links (navigation, internal, and the new Facebook link) remain functional.
+Output:
+Provide the complete, updated code ONLY for the modified HTML files (index.html, about.html, menu.html, contact.html, 404.html), each in its own fenced code block. No need to output style.css, script.js, or netlify.toml again unless they were directly impacted by these content changes (which they shouldn't be significantly).
