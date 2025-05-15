@@ -1,0 +1,71 @@
+I need to completely redesign and update the menu.html page for Whippers Pizza, using the information from their current online menu: https://www.whipperspizza.com/menu.
+The existing menu.html structure should be adapted or replaced to accurately reflect these categories and items. Maintain the overall site aesthetic (Inter font, color scheme, responsive card layout for menu items as previously defined).
+Key Menu Categories and Structure from whipperspizza.com/menu:
+Pizza:
+List sizes (Small 10", Medium 12", Large 14", X-Large 16") and corresponding base prices (Cheese Pizza).
+List Toppings and their prices (Regular, Premium).
+List Specialty Pizzas with their names and descriptions. Prices for specialty pizzas often vary by size but might be listed as a single price or need to be inferred/calculated based on base + toppings if not explicit. (Focus on getting names and descriptions; pricing structure can be simplified for this AI generation if complex).
+Gluten Free Pizza:
+Specify size (10") and base price.
+Note that toppings are priced as per the regular pizza toppings.
+Calzones:
+List different types of calzones with their names, included fillings, and prices.
+Signature Hot Sandwiches:
+List sandwich names, descriptions (key ingredients), and prices.
+Create Your Own Cold Sandwiches:
+List available breads, meats, cheeses, veggies, and condiments.
+Provide a base price or indicate how pricing works (e.g., price per meat/cheese).
+Salads:
+List salad names, descriptions, and prices. Note add-on options (like grilled chicken) and their additional cost.
+Sides:
+List side items (e.g., French Fries, Onion Rings, Mozzarella Sticks, Garlic Bread) with their prices.
+Drinks:
+List available drinks (e.g., Soda cans, 20oz bottles, 2-Liters) with their prices.
+Instructions for menu.html Update:
+Clear Existing Menu Content: Remove all previous placeholder menu items from menu.html.
+Structure with New Categories:
+Use <h2> or <h3> headings for each main menu category (Pizza, Gluten Free Pizza, Calzones, Signature Hot Sandwiches, Create Your Own Cold Sandwiches, Salads, Sides, Drinks).
+Within each category, organize the items clearly.
+Pizza Section Details:
+Start with a clear listing of "Cheese Pizza" prices by size:
+Small 10": $[Price]
+Medium 12": $[Price]
+Large 14": $[Price]
+X-Large 16": $[Price]
+Follow with a "Toppings" subsection:
+Regular Toppings: $[Price each] (List examples: Pepperoni, Mushrooms, Onions, Green Peppers, etc.)
+Premium Toppings: $[Price each] (List examples: Bacon, Chicken, Steak, Extra Cheese, etc.)
+List "Specialty Pizzas" using a card layout (or similar clear format) for each:
+Name: (e.g., "The Whipper")
+Description: (e.g., "Pepperoni, hamburg, sausage, mushrooms, onions, green peppers")
+Price: (If sizes/prices are listed for each specialty, include them. If it's one price or "Market Price," note that. If it's base + toppings, this AI might not be able to calculate, so a placeholder like "See size pricing" or a single representative price is okay for now.)
+Gluten Free Pizza Section:
+Clearly state: "10" Gluten Free Crust" with its price.
+Add a note: "Toppings priced as regular toppings."
+Other Sections (Calzones, Sandwiches, Salads, Sides, Drinks):
+For each item, list:
+Name
+Description (key ingredients/details)
+Price
+Use the .card class or a similar consistent, readable format for each item, adapting the responsive two-column (desktop) / single-column (mobile) layout.
+For "Create Your Own Cold Sandwiches," list the options clearly. You can group them (e.g., "Breads:", "Meats:", "Cheeses:").
+Pricing Display: Display prices clearly (e.g., $9.99).
+Notes/Disclaimers:
+At the bottom of the menu page or in a relevant section, include any important notes from their current menu, such as "Prices subject to change without notice" or information about sales tax if mentioned. (The linked menu doesn't show these prominently, but it's good practice).
+Aesthetics & Readability:
+Ensure the menu is easy to scan and read. Use appropriate font sizes, spacing, and visual hierarchy.
+The page should remain consistent with the overall website design (colors, fonts, sticky navigation, footer).
+Instructions for css/style.css (Minor adjustments if needed):
+If the new menu structure requires any minor styling adjustments for headings within the menu, or for the "Create Your Own" section's list format, make those additions.
+Ensure the .card styling works well for all new menu items.
+Output Request:
+Provide the complete, updated code for menu.html in its own fenced code block.
+If any specific, new CSS rules were added to css/style.css to support the new menu structure (beyond general .card styling), provide only those new/modified CSS rules in a separate fenced code block. If no CSS changes are needed, state that.
+Example of data extraction from the link (for the AI's reference):
+Pizza - Cheese: Sm 10" $9.75, Med 12" $12.75, Lg 14" $15.50, XLg 16" $17.99
+Toppings - Regular: $1.50 (Sm), $1.75 (Med), $2.00 (Lg), $2.50 (XLg) - AI Note: If this pricing per size is too complex, simplify to a single representative topping price and note that it varies.
+Specialty Pizza - The Whipper: Pepperoni, hamburg, sausage, mushrooms, onions, green peppers. (Prices: Sm $14.99, Med $18.99, Lg $23.99, XLg $27.99)
+Calzone - Steak & Cheese: Shaved steak & American cheese. $11.99
+Hot Sandwich - Meatball: Homemade meatballs, provolone cheese & marinara sauce. $9.99
+...and so on for all categories.
+Prioritize getting all item names, descriptions, and listed prices accurately. The complex pricing structure for toppings varying by pizza size can be simplified if it's too difficult for the AI to implement perfectly in one go. A note like 'Topping prices vary by size' would be acceptable as a first pass.

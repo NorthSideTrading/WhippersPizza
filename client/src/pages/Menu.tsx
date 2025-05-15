@@ -21,9 +21,12 @@ const Menu = () => {
         <div className="container mx-auto px-4 py-4">
           <p className="text-center mb-4">All our pizzas feature homemade dough and sauce, made fresh daily! Discover our delicious pizzas, classic sandwiches, tasty sides, and refreshing drinks.</p>
           <ul className="flex flex-wrap justify-center space-x-2 md:space-x-8">
-            <li><a href="#pizzas" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Pizzas</a></li>
-            <li><a href="#sandwiches" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Sandwiches</a></li>
+            <li><a href="#pizzas" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Pizza</a></li>
+            <li><a href="#gluten-free" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Gluten Free</a></li>
             <li><a href="#calzones" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Calzones</a></li>
+            <li><a href="#hot-sandwiches" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Hot Sandwiches</a></li>
+            <li><a href="#cold-sandwiches" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Cold Sandwiches</a></li>
+            <li><a href="#salads" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Salads</a></li>
             <li><a href="#sides" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Sides</a></li>
             <li><a href="#drinks" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Drinks</a></li>
           </ul>
@@ -33,91 +36,168 @@ const Menu = () => {
       {/* Pizzas Section */}
       <section id="pizzas" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Pizzas</h2>
+          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Pizza</h2>
           
+          <div className="mb-10">
+            <h3 className="text-2xl font-bold mb-4">Cheese Pizza</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+              <div className="bg-white p-4 rounded-lg shadow-md text-center">
+                <h4 className="font-bold mb-2">Small 10"</h4>
+                <p className="text-[#B71C1C] font-bold">$9.75</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md text-center">
+                <h4 className="font-bold mb-2">Medium 12"</h4>
+                <p className="text-[#B71C1C] font-bold">$12.75</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md text-center">
+                <h4 className="font-bold mb-2">Large 14"</h4>
+                <p className="text-[#B71C1C] font-bold">$15.50</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md text-center">
+                <h4 className="font-bold mb-2">X-Large 16"</h4>
+                <p className="text-[#B71C1C] font-bold">$17.99</p>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h4 className="text-xl font-bold mb-2">Regular Toppings</h4>
+                <p className="text-gray-700 mb-4">Pepperoni, Hamburg, Sausage, Ham, Bacon, Mushrooms, Onions, Green Peppers, Black Olives, Jalapeños, Pineapple, Tomatoes, Garlic</p>
+                <div className="text-sm text-gray-500">Prices vary by size: Small $1.50, Medium $1.75, Large $2.00, X-Large $2.50</div>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h4 className="text-xl font-bold mb-2">Premium Toppings</h4>
+                <p className="text-gray-700 mb-4">Extra Cheese, Chicken, Steak, Anchovies, Spinach, Broccoli, Feta Cheese</p>
+                <div className="text-sm text-gray-500">Prices vary by size: Small $2.00, Medium $2.50, Large $3.00, X-Large $3.50</div>
+              </div>
+            </div>
+          </div>
+          
+          <h3 className="text-2xl font-bold mb-6">Specialty Pizzas</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Margherita Special</h3>
-                  <p className="text-gray-700 mb-2">Our classic pizza with premium buffalo mozzarella, fresh basil, and San Marzano tomatoes.</p>
+                  <h3 className="text-xl font-bold mb-2">The Whipper</h3>
+                  <p className="text-gray-700 mb-2">Pepperoni, hamburg, sausage, mushrooms, onions, green peppers.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$14.99</span>
               </div>
-              <div className="text-sm text-gray-500">Available in: Small (+$2), Medium, Large (+$4)</div>
+              <div className="text-sm text-gray-700 mt-2">
+                <span className="font-semibold">Sm: $14.99</span> • 
+                <span className="font-semibold"> Med: $18.99</span> • 
+                <span className="font-semibold"> Lg: $23.99</span> • 
+                <span className="font-semibold"> XLg: $27.99</span>
+              </div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Double Pepperoni Feast</h3>
-                  <p className="text-gray-700 mb-2">Loaded with twice the pepperoni, extra cheese, and our secret spice blend on a perfectly crisp crust.</p>
+                  <h3 className="text-xl font-bold mb-2">All Meat</h3>
+                  <p className="text-gray-700 mb-2">Pepperoni, hamburg, ham, sausage, bacon.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$16.99</span>
               </div>
-              <div className="text-sm text-gray-500">Available in: Small (+$2), Medium, Large (+$4)</div>
+              <div className="text-sm text-gray-700 mt-2">
+                <span className="font-semibold">Sm: $14.99</span> • 
+                <span className="font-semibold"> Med: $18.99</span> • 
+                <span className="font-semibold"> Lg: $23.99</span> • 
+                <span className="font-semibold"> XLg: $27.99</span>
+              </div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Garden Veggie Delight</h3>
-                  <p className="text-gray-700 mb-2">Fresh seasonal vegetables, roasted bell peppers, olives, and mushrooms on our signature herb-infused sauce.</p>
+                  <h3 className="text-xl font-bold mb-2">Veggie</h3>
+                  <p className="text-gray-700 mb-2">Mushrooms, onions, green peppers, tomatoes, broccoli, black olives.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$15.99</span>
               </div>
-              <div className="text-sm text-gray-500">Available in: Small (+$2), Medium, Large (+$4)</div>
+              <div className="text-sm text-gray-700 mt-2">
+                <span className="font-semibold">Sm: $14.99</span> • 
+                <span className="font-semibold"> Med: $18.99</span> • 
+                <span className="font-semibold"> Lg: $23.99</span> • 
+                <span className="font-semibold"> XLg: $27.99</span>
+              </div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Meat Lover's Supreme</h3>
-                  <p className="text-gray-700 mb-2">Pepperoni, Italian sausage, bacon, ham, and ground beef with our three-cheese blend.</p>
+                  <h3 className="text-xl font-bold mb-2">Hawaiian</h3>
+                  <p className="text-gray-700 mb-2">Ham and pineapple.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$18.99</span>
               </div>
-              <div className="text-sm text-gray-500">Available in: Small (+$2), Medium, Large (+$4)</div>
+              <div className="text-sm text-gray-700 mt-2">
+                <span className="font-semibold">Sm: $12.99</span> • 
+                <span className="font-semibold"> Med: $16.99</span> • 
+                <span className="font-semibold"> Lg: $19.99</span> • 
+                <span className="font-semibold"> XLg: $22.99</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Buffalo Chicken</h3>
+                  <p className="text-gray-700 mb-2">Grilled chicken with our special buffalo sauce.</p>
+                </div>
+              </div>
+              <div className="text-sm text-gray-700 mt-2">
+                <span className="font-semibold">Sm: $14.99</span> • 
+                <span className="font-semibold"> Med: $18.99</span> • 
+                <span className="font-semibold"> Lg: $22.99</span> • 
+                <span className="font-semibold"> XLg: $25.99</span>
+              </div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="text-xl font-bold mb-2">BBQ Chicken</h3>
-                  <p className="text-gray-700 mb-2">Grilled chicken, red onions, and cilantro on our tangy BBQ sauce base with smoked gouda and mozzarella.</p>
+                  <p className="text-gray-700 mb-2">Grilled chicken with our tangy BBQ sauce.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$17.99</span>
               </div>
-              <div className="text-sm text-gray-500">Available in: Small (+$2), Medium, Large (+$4)</div>
+              <div className="text-sm text-gray-700 mt-2">
+                <span className="font-semibold">Sm: $14.99</span> • 
+                <span className="font-semibold"> Med: $18.99</span> • 
+                <span className="font-semibold"> Lg: $22.99</span> • 
+                <span className="font-semibold"> XLg: $25.99</span>
+              </div>
             </div>
-            
+          </div>
+        </div>
+      </section>
+      
+      {/* Gluten Free Pizza Section */}
+      <section id="gluten-free" className="py-16 bg-[#FFF9C4] bg-opacity-30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Gluten Free Pizza</h2>
+          
+          <div className="mb-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Whippers Special</h3>
-                  <p className="text-gray-700 mb-2">Our signature combination of pepperoni, Italian sausage, mushrooms, green peppers, onions, and black olives.</p>
-                </div>
-                <span className="text-[#B71C1C] font-bold">$19.99</span>
-              </div>
-              <div className="text-sm text-gray-500">Available in: Small (+$2), Medium, Large (+$4)</div>
+              <h3 className="text-xl font-bold mb-2">10" Gluten Free Crust</h3>
+              <p className="text-gray-700 mb-3">Our special gluten free crust with cheese.</p>
+              <p className="text-[#B71C1C] font-bold mb-2">$13.99</p>
+              <p className="text-sm text-gray-500">Toppings priced as regular toppings.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sandwiches Section */}
-      <section id="sandwiches" className="py-16 bg-[#FFF9C4] bg-opacity-30">
+      {/* Hot Sandwiches Section */}
+      <section id="hot-sandwiches" className="py-16 bg-[#FFF9C4] bg-opacity-30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Sandwiches</h2>
+          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Signature Hot Sandwiches</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Italian Cold Cut</h3>
-                  <p className="text-gray-700 mb-2">Layers of ham, salami, pepperoni, provolone cheese, lettuce, tomato, onion, and Italian dressing on a fresh roll.</p>
+                  <h3 className="text-xl font-bold mb-2">Meatball</h3>
+                  <p className="text-gray-700 mb-2">Homemade meatballs, provolone cheese & marinara sauce.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$8.99</span>
+                <span className="text-[#B71C1C] font-bold">$9.99</span>
               </div>
             </div>
             
@@ -125,31 +205,123 @@ const Menu = () => {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="text-xl font-bold mb-2">Steak & Cheese</h3>
-                  <p className="text-gray-700 mb-2">Thinly sliced steak with melted American cheese, grilled onions, and peppers on a toasted sub roll.</p>
+                  <p className="text-gray-700 mb-2">Shaved steak with American cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$9.49</span>
+                <span className="text-[#B71C1C] font-bold">$9.99</span>
               </div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Meatball Parmesan</h3>
-                  <p className="text-gray-700 mb-2">Homemade meatballs covered in marinara sauce, topped with melted provolone and parmesan cheese.</p>
+                  <h3 className="text-xl font-bold mb-2">Buffalo Chicken</h3>
+                  <p className="text-gray-700 mb-2">Grilled chicken, American cheese & our Buffalo sauce.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$8.99</span>
+                <span className="text-[#B71C1C] font-bold">$9.99</span>
               </div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Veggie Delight</h3>
-                  <p className="text-gray-700 mb-2">Fresh assorted vegetables, provolone cheese, and hummus spread on a whole wheat roll.</p>
+                  <h3 className="text-xl font-bold mb-2">BBQ Chicken</h3>
+                  <p className="text-gray-700 mb-2">Grilled chicken, American cheese & BBQ sauce.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$7.99</span>
+                <span className="text-[#B71C1C] font-bold">$9.99</span>
               </div>
             </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Chicken Parmesan</h3>
+                  <p className="text-gray-700 mb-2">Breaded chicken, provolone cheese & marinara sauce.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$9.99</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Ham & Cheese</h3>
+                  <p className="text-gray-700 mb-2">Ham with American cheese.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$9.99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Cold Sandwiches Section */}
+      <section id="cold-sandwiches" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Create Your Own Cold Sandwiches</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">Step 1: Choose Your Bread</h3>
+              <div className="bg-white p-5 rounded-lg shadow-md">
+                <ul className="space-y-2">
+                  <li>• White Roll</li>
+                  <li>• Wheat Roll</li>
+                  <li>• Italian Bread</li>
+                  <li>• Wrap</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold mb-4">Step 2: Choose Your Meats</h3>
+              <div className="bg-white p-5 rounded-lg shadow-md">
+                <ul className="space-y-2">
+                  <li>• Ham</li>
+                  <li>• Turkey</li>
+                  <li>• Salami</li>
+                  <li>• Pepperoni</li>
+                  <li>• Roast Beef</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold mb-4">Step 3: Choose Your Cheese</h3>
+              <div className="bg-white p-5 rounded-lg shadow-md">
+                <ul className="space-y-2">
+                  <li>• American</li>
+                  <li>• Provolone</li>
+                  <li>• Swiss</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold mb-4">Step 4: Add Veggies & Condiments</h3>
+              <div className="bg-white p-5 rounded-lg shadow-md">
+                <p className="font-bold mb-2">Veggies:</p>
+                <ul className="space-y-1 mb-3">
+                  <li>• Lettuce</li>
+                  <li>• Tomato</li>
+                  <li>• Onion</li>
+                  <li>• Green Peppers</li>
+                  <li>• Black Olives</li>
+                  <li>• Pickles</li>
+                </ul>
+                <p className="font-bold mb-2">Condiments:</p>
+                <ul className="space-y-1">
+                  <li>• Mayo</li>
+                  <li>• Mustard</li>
+                  <li>• Oil & Vinegar</li>
+                  <li>• Italian Dressing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-8 text-center">
+            <p className="font-bold text-lg text-[#B71C1C]">Cold Sandwiches starting at: $9.99</p>
+            <p className="text-sm text-gray-600 mt-2">Price varies depending on meat selection and additional toppings</p>
           </div>
         </div>
       </section>
@@ -163,40 +335,111 @@ const Menu = () => {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Classic Cheese</h3>
-                  <p className="text-gray-700 mb-2">Ricotta and mozzarella cheese blend with a touch of garlic and herbs, served with marinara on the side.</p>
+                  <h3 className="text-xl font-bold mb-2">Steak & Cheese</h3>
+                  <p className="text-gray-700 mb-2">Shaved steak & American cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$12.99</span>
+                <span className="text-[#B71C1C] font-bold">$11.99</span>
               </div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Meat Lover's Calzone</h3>
-                  <p className="text-gray-700 mb-2">Pepperoni, bacon, sausage, ham with our cheese blend, served with marinara sauce.</p>
+                  <h3 className="text-xl font-bold mb-2">Ham & Cheese</h3>
+                  <p className="text-gray-700 mb-2">Ham & American cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$15.99</span>
+                <span className="text-[#B71C1C] font-bold">$11.99</span>
               </div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Veggie Garden</h3>
-                  <p className="text-gray-700 mb-2">Spinach, mushrooms, bell peppers, onions, and tomatoes with our cheese blend, served with marinara sauce.</p>
+                  <h3 className="text-xl font-bold mb-2">Italian</h3>
+                  <p className="text-gray-700 mb-2">Ham, salami, pepperoni & provolone cheese.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$11.99</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Veggie</h3>
+                  <p className="text-gray-700 mb-2">Mushrooms, onions, green peppers, black olives & American cheese.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$11.99</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Cheese</h3>
+                  <p className="text-gray-700 mb-2">Ricotta & mozzarella cheese.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$9.99</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Whipper's Calzone</h3>
+                  <p className="text-gray-700 mb-2">Pepperoni, Hamburg, sausage, mushrooms, onions, green peppers & provolone cheese.</p>
                 </div>
                 <span className="text-[#B71C1C] font-bold">$14.99</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Salads Section */}
+      <section id="salads" className="py-16 bg-[#FFF9C4] bg-opacity-30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Salads</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Garden Salad</h3>
+                  <p className="text-gray-700 mb-2">Lettuce, tomatoes, onions, green peppers, black olives & croutons.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$7.99</span>
+              </div>
+              <div className="text-sm text-gray-500">Add grilled chicken +$2.50</div>
+            </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Build Your Own</h3>
-                  <p className="text-gray-700 mb-2">Choose up to 3 toppings with our cheese blend, served with marinara sauce.</p>
+                  <h3 className="text-xl font-bold mb-2">Caesar Salad</h3>
+                  <p className="text-gray-700 mb-2">Romaine lettuce, croutons, parmesan cheese & Caesar dressing.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$13.99</span>
+                <span className="text-[#B71C1C] font-bold">$7.99</span>
+              </div>
+              <div className="text-sm text-gray-500">Add grilled chicken +$2.50</div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Chef Salad</h3>
+                  <p className="text-gray-700 mb-2">Garden salad topped with ham, turkey & American cheese.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$9.99</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Antipasto Salad</h3>
+                  <p className="text-gray-700 mb-2">Garden salad topped with ham, salami, pepperoni & provolone cheese.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$9.99</span>
               </div>
             </div>
           </div>
@@ -212,8 +455,18 @@ const Menu = () => {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Garlic Knots</h3>
-                  <p className="text-gray-700 mb-2">Six freshly baked knots brushed with garlic butter and dusted with parmesan. Served with marinara sauce.</p>
+                  <h3 className="text-xl font-bold mb-2">French Fries</h3>
+                  <p className="text-gray-700 mb-2">Crispy golden fries served hot and fresh.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$4.99</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Onion Rings</h3>
+                  <p className="text-gray-700 mb-2">Crispy battered onion rings.</p>
                 </div>
                 <span className="text-[#B71C1C] font-bold">$5.99</span>
               </div>
@@ -223,31 +476,41 @@ const Menu = () => {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="text-xl font-bold mb-2">Mozzarella Sticks</h3>
-                  <p className="text-gray-700 mb-2">Eight crispy breaded mozzarella sticks served with our homemade marinara sauce.</p>
-                </div>
-                <span className="text-[#B71C1C] font-bold">$7.99</span>
-              </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Caesar Salad</h3>
-                  <p className="text-gray-700 mb-2">Fresh romaine lettuce with our Caesar dressing, croutons, and shaved parmesan cheese.</p>
+                  <p className="text-gray-700 mb-2">Breaded mozzarella sticks served with marinara sauce.</p>
                 </div>
                 <span className="text-[#B71C1C] font-bold">$6.99</span>
               </div>
-              <div className="text-sm text-gray-500">Add grilled chicken +$3.00</div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Buffalo Wings</h3>
-                  <p className="text-gray-700 mb-2">Ten crispy chicken wings tossed in your choice of sauce: Mild, Hot, BBQ, or Garlic Parmesan.</p>
+                  <h3 className="text-xl font-bold mb-2">Chicken Tenders</h3>
+                  <p className="text-gray-700 mb-2">Breaded chicken tenders served with your choice of sauce.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$8.99</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Wings</h3>
+                  <p className="text-gray-700 mb-2">Bone-in wings with your choice of sauce: Mild, Hot, BBQ, Teriyaki.</p>
                 </div>
                 <span className="text-[#B71C1C] font-bold">$12.99</span>
               </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Garlic Bread</h3>
+                  <p className="text-gray-700 mb-2">Toasted Italian bread with garlic butter.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$4.99</span>
+              </div>
+              <div className="text-sm text-gray-500">Add cheese +$1.00</div>
             </div>
           </div>
         </div>
@@ -262,44 +525,41 @@ const Menu = () => {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Fountain Sodas</h3>
-                  <p className="text-gray-700 mb-2">Coca-Cola, Diet Coke, Sprite, Root Beer, or Lemonade.</p>
+                  <h3 className="text-xl font-bold mb-2">Canned Soda</h3>
+                  <p className="text-gray-700 mb-2">Coca-Cola, Diet Coke, Sprite, Fanta, Dr. Pepper.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$2.49</span>
+                <span className="text-[#B71C1C] font-bold">$1.50</span>
               </div>
-              <div className="text-sm text-gray-500">Available in: Small, Medium (+$0.50), Large (+$1.00)</div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Bottled Drinks</h3>
-                  <p className="text-gray-700 mb-2">Water, Sparkling Water, or Italian Soda (various flavors).</p>
+                  <h3 className="text-xl font-bold mb-2">20oz Bottles</h3>
+                  <p className="text-gray-700 mb-2">Coca-Cola, Diet Coke, Sprite, Fanta, Dasani Water.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$2.50</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">2-Liter Bottles</h3>
+                  <p className="text-gray-700 mb-2">Coca-Cola, Diet Coke, Sprite, Orange Soda.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$3.99</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Specialty Drinks</h3>
+                  <p className="text-gray-700 mb-2">Bottled Iced Tea, Energy Drinks, Bottled Juices.</p>
                 </div>
                 <span className="text-[#B71C1C] font-bold">$2.99</span>
               </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Draft Beer</h3>
-                  <p className="text-gray-700 mb-2">Selection of local and imported beers. Ask your server for current offerings.</p>
-                </div>
-                <span className="text-[#B71C1C] font-bold">$5.99</span>
-              </div>
-              <div className="text-sm text-gray-500">Must be 21+ with valid ID</div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-xl font-bold mb-2">House Wine</h3>
-                  <p className="text-gray-700 mb-2">Red or white wine by the glass. Ask your server for current selections.</p>
-                </div>
-                <span className="text-[#B71C1C] font-bold">$6.99</span>
-              </div>
-              <div className="text-sm text-gray-500">Must be 21+ with valid ID</div>
             </div>
           </div>
         </div>
