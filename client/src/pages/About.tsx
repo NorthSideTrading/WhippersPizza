@@ -30,9 +30,9 @@ const About = () => {
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-              <p className="text-gray-700 mb-4">Whippers Pizza began in 1998 when the Romano family moved from Brooklyn to Augusta, bringing with them decades of Italian pizza-making tradition. Starting with a small storefront on Main Street, Tony and Maria Romano quickly gained a reputation for their authentic New York-style pizzas made with fresh, local ingredients.</p>
-              <p className="text-gray-700 mb-4">What started as a family operation has grown into a beloved Augusta institution, but we've never lost our commitment to quality and tradition. Twenty-five years later, we still make our dough fresh daily, use locally-sourced produce when possible, and follow the same recipes that made us famous.</p>
-              <p className="text-gray-700">Today, the second generation of Romanos continues the family legacy, serving the Augusta community with the same passion and dedication that Tony and Maria brought when they first opened our doors.</p>
+              <p className="text-gray-700 mb-4">Whipper's Pizza has been an Augusta, Maine Landmark for over 40 years. We pride ourselves on our homemade dough and sauce, crafting delicious pizzas and sandwiches at a great price.</p>
+              <p className="text-gray-700 mb-4">As a family-run local pizza shop, we're dedicated to serving our community with quality food and a friendly atmosphere. Our commitment to freshness and authenticity has made us a favorite for generations of Augusta residents.</p>
+              <p className="text-gray-700">We continue to uphold our tradition of excellence, using time-tested recipes and quality ingredients to create the memorable taste that's kept our customers coming back for decades.</p>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ const About = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-3">Quality Ingredients</h3>
-              <p className="text-gray-700">We believe great pizza starts with great ingredients. We source the freshest products, make our dough from scratch daily, and use a signature sauce recipe passed down through generations.</p>
+              <p className="text-gray-700">Our mission is simple: to provide the Augusta community with high-quality, homemade food that tastes great and offers excellent value. We make our dough fresh daily and prepare our signature sauce in-house.</p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md">
@@ -60,8 +60,8 @@ const About = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Community First</h3>
-              <p className="text-gray-700">Augusta isn't just where our restaurant is located—it's our home. We're committed to giving back through local sponsorships, fundraisers, and participating in community events.</p>
+              <h3 className="text-xl font-bold mb-3">Family Values</h3>
+              <p className="text-gray-700">We believe in the importance of family, tradition, and supporting our local patrons who have made us a landmark for decades. Our family-run business brings a personal touch to every order.</p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md">
@@ -70,8 +70,8 @@ const About = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Authenticity</h3>
-              <p className="text-gray-700">We stay true to traditional pizza-making methods while embracing innovation. Every pizza is hand-tossed and baked to perfection in our brick ovens, just as it has been for decades.</p>
+              <h3 className="text-xl font-bold mb-3">Community Service</h3>
+              <p className="text-gray-700">Augusta isn't just where our restaurant is located—it's our home. For over 40 years, we've been committed to serving our community with delicious food at a great price, making us a local landmark.</p>
             </div>
           </div>
         </div>

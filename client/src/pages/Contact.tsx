@@ -28,7 +28,7 @@ const Contact = () => {
               <div className="mb-8">
                 <h3 className="text-xl font-bold mb-2">Address</h3>
                 <address className="not-italic text-gray-700">
-                  123 Main St<br />
+                  97 Bangor St<br />
                   Augusta, ME 04330
                 </address>
               </div>
@@ -38,19 +38,19 @@ const Contact = () => {
                 <p className="mb-2">
                   <span className="font-semibold">Phone:</span>{' '}
                   <a 
-                    href="tel:+12075557492" 
+                    href="tel:+12076233500" 
                     className="text-[#B71C1C] hover:underline"
                   >
-                    (207) 555-PIZA
+                    (207) 623-3500
                   </a>
                 </p>
                 <p>
                   <span className="font-semibold">Email:</span>{' '}
                   <a 
-                    href="mailto:info@whipperspizza.com" 
+                    href="mailto:whipperspizza@gmail.com" 
                     className="text-[#B71C1C] hover:underline"
                   >
-                    info@whipperspizza.com
+                    whipperspizza@gmail.com
                   </a>
                 </p>
               </div>
@@ -58,14 +58,18 @@ const Contact = () => {
               <div className="mb-8">
                 <h3 className="text-xl font-bold mb-2">Hours</h3>
                 <ul className="text-gray-700">
-                  <li className="mb-1">Monday - Friday: 11:00 AM - 9:00 PM</li>
-                  <li className="mb-1">Saturday: 12:00 PM - 10:00 PM</li>
-                  <li>Sunday: 12:00 PM - 10:00 PM</li>
+                  <li className="mb-1">Monday: 11:00 AM - 9:00 PM</li>
+                  <li className="mb-1">Tuesday: 11:00 AM - 9:00 PM</li>
+                  <li className="mb-1">Wednesday: 11:00 AM - 9:00 PM</li>
+                  <li className="mb-1">Thursday: 11:00 AM - 9:00 PM</li>
+                  <li className="mb-1">Friday: 11:00 AM - 9:00 PM</li>
+                  <li className="mb-1">Saturday: 11:00 AM - 9:00 PM</li>
+                  <li>Sunday: 11:00 AM - 9:00 PM</li>
                 </ul>
               </div>
               
               <div id="map-placeholder" style={{ height: 300, background: '#eee', textAlign: 'center', lineHeight: '300px', marginTop: 20 }}>
-                Google Map Embed for 123 Main St, Augusta ME Here
+                Google Map Embed for 97 Bangor St, Augusta ME Here
               </div>
             </div>
             

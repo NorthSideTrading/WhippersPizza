@@ -19,8 +19,10 @@ const Menu = () => {
       {/* Menu Navigation */}
       <div className="sticky top-[72px] z-20 bg-white shadow-md">
         <div className="container mx-auto px-4 py-4">
+          <p className="text-center mb-4">Discover our delicious, homemade pizzas, classic sandwiches, tasty sides, and refreshing drinks.</p>
           <ul className="flex flex-wrap justify-center space-x-2 md:space-x-8">
             <li><a href="#pizzas" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Pizzas</a></li>
+            <li><a href="#sandwiches" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Sandwiches</a></li>
             <li><a href="#calzones" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Calzones</a></li>
             <li><a href="#sides" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Sides</a></li>
             <li><a href="#drinks" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Drinks</a></li>
@@ -103,8 +105,57 @@ const Menu = () => {
         </div>
       </section>
 
+      {/* Sandwiches Section */}
+      <section id="sandwiches" className="py-16 bg-[#FFF9C4] bg-opacity-30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Sandwiches</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Italian Cold Cut</h3>
+                  <p className="text-gray-700 mb-2">Layers of ham, salami, pepperoni, provolone cheese, lettuce, tomato, onion, and Italian dressing on a fresh roll.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$8.99</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Steak & Cheese</h3>
+                  <p className="text-gray-700 mb-2">Thinly sliced steak with melted American cheese, grilled onions, and peppers on a toasted sub roll.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$9.49</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Meatball Parmesan</h3>
+                  <p className="text-gray-700 mb-2">Homemade meatballs covered in marinara sauce, topped with melted provolone and parmesan cheese.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$8.99</span>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Veggie Delight</h3>
+                  <p className="text-gray-700 mb-2">Fresh assorted vegetables, provolone cheese, and hummus spread on a whole wheat roll.</p>
+                </div>
+                <span className="text-[#B71C1C] font-bold">$7.99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Calzones Section */}
-      <section id="calzones" className="py-16 bg-[#FFF9C4] bg-opacity-30">
+      <section id="calzones" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Calzones</h2>
           

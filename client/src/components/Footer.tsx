@@ -15,23 +15,23 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Whippers Pizza</h3>
             <address className="not-italic mb-4">
-              123 Main St<br />
+              97 Bangor St<br />
               Augusta, ME 04330
             </address>
             <p className="mb-4">
               <a 
-                href="tel:+12075557492" 
+                href="tel:+12076233500" 
                 className="hover:text-[#8BC34A] transition-colors duration-200"
               >
-                (207) 555-PIZA
+                (207) 623-3500
               </a>
             </p>
             <p>
               <a 
-                href="mailto:info@whipperspizza.com" 
+                href="mailto:whipperspizza@gmail.com" 
                 className="hover:text-[#8BC34A] transition-colors duration-200"
               >
-                info@whipperspizza.com
+                whipperspizza@gmail.com
               </a>
             </p>
           </div>
@@ -39,9 +39,13 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Hours</h3>
             <ul>
-              <li className="mb-2">Monday - Friday: 11:00 AM - 9:00 PM</li>
-              <li className="mb-2">Saturday: 12:00 PM - 10:00 PM</li>
-              <li>Sunday: 12:00 PM - 10:00 PM</li>
+              <li className="mb-2">Monday: 11:00 AM - 9:00 PM</li>
+              <li className="mb-2">Tuesday: 11:00 AM - 9:00 PM</li>
+              <li className="mb-2">Wednesday: 11:00 AM - 9:00 PM</li>
+              <li className="mb-2">Thursday: 11:00 AM - 9:00 PM</li>
+              <li className="mb-2">Friday: 11:00 AM - 9:00 PM</li>
+              <li className="mb-2">Saturday: 11:00 AM - 9:00 PM</li>
+              <li>Sunday: 11:00 AM - 9:00 PM</li>
             </ul>
           </div>
           
@@ -49,11 +53,13 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
             <div className="flex space-x-4 mb-4">
               <a 
-                href="#" 
+                href="https://www.facebook.com/profile.php?id=100057050006369" 
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook" 
                 className="text-[#FAFAFA] hover:text-[#8BC34A] transition-colors duration-200"
               >
-                <span className="text-2xl">[FB]</span>
+                <span className="text-2xl">Facebook</span>
               </a>
               <a 
                 href="#" 
@@ -122,19 +128,19 @@ const Footer = () => {
           "image": ["images/placeholder-hero-pizza.jpg"],
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "123 Main St",
+            "streetAddress": "97 Bangor St",
             "addressLocality": "Augusta",
             "addressRegion": "ME",
             "postalCode": "04330"
           },
-          "telephone": "+1-207-555-PIZA",
-          "servesCuisine": "Pizza",
-          "priceRange": "$$",
+          "telephone": "+1-207-623-3500",
+          "email": "whipperspizza@gmail.com",
+          "servesCuisine": "Pizza, Sandwiches",
+          "priceRange": "$",
           "openingHoursSpecification": [
-            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "11:00", "closes": "21:00"},
-            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "12:00", "closes": "22:00"}
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}
           ],
-          "url": window.location.origin,
+          "url": "https://www.facebook.com/profile.php?id=100057050006369",
           "menu": `${window.location.origin}/menu`
         })}
       </script>

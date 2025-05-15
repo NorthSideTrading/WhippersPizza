@@ -101,8 +101,8 @@ const Home = () => {
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">About Whippers Pizza</h2>
-              <p className="text-gray-700 mb-6">Family-owned since 1998, Whippers Pizza brings authentic flavors and traditional pizza-making techniques to Augusta. We believe in using only the freshest ingredients, hand-tossed dough made daily, and our secret family sauce recipe passed down through generations.</p>
-              <p className="text-gray-700 mb-8">Our team of passionate pizza makers are dedicated to creating the perfect pie for every customer, whether you prefer classic flavors or adventurous combinations.</p>
+              <p className="text-gray-700 mb-6">Whipper's Pizza is an Augusta, Maine Landmark for over 40 years. We pride ourselves on our homemade dough and sauce, serving delicious pizza and sandwiches at a great price.</p>
+              <p className="text-gray-700 mb-8">As a family-run local pizza shop, we've been devoted to providing our community with quality food and friendly service, making us a local favorite for decades.</p>
               <Link 
                 href="/about" 
                 className="inline-block bg-[#B71C1C] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition duration-300"
