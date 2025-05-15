@@ -1,0 +1,111 @@
+Task: You are a professional website designer. Generate a complete, responsive professional website for “Whippers Pizza” (Augusta, Maine) using plain HTML + CSS + JS, ready to drag-and-drop onto Netlify. 
+Output Eight files, each in its own fenced code block, nothing else:
+
+/index.html
+/about.html
+/menu.html
+/contact.html
+/404.html                  (simple “Page not found”)
+/css/style.css
+/js/script.js
+/netlify.toml              (minimal config; leave build blank for static)
+/images/   (folder, placeholder refs only like `images/placeholder-pizza.jpg`)
+
+1 · Global Design
+Palette — root CSS vars: --primary-red: #B71C1C; --cream: #FFF9C4; --sage-green: #8BC34A; --dark-bg: #333; --text-light: #FAFAFA; --text-dark: #212121;.
+Font — Google Font ‘Inter’; include `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">` in each `<head>`.
+Layout — max-width:1200px; margin:0 auto; padding: 0 20px; for a main container class (e.g., `.container`); mobile-first design with breakpoints at `min-width: 768px` and `min-width: 1024px`.
+Nav — sticky top `<nav aria-label="Main">`, text logo "Whippers Pizza", links (Home, About, Menu, Contact) + hamburger toggle icon for mobile (JS to add/remove an `.nav--open` class).
+Footer — dark background band, address "123 Main St, Augusta ME 04330", phone "(207) 555-PIZA", copyright "© <span id="currentYear"></span> Whippers Pizza" (JS to inject year), placeholder text for social media icons like "[FB] [IG] [TW]".
+Accessibility — descriptive `alt` text for every image (e.g., `alt="Delicious pepperoni pizza"`). Buttons/links with non-explicit text content must have an `aria-label`.
+Performance — `loading="lazy"` on all `<img>` tags; create and reuse utility class names (e.g., `.btn`, `.btn--primary`, `.card`, `.text-center`, `.container`).
+Optional Tailwind — Include a COMMENTED-OUT CDN link for Tailwind CSS in the `<head>` of each HTML file: `<!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->`.
+
+2 · SEO
+Unique `<title>` and `<meta name="description">` per page (e.g., Home: "Whippers Pizza - Augusta, ME | Best Local Pizza", About: "Our Story - Whippers Pizza, Augusta").
+Proper semantic sectioning (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`). Single `<h1>` per page.
+`index.html` footer: include a `LocalBusiness` JSON-LD schema placeholder:
+    ```html
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Whippers Pizza",
+      "image": ["images/placeholder-hero-pizza.jpg"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main St",
+        "addressLocality": "Augusta",
+        "addressRegion": "ME",
+        "postalCode": "04330"
+      },
+      "telephone": "+1-207-555-PIZA",
+      "servesCuisine": "Pizza",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "11:00", "closes": "21:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "12:00", "closes": "22:00"}
+      ],
+      "url": "YOUR_WEBSITE_URL_HERE",
+      "menu": "YOUR_WEBSITE_URL_HERE/menu.html"
+    }
+    </script>
+    ```
+
+3 · Netlify-Specific
+Contact form in `contact.html`: Use the following structure for Netlify compatibility:
+    ```html
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hidden" style="display:none;">
+        <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+      </p>
+      <!-- Add Name, Email, Phone, Message fields here -->
+      <button type="submit" class="btn btn--primary">Send Message</button>
+    </form>
+    ```
+`netlify.toml` file content:
+    ```toml
+    [build]
+      publish = "." # Publish the root directory
+    [[redirects]]
+      from = "/*"
+      to = "/404.html"
+      status = 404
+    ```
+
+4 · Page Blueprints
+`index.html`:
+    Hero section (`<section class="hero">`) with CSS `background-image` (use `images/placeholder-hero-pizza.jpg`), overlaid `<h1>` (e.g., "Augusta's Best Hometown Pizza!"), and a CTA button (`.btn--primary`) linking to `menu.html`.
+    "Our Specials" section: Responsive grid of 3 cards (`.card` class) with placeholder text/prices.
+    Mini "About Us" blurb: Short text with a link/button to `about.html`.
+    Customer Testimonial Slider section: JS-powered slider rotating 3 placeholder quotes every 5 seconds.
+`about.html`:
+    Sections for "Our Story", "Our Mission & Values".
+    Optional "Meet the Team" section with a 3-column layout (desktop) using placeholder avatars (`images/placeholder-avatar.png`) and brief text.
+`menu.html`:
+    Organized into sections: Pizzas, Calzones, Sides, Drinks.
+    Each item using a `.card`-like structure (name, short description, price).
+    Layout: Two-column on desktop, stacking to single-column on mobile.
+`contact.html`:
+    Two-column layout (desktop): Left for contact info (address, phone `tel:` link, email `mailto:` link, hours). Right for the Netlify-enabled contact form.
+    Include a map placeholder: `<div id="map-placeholder" style="height: 300px; background: #eee; text-align: center; line-height: 300px; margin-top: 20px;">Google Map Embed for 123 Main St, Augusta ME Here</div>`.
+`404.html`:
+    A friendly message like "Oops—lost in the sauce? The page you're looking for doesn't exist."
+    A prominent link back to the Home page (`index.html`).
+
+5 · `/css/style.css`
+Include a simple CSS reset (e.g., Meyerweb reset or similar).
+Define CSS root variables for colors.
+Base typography styles using 'Inter', and for headings.
+Utility classes: `.container`, `.btn`, `.btn--primary`, `.card`, `.text-center`, `.hidden` (for `display:none;`).
+Styling for the sticky navigation, including the hamburger icon and its open/close animation.
+Media queries at `min-width: 768px` and `min-width: 1024px` for responsive adjustments.
+Subtle transitions on interactive elements (links, buttons, cards) e.g., `transition: all 200ms ease-in-out;`.
+
+6 · `/js/script.js`
+Mobile navigation toggle: Functionality for the hamburger menu to add/remove an `.nav--open` class on the navigation element or body to show/hide mobile menu.
+Testimonial slider: Logic to cycle through an array of testimonial elements, changing visibility every 5 seconds.
+Smooth scroll: Implement smooth scrolling for any in-page anchor links (if used).
+Contact form front-end validation: Before allowing Netlify's submission, check if required fields (e.g., Name, Email, Message) are filled. If not, prevent default and visually indicate errors (e.g., add a class to highlight missing fields).
+Footer year: JavaScript to get the current year and inject it into the `<span id="currentYear"></span>` in the footer.
