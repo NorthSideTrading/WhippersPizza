@@ -7,15 +7,15 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "Whippers Pizza has been our family's go-to for Friday night dinners for years. Their Margherita Special is simply the best pizza I've ever had, and the service is always friendly and fast!",
+    quote: "Best pizza in town! We've been coming to Whippers for over 20 years and the quality has always remained top-notch. The homemade dough and sauce make all the difference!",
     author: "Sarah M."
   },
   {
-    quote: "I'm very particular about pizza, and Whippers consistently exceeds my expectations. The ingredients are fresh, the crust is perfect, and they're always willing to accommodate special requests.",
+    quote: "Love the homemade dough! Whippers Pizza has been an Augusta landmark for good reason. Their sandwiches are also fantastic - perfect when you want something different.",
     author: "Michael T."
   },
   {
-    quote: "As a newcomer to Augusta, discovering Whippers Pizza was a highlight. Their Garden Veggie Delight has become my weekly treat, and the staff always makes me feel like a regular. Highly recommend!",
+    quote: "A family favorite for years! Their prices are great, and you can't beat the friendly service from this local family-run shop. Always our first choice for pizza night.",
     author: "Jennifer L."
   }
 ];

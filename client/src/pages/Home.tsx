@@ -16,8 +16,8 @@ const Home = () => {
         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" }}
       >
         <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Augusta's Best Hometown Pizza!</h1>
-          <p className="text-xl md:text-2xl text-white mb-8">Crafted with passion, served with pride since 1998</p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Augusta's Landmark Pizza - Over 40 Years!</h1>
+          <p className="text-xl md:text-2xl text-white mb-8">Homemade dough and sauce, served with family pride</p>
           <Link 
             href="/menu" 
             className="bg-[#8BC34A] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"
@@ -42,10 +42,10 @@ const Home = () => {
               />
               <div className="p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-bold">Margherita Special</h3>
-                  <span className="text-[#B71C1C] font-bold">$14.99</span>
+                  <h3 className="text-xl font-bold">The Bangor Street Beast</h3>
+                  <span className="text-[#B71C1C] font-bold">$17.99</span>
                 </div>
-                <p className="text-gray-600 mb-4">Our classic margherita with premium buffalo mozzarella, fresh basil, and San Marzano tomatoes.</p>
+                <p className="text-gray-600 mb-4">Our signature creation loaded with pepperoni, sausage, bacon, ham, and extra cheese on our homemade dough and sauce.</p>
                 <Link href="/menu" className="text-[#8BC34A] font-bold hover:underline">View Details</Link>
               </div>
             </div>
@@ -59,10 +59,10 @@ const Home = () => {
               />
               <div className="p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-bold">Double Pepperoni Feast</h3>
-                  <span className="text-[#B71C1C] font-bold">$16.99</span>
+                  <h3 className="text-xl font-bold">Family Meal Deal</h3>
+                  <span className="text-[#B71C1C] font-bold">$29.99</span>
                 </div>
-                <p className="text-gray-600 mb-4">Loaded with twice the pepperoni, extra cheese, and our secret spice blend on a perfectly crisp crust.</p>
+                <p className="text-gray-600 mb-4">One large 2-topping pizza, a dozen wings, garlic knots, and 2-liter soda. Perfect for feeding the whole family!</p>
                 <Link href="/menu" className="text-[#8BC34A] font-bold hover:underline">View Details</Link>
               </div>
             </div>
@@ -101,8 +101,8 @@ const Home = () => {
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">About Whippers Pizza</h2>
-              <p className="text-gray-700 mb-6">Whipper's Pizza is an Augusta, Maine Landmark for over 40 years. We pride ourselves on our homemade dough and sauce, serving delicious pizza and sandwiches at a great price.</p>
-              <p className="text-gray-700 mb-8">As a family-run local pizza shop, we've been devoted to providing our community with quality food and friendly service, making us a local favorite for decades.</p>
+              <p className="text-gray-700 mb-6">An Augusta, Maine Landmark for over 40 years, Whipper's Pizza offers delicious, homemade pizza and sandwiches. Our secret is in our fresh dough and signature sauce made daily.</p>
+              <p className="text-gray-700 mb-8">A family-run local shop serving our community! We're proud to offer great taste at a great price, which is why generations of Augusta families have made us their favorite pizzeria.</p>
               <Link 
                 href="/about" 
                 className="inline-block bg-[#B71C1C] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition duration-300"

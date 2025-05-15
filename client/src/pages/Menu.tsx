@@ -19,7 +19,7 @@ const Menu = () => {
       {/* Menu Navigation */}
       <div className="sticky top-[72px] z-20 bg-white shadow-md">
         <div className="container mx-auto px-4 py-4">
-          <p className="text-center mb-4">Discover our delicious, homemade pizzas, classic sandwiches, tasty sides, and refreshing drinks.</p>
+          <p className="text-center mb-4">All our pizzas feature homemade dough and sauce, made fresh daily! Discover our delicious pizzas, classic sandwiches, tasty sides, and refreshing drinks.</p>
           <ul className="flex flex-wrap justify-center space-x-2 md:space-x-8">
             <li><a href="#pizzas" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Pizzas</a></li>
             <li><a href="#sandwiches" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Sandwiches</a></li>

@@ -30,8 +30,8 @@ const About = () => {
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-              <p className="text-gray-700 mb-4">Whipper's Pizza has been an Augusta, Maine Landmark for over 40 years. We pride ourselves on our homemade dough and sauce, crafting delicious pizzas and sandwiches at a great price.</p>
-              <p className="text-gray-700 mb-4">As a family-run local pizza shop, we're dedicated to serving our community with quality food and a friendly atmosphere. Our commitment to freshness and authenticity has made us a favorite for generations of Augusta residents.</p>
+              <p className="text-gray-700 mb-4">Whipper's Pizza has proudly served as an Augusta, Maine Landmark for over 40 years. Our tradition is built on homemade dough and sauce, crafting delicious pizzas and sandwiches that our community loves, all at a great price.</p>
+              <p className="text-gray-700 mb-4">As a dedicated family-run local pizza shop, we cherish our customers and the decades of support. Our commitment to freshness and authenticity has made us a favorite for generations of Augusta residents.</p>
               <p className="text-gray-700">We continue to uphold our tradition of excellence, using time-tested recipes and quality ingredients to create the memorable taste that's kept our customers coming back for decades.</p>
             </div>
           </div>
@@ -51,7 +51,7 @@ const About = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-3">Quality Ingredients</h3>
-              <p className="text-gray-700">Our mission is simple: to provide the Augusta community with high-quality, homemade food that tastes great and offers excellent value. We make our dough fresh daily and prepare our signature sauce in-house.</p>
+              <p className="text-gray-700">Our mission is to continue the tradition of providing Augusta with high-quality, delicious food made with care. We make our dough fresh daily and prepare our signature sauce in-house, ensuring every bite delivers authentic flavor.</p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-md">
