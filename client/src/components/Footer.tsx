@@ -31,7 +31,7 @@ const Footer = () => {
           {/* Logo and Contact Info */}
           <div className="mb-8 md:mb-0 md:w-1/3">
             <img 
-              src="/attached_assets/15fc4719-b1a9-4a46-a19a-a1e83fb1fe86.png" 
+              src="/images/whippers-logo.png" 
               alt="Whippers Pizza Logo" 
               className="h-28 w-auto mb-6" 
             />

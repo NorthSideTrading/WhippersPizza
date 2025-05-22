@@ -47,7 +47,7 @@ const Header = () => {
       <nav aria-label="Main" className="container mx-auto px-4 flex flex-wrap items-center justify-between">
         <Link href="/" className="flex items-center">
           <img 
-            src="/attached_assets/15fc4719-b1a9-4a46-a19a-a1e83fb1fe86.png" 
+            src="/images/whippers-logo.png" 
             alt="Whippers Pizza Logo" 
             className="h-16 w-auto" 
           />
