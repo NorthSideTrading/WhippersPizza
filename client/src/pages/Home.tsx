@@ -309,8 +309,8 @@ const Home = () => {
             <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Whippers Pizza restaurant interior with brick oven" 
+                  src="/images/whippers-owners.jpg" 
+                  alt="The owners of Whippers Pizza in their restaurant kitchen" 
                   className="rounded-lg shadow-lg w-full relative z-10"
                   loading="lazy"
                 />
