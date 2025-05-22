@@ -50,19 +50,19 @@ const Menu = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               <div className="bg-white p-4 rounded-lg shadow-md text-center">
                 <h4 className="font-bold mb-2">Small 10"</h4>
-                <p className="text-[#B71C1C] font-bold">$9.75</p>
+                <p className="text-[hsl(145,63%,49%)] font-bold">$9.75</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md text-center">
                 <h4 className="font-bold mb-2">Medium 12"</h4>
-                <p className="text-[#B71C1C] font-bold">$12.75</p>
+                <p className="text-[hsl(145,63%,49%)] font-bold">$12.75</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md text-center">
                 <h4 className="font-bold mb-2">Large 14"</h4>
-                <p className="text-[#B71C1C] font-bold">$15.50</p>
+                <p className="text-[hsl(145,63%,49%)] font-bold">$15.50</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md text-center">
                 <h4 className="font-bold mb-2">X-Large 16"</h4>
-                <p className="text-[#B71C1C] font-bold">$17.99</p>
+                <p className="text-[hsl(145,63%,49%)] font-bold">$17.99</p>
               </div>
             </div>
             
@@ -177,7 +177,7 @@ const Menu = () => {
       </section>
       
       {/* Gluten Free Pizza Section */}
-      <section id="gluten-free" className="py-16 bg-[#FFF9C4] bg-opacity-30">
+      <section id="gluten-free" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="mb-10">
             <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Special Diet</span>
@@ -197,9 +197,13 @@ const Menu = () => {
       </section>
 
       {/* Hot Sandwiches Section */}
-      <section id="hot-sandwiches" className="py-16 bg-[#FFF9C4] bg-opacity-30">
+      <section id="hot-sandwiches" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Signature Hot Sandwiches</h2>
+          <div className="mb-10">
+            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Tasty Options</span>
+            <h2 className="text-3xl font-bold mb-4 text-[hsl(212,40%,18%)]">Signature Hot Sandwiches</h2>
+            <div className="w-16 h-1 bg-[hsl(145,63%,49%)] mb-8"></div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -268,7 +272,11 @@ const Menu = () => {
       {/* Cold Sandwiches Section */}
       <section id="cold-sandwiches" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Create Your Own Cold Sandwiches</h2>
+          <div className="mb-10">
+            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Customize It</span>
+            <h2 className="text-3xl font-bold mb-4 text-[hsl(212,40%,18%)]">Create Your Own Cold Sandwiches</h2>
+            <div className="w-16 h-1 bg-[hsl(145,63%,49%)] mb-8"></div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -340,7 +348,11 @@ const Menu = () => {
       {/* Calzones Section */}
       <section id="calzones" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Calzones</h2>
+          <div className="mb-10">
+            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Folded Goodness</span>
+            <h2 className="text-3xl font-bold mb-4 text-[hsl(212,40%,18%)]">Calzones</h2>
+            <div className="w-16 h-1 bg-[hsl(145,63%,49%)] mb-8"></div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
