@@ -37,7 +37,7 @@ const TestimonialSlider = () => {
   }, []);
 
   return (
-    <div className="testimonial-slider max-w-3xl mx-auto">
+    <div className="testimonial-slider max-w-3xl mx-auto px-4 sm:px-6">
       {testimonials.map((testimonial, index) => (
         <div 
           key={index} 

@@ -332,3 +332,8 @@ button[class*="bg-"]:active {
 
 /* Create staggered animations for lists/grids */
 /* Staggered animation classes removed to fix display issues */
+
+/* Text shadow utility for better contrast on mobile */
+.text-shadow-lg {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}

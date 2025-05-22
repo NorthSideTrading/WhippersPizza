@@ -49,22 +49,22 @@ const Home = () => {
           <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white text-sm font-medium mb-6 border border-white/20 animate-fade-in">
             Augusta's Favorite Since 1983
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight max-w-4xl mx-auto slide-up">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight max-w-4xl mx-auto slide-up text-shadow-lg">
             Handcrafted <span className="text-[hsl(145,63%,49%)]">Pizza</span> Made With Passion
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light slide-up">
+          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light slide-up text-shadow-lg px-3">
             Family-owned for over 40 years, serving Augusta with homemade dough and signature sauce daily
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 slide-up">
+          <div className="flex flex-col sm:flex-row gap-4 w-full px-4 sm:px-0 sm:w-auto slide-up">
             <Link 
               href="/menu" 
-              className="bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-5 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-lg w-full sm:w-auto flex items-center justify-center"
             >
               View Our Menu
             </Link>
             <Link 
               href="/contact" 
-              className="bg-white hover:bg-white/90 text-[hsl(212,40%,18%)] font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-white hover:bg-white/90 text-[hsl(212,40%,18%)] font-bold py-5 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-lg w-full sm:w-auto flex items-center justify-center"
             >
               Order Online
             </Link>
