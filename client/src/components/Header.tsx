@@ -68,8 +68,8 @@ const Header = () => {
           </svg>
         </button>
         
-        <div className={`nav-links w-full md:w-auto md:flex items-center ${isOpen ? 'block' : 'hidden md:block'}`}>
-          <ul className="flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 space-y-2 md:space-y-0 pb-3 md:pb-0">
+        <div className={`nav-links w-full md:w-auto md:flex items-center ${isOpen ? 'block' : 'hidden md:block'} absolute md:relative top-full left-0 md:top-auto md:left-auto bg-white md:bg-transparent w-full shadow-md md:shadow-none z-50`}>
+          <ul className="flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 space-y-2 md:space-y-0 pb-3 md:pb-0 px-5 md:px-0">
             <li>
               <Link 
                 href="/" 
