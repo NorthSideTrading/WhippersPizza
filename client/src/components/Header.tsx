@@ -45,12 +45,12 @@ const Header = () => {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg py-3' : 'bg-white shadow-md py-4'}`}>
       <nav aria-label="Main" className="container mx-auto px-4 flex flex-wrap items-center justify-between">
-        <Link href="/" className="text-2xl font-bold text-[hsl(196,100%,47%)] hover:text-[hsl(196,100%,40%)] transition-colors">
+        <Link href="/" className="text-2xl font-bold text-[hsl(212,40%,18%)] hover:text-[hsl(145,63%,49%)] transition-colors">
           Whippers Pizza
         </Link>
         
         <button 
-          className="md:hidden text-[hsl(220,13%,18%)] focus:outline-none" 
+          className="md:hidden text-[hsl(212,40%,18%)] focus:outline-none" 
           aria-label="Toggle menu"
           onClick={toggleMenu}
         >
@@ -59,48 +59,66 @@ const Header = () => {
           </svg>
         </button>
         
-        <div className={`nav-links w-full md:w-auto md:flex items-center ${isOpen ? 'open' : ''}`}>
-          <ul className="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0">
+        <div className={`nav-links w-full md:w-auto md:flex items-center ${isOpen ? 'block' : 'hidden md:block'}`}>
+          <ul className="flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0">
             <li>
               <Link 
                 href="/" 
-                className={`block py-2 px-1 relative transition-colors duration-200 ${location === '/' ? 'text-[hsl(196,100%,47%)] font-semibold' : 'hover:text-[hsl(196,100%,47%)]'}`}
+                className={`block py-2 px-1 relative transition-colors duration-200 ${location === '/' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'hover:text-[hsl(145,63%,49%)]'}`}
               >
                 Home
-                {location === '/' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(196,100%,47%)]"></span>}
+                {location === '/' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(145,63%,49%)]"></span>}
               </Link>
             </li>
             <li>
               <Link 
                 href="/about" 
-                className={`block py-2 px-1 relative transition-colors duration-200 ${location === '/about' ? 'text-[hsl(196,100%,47%)] font-semibold' : 'hover:text-[hsl(196,100%,47%)]'}`}
+                className={`block py-2 px-1 relative transition-colors duration-200 ${location === '/about' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'hover:text-[hsl(145,63%,49%)]'}`}
               >
                 About
-                {location === '/about' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(196,100%,47%)]"></span>}
+                {location === '/about' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(145,63%,49%)]"></span>}
               </Link>
             </li>
             <li>
               <Link 
                 href="/menu" 
-                className={`block py-2 px-1 relative transition-colors duration-200 ${location === '/menu' ? 'text-[hsl(196,100%,47%)] font-semibold' : 'hover:text-[hsl(196,100%,47%)]'}`}
+                className={`block py-2 px-1 relative transition-colors duration-200 ${location === '/menu' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'hover:text-[hsl(145,63%,49%)]'}`}
               >
                 Menu
-                {location === '/menu' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(196,100%,47%)]"></span>}
+                {location === '/menu' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(145,63%,49%)]"></span>}
               </Link>
+            </li>
+            <li>
+              <a 
+                href="/#services" 
+                onClick={(e) => scrollToSection(e, 'services')}
+                className="block py-2 px-1 relative transition-colors duration-200 hover:text-[hsl(145,63%,49%)]"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/#testimonials" 
+                onClick={(e) => scrollToSection(e, 'testimonials')}
+                className="block py-2 px-1 relative transition-colors duration-200 hover:text-[hsl(145,63%,49%)]"
+              >
+                Testimonials
+              </a>
             </li>
             <li>
               <Link 
                 href="/contact" 
-                className={`block py-2 px-1 relative transition-colors duration-200 ${location === '/contact' ? 'text-[hsl(196,100%,47%)] font-semibold' : 'hover:text-[hsl(196,100%,47%)]'}`}
+                className={`block py-2 px-1 relative transition-colors duration-200 ${location === '/contact' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'hover:text-[hsl(145,63%,49%)]'}`}
               >
                 Contact
-                {location === '/contact' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(196,100%,47%)]"></span>}
+                {location === '/contact' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(145,63%,49%)]"></span>}
               </Link>
             </li>
             <li className="md:ml-4">
               <Link 
                 href="/contact" 
-                className="mt-4 md:mt-0 block py-2 px-6 bg-[hsl(3,92%,51%)] hover:bg-[hsl(3,92%,45%)] text-white font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
+                className="mt-4 md:mt-0 block py-2 px-6 bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 Order Now
               </Link>
