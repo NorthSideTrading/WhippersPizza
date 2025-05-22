@@ -63,7 +63,7 @@ const Home = () => {
       </section>
 
       {/* Specials Section */}
-      <section id="specials" className="py-16 bg-gray-50">
+      <section id="specials" className="reveal py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">What's Hot</span>
