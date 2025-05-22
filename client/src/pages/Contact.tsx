@@ -9,8 +9,8 @@ const Contact = () => {
         <meta name="description" content="Get in touch with Whippers Pizza in Augusta, Maine. Contact us for inquiries, feedback, or to place an order for pickup or delivery." />
       </Helmet>
 
-      {/* Page Header */}
-      <div className="bg-[#B71C1C] py-16 text-white">
+      {/* Modern Simple Header */}
+      <div className="bg-[#1B2A41] py-20 text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl max-w-2xl mx-auto">We'd love to hear from you! Get in touch with any questions or feedback.</p>
@@ -39,7 +39,7 @@ const Contact = () => {
                   <span className="font-semibold">Phone:</span>{' '}
                   <a 
                     href="tel:+12076233500" 
-                    className="text-[#B71C1C] hover:underline"
+                    className="text-[#2ECC71] hover:underline"
                   >
                     (207) 623-3500
                   </a>
@@ -48,7 +48,7 @@ const Contact = () => {
                   <span className="font-semibold">Email:</span>{' '}
                   <a 
                     href="mailto:whipperspizza@gmail.com" 
-                    className="text-[#B71C1C] hover:underline"
+                    className="text-[#2ECC71] hover:underline"
                   >
                     whipperspizza@gmail.com
                   </a>
@@ -68,8 +68,17 @@ const Contact = () => {
                 </ul>
               </div>
               
-              <div id="map-placeholder" style={{ height: 300, background: '#eee', textAlign: 'center', lineHeight: '300px', marginTop: 20 }}>
-                Google Map Embed for 97 Bangor St, Augusta ME Here
+              <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.3069598212954!2d-69.75731882414016!3d44.32205427111014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb203e45c99d24d%3A0x5d3b261161be39e4!2s97%20Bangor%20St%2C%20Augusta%2C%20ME%2004330%2C%20USA!5e0!3m2!1sen!2sus!4v1684861234567!5m2!1sen!2sus" 
+                  width="100%" 
+                  height="450" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Whippers Pizza Location"
+                ></iframe>
               </div>
             </div>
             
@@ -87,7 +96,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-[#FFF9C4] bg-opacity-30">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
           
