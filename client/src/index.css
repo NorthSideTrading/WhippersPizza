@@ -300,31 +300,7 @@ button[class*="bg-"]:active {
 }
 
 /* Scroll animations */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* Animation classes removed to fix display issues */
 
 /* Create staggered animations for lists/grids */
-.stagger-item {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease;
-}
-
-.stagger-item.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.stagger-item:nth-child(2) { transition-delay: 0.1s; }
-.stagger-item:nth-child(3) { transition-delay: 0.2s; }
-.stagger-item:nth-child(4) { transition-delay: 0.3s; }
-.stagger-item:nth-child(5) { transition-delay: 0.4s; }
-.stagger-item:nth-child(6) { transition-delay: 0.5s; }
+/* Staggered animation classes removed to fix display issues */
