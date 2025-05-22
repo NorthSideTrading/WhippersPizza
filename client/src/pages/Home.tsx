@@ -10,34 +10,49 @@ const Home = () => {
         <meta name="description" content="Whippers Pizza serves Augusta's best hometown pizza with fresh ingredients and authentic recipes. Order online or visit us today!" />
       </Helmet>
       
-      {/* Hero Section - Compact Modern Design */}
+      {/* Hero Section - Full-width Modern Design */}
       <section 
-        className="hero relative bg-cover bg-center h-[80vh]" 
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" }}
+        className="hero relative bg-cover bg-center min-h-screen" 
+        style={{ 
+          backgroundImage: "linear-gradient(to bottom right, rgba(27,42,65,0.9), rgba(27,42,65,0.7)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" 
+        }}
+        id="home"
       >
-        <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center relative z-10 text-center">
-          <span className="inline-block px-4 py-1 bg-white/10 backdrop-blur-md rounded-full text-white text-sm font-medium mb-4 border border-white/20 animate-fade-in">
+        <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center relative z-10 text-center min-h-screen">
+          <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white text-sm font-medium mb-6 border border-white/20 animate-fade-in">
             Augusta's Favorite Since 1983
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 tracking-tight leading-tight max-w-4xl mx-auto slide-up">
-            Handcrafted <span className="text-[hsl(36,100%,50%)]">Pizza</span> Made With Passion
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight max-w-4xl mx-auto slide-up">
+            Handcrafted <span className="text-[hsl(145,63%,49%)]">Pizza</span> Made With Passion
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto font-light slide-up">
+          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light slide-up">
             Family-owned for over 40 years, serving Augusta with homemade dough and signature sauce daily
           </p>
           <div className="flex flex-col sm:flex-row gap-4 slide-up">
             <Link 
               href="/menu" 
-              className="bg-[hsl(196,100%,47%)] text-white font-semibold py-3 px-6 rounded-full"
+              className="bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               View Our Menu
             </Link>
             <Link 
               href="/contact" 
-              className="bg-[hsl(3,92%,51%)] text-white font-semibold py-3 px-6 rounded-full"
+              className="bg-white hover:bg-white/90 text-[hsl(212,40%,18%)] font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Order Online
             </Link>
+          </div>
+          
+          {/* Scroll indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce">
+            <a href="#services" onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+            }}>
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -211,53 +226,53 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-10 bg-white">
+      <section id="services" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <span className="text-[hsl(196,100%,47%)] font-medium mb-1 block text-sm">Our Services</span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">How We Serve You</h2>
-            <p className="text-[hsl(220,13%,18%)]/70 max-w-xl mx-auto text-sm">Experience the best pizza service in Augusta with multiple ways to enjoy our fresh, homemade goodness</p>
+          <div className="text-center mb-12">
+            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block">OUR SERVICES</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[hsl(212,40%,18%)]">How We Serve You</h2>
+            <p className="text-[hsl(220,13%,18%)]/70 max-w-xl mx-auto">Experience the best pizza service in Augusta with multiple ways to enjoy our fresh, homemade goodness</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <div className="bg-white p-4 rounded-xl shadow-md text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 reveal">
-              <div className="w-12 h-12 bg-[hsl(196,100%,47%)]/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[hsl(196,100%,47%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white p-8 rounded-lg shadow-md text-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group">
+              <div className="w-16 h-16 bg-[hsl(212,40%,18%)]/5 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-500 group-hover:bg-[hsl(145,63%,49%)]/20">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[hsl(212,40%,18%)] transition-all duration-500 group-hover:text-[hsl(145,63%,49%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold mb-2">Dine In</h3>
-              <p className="text-[hsl(220,13%,18%)]/70 text-sm">Enjoy our cozy restaurant atmosphere with friends and family.</p>
+              <h3 className="text-xl font-bold mb-3 text-[hsl(212,40%,18%)] transition-all duration-300 group-hover:text-[hsl(145,63%,49%)]">Dine In</h3>
+              <p className="text-[hsl(220,13%,18%)]/70">Enjoy our cozy restaurant atmosphere with friends and family. Experience our pizzas fresh from the oven in our welcoming dining space.</p>
             </div>
             
-            <div className="bg-white p-4 rounded-xl shadow-md text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 reveal">
-              <div className="w-12 h-12 bg-[hsl(3,92%,51%)]/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[hsl(3,92%,51%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="bg-white p-8 rounded-lg shadow-md text-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group">
+              <div className="w-16 h-16 bg-[hsl(212,40%,18%)]/5 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-500 group-hover:bg-[hsl(145,63%,49%)]/20">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[hsl(212,40%,18%)] transition-all duration-500 group-hover:text-[hsl(145,63%,49%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold mb-2">Takeout</h3>
-              <p className="text-[hsl(220,13%,18%)]/70 text-sm">Call ahead or order online for convenient pickup.</p>
+              <h3 className="text-xl font-bold mb-3 text-[hsl(212,40%,18%)] transition-all duration-300 group-hover:text-[hsl(145,63%,49%)]">Takeout</h3>
+              <p className="text-[hsl(220,13%,18%)]/70">Call ahead or order online for convenient pickup. We'll have your order hot and ready when you arrive at our Bangor Street location.</p>
             </div>
             
-            <div className="bg-white p-4 rounded-xl shadow-md text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 reveal">
-              <div className="w-12 h-12 bg-[hsl(36,100%,50%)]/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[hsl(36,100%,50%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="bg-white p-8 rounded-lg shadow-md text-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group">
+              <div className="w-16 h-16 bg-[hsl(212,40%,18%)]/5 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-500 group-hover:bg-[hsl(145,63%,49%)]/20">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[hsl(212,40%,18%)] transition-all duration-500 group-hover:text-[hsl(145,63%,49%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold mb-2">Fast Delivery</h3>
-              <p className="text-[hsl(220,13%,18%)]/70 text-sm">We deliver throughout Augusta and surrounding areas.</p>
+              <h3 className="text-xl font-bold mb-3 text-[hsl(212,40%,18%)] transition-all duration-300 group-hover:text-[hsl(145,63%,49%)]">Fast Delivery</h3>
+              <p className="text-[hsl(220,13%,18%)]/70">We deliver throughout Augusta and surrounding areas. Hot and fresh pizza brought right to your door within our delivery zone.</p>
             </div>
           </div>
           
           <div className="text-center">
             <Link 
               href="/contact" 
-              className="inline-flex items-center bg-[hsl(3,92%,51%)] text-white font-semibold py-2 px-6 rounded-full text-sm"
+              className="inline-flex items-center bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Order Now
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
             </Link>
@@ -330,24 +345,27 @@ const Home = () => {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-10 bg-[hsl(210,33%,9%)] text-white">
+      <section id="testimonials" className="py-16 bg-[hsl(212,40%,18%)] text-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <span className="text-[hsl(36,100%,50%)] font-medium mb-1 block text-sm">Testimonials</span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-white">What Our Customers Say</h2>
-            <p className="text-white/70 max-w-xl mx-auto text-sm">Read what Augusta locals have to say about their favorite pizza spot</p>
+          <div className="text-center mb-12">
+            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block">TESTIMONIALS</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">What Our Customers Say</h2>
+            <p className="text-white/80 max-w-xl mx-auto">Read what Augusta locals have to say about their favorite pizza spot</p>
           </div>
           
           <div className="relative">
+            <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-16 h-16 bg-[hsl(145,63%,49%)]/10 rounded-full -z-10"></div>
+            <div className="absolute bottom-10 right-10 w-24 h-24 bg-[hsl(145,63%,49%)]/10 rounded-full -z-10"></div>
+            
             <TestimonialSlider />
           </div>
           
-          <div className="flex justify-center mt-6">
-            <div className="flex space-x-2">
-              <span className="w-2 h-2 bg-white/30 rounded-full"></span>
-              <span className="w-2 h-2 bg-white rounded-full"></span>
-              <span className="w-2 h-2 bg-white/30 rounded-full"></span>
-              <span className="w-2 h-2 bg-white/30 rounded-full"></span>
+          <div className="flex justify-center mt-8">
+            <div className="flex space-x-3">
+              <span className="w-3 h-3 bg-white/30 rounded-full transition-all duration-300 hover:bg-[hsl(145,63%,49%)] cursor-pointer"></span>
+              <span className="w-3 h-3 bg-[hsl(145,63%,49%)] rounded-full"></span>
+              <span className="w-3 h-3 bg-white/30 rounded-full transition-all duration-300 hover:bg-[hsl(145,63%,49%)] cursor-pointer"></span>
+              <span className="w-3 h-3 bg-white/30 rounded-full transition-all duration-300 hover:bg-[hsl(145,63%,49%)] cursor-pointer"></span>
             </div>
           </div>
         </div>
@@ -468,7 +486,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a 
                 href="tel:+12076233500" 
-                className="bg-white text-[hsl(196,100%,47%)] hover:bg-opacity-90 font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg text-sm"
+                className="bg-white text-[hsl(212,40%,18%)] hover:bg-opacity-90 font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg text-sm"
               >
                 Call Now
               </a>
