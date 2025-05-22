@@ -82,7 +82,7 @@ const ContactForm = () => {
         data-netlify="true" 
         netlify-honeypot="bot-field"
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6"
+        className="space-y-6 max-w-md mx-auto lg:mx-0"
       >
         <input type="hidden" name="form-name" value="contact" />
         <p className="hidden" style={{ display: 'none' }}>
@@ -102,7 +102,7 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your name" {...field} />
+                <Input placeholder="Your name" className="h-12 text-base" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -116,7 +116,7 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Your email" type="email" {...field} />
+                <Input placeholder="Your email" type="email" className="h-12 text-base" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -130,7 +130,7 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Phone (optional)</FormLabel>
               <FormControl>
-                <Input placeholder="Your phone number" type="tel" {...field} />
+                <Input placeholder="Your phone number" type="tel" className="h-12 text-base" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -146,7 +146,7 @@ const ContactForm = () => {
               <FormControl>
                 <Textarea 
                   placeholder="How can we help you?" 
-                  className="h-32"
+                  className="h-32 text-base p-4"
                   {...field} 
                 />
               </FormControl>
@@ -158,7 +158,7 @@ const ContactForm = () => {
         <Button 
           type="submit" 
           disabled={isSubmitting}
-          className="bg-[#B71C1C] hover:bg-opacity-90 text-white w-full md:w-auto"
+          className="bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white w-full md:w-auto py-6 text-lg font-medium rounded-lg"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </Button>
