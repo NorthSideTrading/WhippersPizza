@@ -189,7 +189,7 @@ const Menu = () => {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-2">10" Gluten Free Crust</h3>
               <p className="text-gray-700 mb-3">Our special gluten free crust with cheese.</p>
-              <p className="text-[#B71C1C] font-bold mb-2">$13.99</p>
+              <p className="text-[hsl(145,63%,49%)] font-bold mb-2">$13.99</p>
               <p className="text-sm text-gray-500">Toppings priced as regular toppings.</p>
             </div>
           </div>
@@ -212,7 +212,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Meatball</h3>
                   <p className="text-gray-700 mb-2">Homemade meatballs, provolone cheese & marinara sauce.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$9.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$9.99</span>
               </div>
             </div>
             
@@ -222,7 +222,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Steak & Cheese</h3>
                   <p className="text-gray-700 mb-2">Shaved steak with American cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$9.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$9.99</span>
               </div>
             </div>
             
@@ -232,7 +232,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Buffalo Chicken</h3>
                   <p className="text-gray-700 mb-2">Grilled chicken, American cheese & our Buffalo sauce.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$9.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$9.99</span>
               </div>
             </div>
             
@@ -242,7 +242,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">BBQ Chicken</h3>
                   <p className="text-gray-700 mb-2">Grilled chicken, American cheese & BBQ sauce.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$9.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$9.99</span>
               </div>
             </div>
             
@@ -252,7 +252,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Chicken Parmesan</h3>
                   <p className="text-gray-700 mb-2">Breaded chicken, provolone cheese & marinara sauce.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$9.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$9.99</span>
               </div>
             </div>
             
@@ -262,7 +262,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Ham & Cheese</h3>
                   <p className="text-gray-700 mb-2">Ham with American cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$9.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$9.99</span>
               </div>
             </div>
           </div>
@@ -339,7 +339,7 @@ const Menu = () => {
           </div>
           
           <div className="mt-8 text-center">
-            <p className="font-bold text-lg text-[#B71C1C]">Cold Sandwiches starting at: $9.99</p>
+            <p className="font-bold text-lg text-[hsl(145,63%,49%)]">Cold Sandwiches starting at: $9.99</p>
             <p className="text-sm text-gray-600 mt-2">Price varies depending on meat selection and additional toppings</p>
           </div>
         </div>
@@ -361,7 +361,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Steak & Cheese</h3>
                   <p className="text-gray-700 mb-2">Shaved steak & American cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$11.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$11.99</span>
               </div>
             </div>
             
@@ -371,7 +371,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Ham & Cheese</h3>
                   <p className="text-gray-700 mb-2">Ham & American cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$11.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$11.99</span>
               </div>
             </div>
             
@@ -381,7 +381,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Italian</h3>
                   <p className="text-gray-700 mb-2">Ham, salami, pepperoni & provolone cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$11.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$11.99</span>
               </div>
             </div>
             
@@ -391,7 +391,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Veggie</h3>
                   <p className="text-gray-700 mb-2">Mushrooms, onions, green peppers, black olives & American cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$11.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$11.99</span>
               </div>
             </div>
             
@@ -401,7 +401,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Cheese</h3>
                   <p className="text-gray-700 mb-2">Ricotta & mozzarella cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$9.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$9.99</span>
               </div>
             </div>
             
@@ -411,7 +411,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Whipper's Calzone</h3>
                   <p className="text-gray-700 mb-2">Pepperoni, Hamburg, sausage, mushrooms, onions, green peppers & provolone cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$14.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$14.99</span>
               </div>
             </div>
           </div>
@@ -430,7 +430,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Garden Salad</h3>
                   <p className="text-gray-700 mb-2">Lettuce, tomatoes, onions, green peppers, black olives & croutons.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$7.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$7.99</span>
               </div>
               <div className="text-sm text-gray-500">Add grilled chicken +$2.50</div>
             </div>
@@ -441,7 +441,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Caesar Salad</h3>
                   <p className="text-gray-700 mb-2">Romaine lettuce, croutons, parmesan cheese & Caesar dressing.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$7.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$7.99</span>
               </div>
               <div className="text-sm text-gray-500">Add grilled chicken +$2.50</div>
             </div>
@@ -452,7 +452,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Chef Salad</h3>
                   <p className="text-gray-700 mb-2">Garden salad topped with ham, turkey & American cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$9.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$9.99</span>
               </div>
             </div>
             
@@ -462,7 +462,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Antipasto Salad</h3>
                   <p className="text-gray-700 mb-2">Garden salad topped with ham, salami, pepperoni & provolone cheese.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$9.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$9.99</span>
               </div>
             </div>
           </div>
@@ -481,7 +481,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">French Fries</h3>
                   <p className="text-gray-700 mb-2">Crispy golden fries served hot and fresh.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$4.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$4.99</span>
               </div>
             </div>
             
@@ -491,7 +491,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Onion Rings</h3>
                   <p className="text-gray-700 mb-2">Crispy battered onion rings.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$5.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$5.99</span>
               </div>
             </div>
             
@@ -501,7 +501,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Mozzarella Sticks</h3>
                   <p className="text-gray-700 mb-2">Breaded mozzarella sticks served with marinara sauce.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$6.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$6.99</span>
               </div>
             </div>
             
@@ -511,7 +511,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Chicken Tenders</h3>
                   <p className="text-gray-700 mb-2">Breaded chicken tenders served with your choice of sauce.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$8.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$8.99</span>
               </div>
             </div>
             
@@ -521,7 +521,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Wings</h3>
                   <p className="text-gray-700 mb-2">Bone-in wings with your choice of sauce: Mild, Hot, BBQ, Teriyaki.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$12.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$12.99</span>
               </div>
             </div>
             
@@ -531,7 +531,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Garlic Bread</h3>
                   <p className="text-gray-700 mb-2">Toasted Italian bread with garlic butter.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$4.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$4.99</span>
               </div>
               <div className="text-sm text-gray-500">Add cheese +$1.00</div>
             </div>
@@ -551,7 +551,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Canned Soda</h3>
                   <p className="text-gray-700 mb-2">Coca-Cola, Diet Coke, Sprite, Fanta, Dr. Pepper.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$1.50</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$1.50</span>
               </div>
             </div>
             
@@ -561,7 +561,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">20oz Bottles</h3>
                   <p className="text-gray-700 mb-2">Coca-Cola, Diet Coke, Sprite, Fanta, Dasani Water.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$2.50</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$2.50</span>
               </div>
             </div>
             
@@ -571,7 +571,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">2-Liter Bottles</h3>
                   <p className="text-gray-700 mb-2">Coca-Cola, Diet Coke, Sprite, Orange Soda.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$3.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$3.99</span>
               </div>
             </div>
             
@@ -581,7 +581,7 @@ const Menu = () => {
                   <h3 className="text-xl font-bold mb-2">Specialty Drinks</h3>
                   <p className="text-gray-700 mb-2">Bottled Iced Tea, Energy Drinks, Bottled Juices.</p>
                 </div>
-                <span className="text-[#B71C1C] font-bold">$2.99</span>
+                <span className="text-[hsl(145,63%,49%)] font-bold">$2.99</span>
               </div>
             </div>
           </div>
