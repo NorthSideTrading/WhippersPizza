@@ -109,10 +109,10 @@ const Home = () => {
                   Popular
                 </div>
               </div>
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-xl font-bold text-[hsl(212,40%,18%)]">The Bangor Street Beast</h3>
-                  <span className="text-[hsl(145,63%,49%)] font-bold">$17.99</span>
+              <div className="p-5 sm:p-6">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-0 mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-[hsl(212,40%,18%)]">The Bangor Street Beast</h3>
+                  <span className="text-[hsl(145,63%,49%)] font-bold text-lg">$17.99</span>
                 </div>
                 <div className="flex items-center text-yellow-400 mb-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -132,7 +132,7 @@ const Home = () => {
                   </svg>
                   <span className="ml-2 text-sm text-gray-600">(128)</span>
                 </div>
-                <p className="text-gray-600 mb-4">Our signature creation loaded with pepperoni, sausage, bacon, ham, and extra cheese.</p>
+                <p className="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">Our signature creation loaded with pepperoni, sausage, bacon, ham, and extra cheese.</p>
                 <button className="w-full bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
                   View Details
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -154,10 +154,10 @@ const Home = () => {
                   Best Value
                 </div>
               </div>
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-xl font-bold text-[hsl(212,40%,18%)]">Family Meal Deal</h3>
-                  <span className="text-[hsl(145,63%,49%)] font-bold">$29.99</span>
+              <div className="p-5 sm:p-6">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-0 mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-[hsl(212,40%,18%)]">Family Meal Deal</h3>
+                  <span className="text-[hsl(145,63%,49%)] font-bold text-lg">$29.99</span>
                 </div>
                 <div className="flex items-center text-yellow-400 mb-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -177,7 +177,7 @@ const Home = () => {
                   </svg>
                   <span className="ml-2 text-sm text-gray-600">(86)</span>
                 </div>
-                <p className="text-gray-600 mb-4">One large 2-topping pizza, a dozen wings, garlic knots, and 2-liter soda. Perfect for feeding the whole family!</p>
+                <p className="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">One large 2-topping pizza, a dozen wings, garlic knots, and 2-liter soda. Perfect for feeding the whole family!</p>
                 <button className="w-full bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
                   View Details
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -199,10 +199,10 @@ const Home = () => {
                   Veggie
                 </div>
               </div>
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-xl font-bold text-[hsl(212,40%,18%)]">Garden Veggie Delight</h3>
-                  <span className="text-[hsl(145,63%,49%)] font-bold">$15.99</span>
+              <div className="p-5 sm:p-6">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-0 mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-[hsl(212,40%,18%)]">Garden Veggie Delight</h3>
+                  <span className="text-[hsl(145,63%,49%)] font-bold text-lg">$15.99</span>
                 </div>
                 <div className="flex items-center text-yellow-400 mb-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -222,7 +222,7 @@ const Home = () => {
                   </svg>
                   <span className="ml-2 text-sm text-gray-600">(94)</span>
                 </div>
-                <p className="text-gray-600 mb-4">Fresh seasonal vegetables, roasted bell peppers, olives, and mushrooms on our signature herb-infused sauce.</p>
+                <p className="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">Fresh seasonal vegetables, roasted bell peppers, olives, and mushrooms on our signature herb-infused sauce.</p>
                 <button className="w-full bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
                   View Details
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
