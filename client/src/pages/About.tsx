@@ -27,7 +27,7 @@ const About = () => {
       </div>
 
       {/* Our Story Section */}
-      <section className="py-16 bg-white">
+      <section className="reveal py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
@@ -49,7 +49,7 @@ const About = () => {
       </section>
 
       {/* Mission & Values Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="reveal slide-left py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">What Drives Us</span>

@@ -44,7 +44,7 @@ const Menu = () => {
       </div>
 
       {/* Pizzas Section */}
-      <section id="pizzas" className="py-16 bg-white">
+      <section id="pizzas" className="reveal py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="mb-10">
             <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Our Specialty</span>
