@@ -30,15 +30,15 @@ const Menu = () => {
       <div className="sticky top-[72px] z-20 bg-white shadow-md">
         <div className="container mx-auto px-4 py-6">
           <p className="text-center mb-6 text-gray-700 max-w-3xl mx-auto">All our pizzas feature homemade dough and sauce, made fresh daily! Discover our delicious pizzas, classic sandwiches, tasty sides, and refreshing drinks.</p>
-          <ul className="flex flex-wrap justify-center gap-2 md:gap-4">
-            <li><a href="#pizzas" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Pizza</a></li>
-            <li><a href="#gluten-free" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Gluten Free</a></li>
-            <li><a href="#calzones" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Calzones</a></li>
-            <li><a href="#hot-sandwiches" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Hot Sandwiches</a></li>
-            <li><a href="#cold-sandwiches" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Cold Sandwiches</a></li>
-            <li><a href="#salads" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Salads</a></li>
-            <li><a href="#sides" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Sides</a></li>
-            <li><a href="#drinks" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Drinks</a></li>
+          <ul className="flex flex-wrap justify-center gap-3 md:gap-4 overflow-x-auto pb-2 -mx-1 px-1">
+            <li><a href="#pizzas" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)] block text-center whitespace-nowrap">Pizza</a></li>
+            <li><a href="#gluten-free" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)] block text-center whitespace-nowrap">Gluten Free</a></li>
+            <li><a href="#calzones" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)] block text-center whitespace-nowrap">Calzones</a></li>
+            <li><a href="#hot-sandwiches" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)] block text-center whitespace-nowrap">Hot Sandwiches</a></li>
+            <li><a href="#cold-sandwiches" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)] block text-center whitespace-nowrap">Cold Sandwiches</a></li>
+            <li><a href="#salads" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)] block text-center whitespace-nowrap">Salads</a></li>
+            <li><a href="#sides" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)] block text-center whitespace-nowrap">Sides</a></li>
+            <li><a href="#drinks" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)] block text-center whitespace-nowrap">Drinks</a></li>
           </ul>
         </div>
       </div>

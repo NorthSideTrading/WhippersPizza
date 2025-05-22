@@ -66,7 +66,7 @@ const Footer = () => {
           {/* Hours */}
           <div className="mb-8 md:mb-0 md:w-1/3">
             <h3 className="text-xl font-bold mb-4 text-[hsl(145,63%,49%)]">Hours</h3>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-2 text-sm sm:text-base">
               <div className="font-semibold">Monday:</div>
               <div>11:00 AM - 9:00 PM</div>
               <div className="font-semibold">Tuesday:</div>
