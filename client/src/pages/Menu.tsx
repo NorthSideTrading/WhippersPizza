@@ -184,7 +184,7 @@ const Menu = () => {
       </section>
       
       {/* Gluten Free Pizza Section */}
-      <section id="gluten-free" className="py-16 bg-gray-50">
+      <section id="gluten-free" className="reveal slide-right py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="mb-10">
             <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Special Diet</span>
@@ -204,7 +204,7 @@ const Menu = () => {
       </section>
 
       {/* Hot Sandwiches Section */}
-      <section id="hot-sandwiches" className="py-16 bg-gray-50">
+      <section id="hot-sandwiches" className="reveal py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="mb-10">
             <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Tasty Options</span>
@@ -277,7 +277,7 @@ const Menu = () => {
       </section>
       
       {/* Cold Sandwiches Section */}
-      <section id="cold-sandwiches" className="py-16 bg-white">
+      <section id="cold-sandwiches" className="reveal slide-left py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="mb-10">
             <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Customize It</span>
@@ -353,7 +353,7 @@ const Menu = () => {
       </section>
       
       {/* Calzones Section */}
-      <section id="calzones" className="py-16 bg-white">
+      <section id="calzones" className="reveal py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="mb-10">
             <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Folded Goodness</span>
