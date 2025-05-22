@@ -12,12 +12,17 @@ const Home = () => {
       
       {/* Hero Section - Full-width Modern Design */}
       <section 
-        className="hero relative bg-cover bg-center min-h-screen" 
-        style={{ 
-          backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" 
-        }}
+        className="hero relative min-h-screen" 
         id="home"
       >
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+            alt="Pizza background" 
+            className="w-full h-full object-cover"
+          />
+          {/* No overlay for natural pizza colors */}
+        </div>
         <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center relative z-10 text-center min-h-screen">
           <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white text-sm font-medium mb-6 border border-white/20 animate-fade-in">
             Augusta's Favorite Since 1983
