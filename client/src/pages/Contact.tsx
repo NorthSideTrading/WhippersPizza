@@ -37,8 +37,8 @@ const Contact = () => {
               <div className="mb-8">
                 <h3 className="text-xl font-bold mb-2">Address</h3>
                 <address className="not-italic text-gray-700">
-                  97 Bangor St<br />
-                  Augusta, ME 04330
+                  9 Bangor St<br />
+                  Augusta, ME 04330-4701
                 </address>
               </div>
               
@@ -47,10 +47,10 @@ const Contact = () => {
                 <p className="mb-2">
                   <span className="font-semibold">Phone:</span>{' '}
                   <a 
-                    href="tel:+12076233500" 
+                    href="tel:+12076221471" 
                     className="text-[#2ECC71] hover:underline"
                   >
-                    (207) 623-3500
+                    (207) 622-1471
                   </a>
                 </p>
                 <p>

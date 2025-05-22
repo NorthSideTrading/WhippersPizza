@@ -13,7 +13,7 @@ const Footer = () => {
       {/* Map Section */}
       <div className="w-full h-[300px] relative">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.307218860361!2d-69.75731882381578!3d44.32205427111014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb203e465b9a03f%3A0xf5b6a1eb59df917a!2s97%20Bangor%20St%2C%20Augusta%2C%20ME%2004330!5e0!3m2!1sen!2sus!4v1684861798971!5m2!1sen!2sus" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.3018714249485!2d-69.75685432381578!3d44.32177827110995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb202b22ae129c1%3A0x3823da35730a8bb4!2s9%20Bangor%20St%2C%20Augusta%2C%20ME%2004330!5e0!3m2!1sen!2sus!4v1689981234567!5m2!1sen!2sus" 
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 
@@ -36,18 +36,18 @@ const Footer = () => {
               className="h-28 w-auto mb-6" 
             />
             <address className="not-italic mb-4 text-white">
-              97 Bangor St<br />
-              Augusta, ME 04330
+              9 Bangor St<br />
+              Augusta, ME 04330-4701
             </address>
             <p className="mb-2">
               <a 
-                href="tel:+12076233500" 
+                href="tel:+12076221471" 
                 className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200 flex items-center"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                (207) 623-3500
+                (207) 622-1471
               </a>
             </p>
             <p>
@@ -192,12 +192,12 @@ const Footer = () => {
           "image": ["images/placeholder-hero-pizza.jpg"],
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "97 Bangor St",
+            "streetAddress": "9 Bangor St",
             "addressLocality": "Augusta",
             "addressRegion": "ME",
-            "postalCode": "04330"
+            "postalCode": "04330-4701"
           },
-          "telephone": "+1-207-623-3500",
+          "telephone": "+1-207-622-1471",
           "email": "whipperspizza@gmail.com",
           "servesCuisine": "Pizza, Sandwiches",
           "priceRange": "$",
