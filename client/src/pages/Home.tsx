@@ -14,7 +14,7 @@ const Home = () => {
       <section 
         className="hero relative bg-cover bg-center min-h-screen" 
         style={{ 
-          backgroundImage: "linear-gradient(to bottom right, rgba(27,42,65,0.9), rgba(27,42,65,0.7)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" 
+          backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" 
         }}
         id="home"
       >
