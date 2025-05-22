@@ -46,7 +46,7 @@ const Header = () => {
     <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg py-3' : 'bg-white shadow-md py-4'}`}>
       <nav aria-label="Main" className="container mx-auto px-4 flex flex-wrap items-center justify-between">
         <Link href="/" className="flex items-center">
-          <img src="/attached_assets/image_1747933098636.png" alt="Whippers Pizza Logo" className="h-14 w-auto" />
+          <img src="https://i.imgur.com/2UOfOEE.png" alt="Whippers Pizza Logo" className="h-14 w-auto" />
         </Link>
         
         <button 
