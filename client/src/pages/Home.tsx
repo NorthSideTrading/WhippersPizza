@@ -96,7 +96,7 @@ const Home = () => {
             <p className="text-[hsl(220,13%,18%)]/70 max-w-2xl mx-auto mt-6 text-lg">Experience our most popular dishes crafted with fresh ingredients and our secret family recipes</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-2 sm:px-0">
             <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group reveal slide-left">
               <div className="relative overflow-hidden">
                 <img 

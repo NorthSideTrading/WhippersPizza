@@ -85,15 +85,15 @@ const ContactForm = () => {
         className="space-y-6 max-w-md mx-auto lg:mx-0"
       >
         <input type="hidden" name="form-name" value="contact" />
-        <p className="hidden" style={{ display: 'none' }}>
+        <div className="hidden">
           <label>
             Don't fill this out if you're human: 
             <input 
-              name="bot-field" 
-              {...form.register('botField')}
+              id="bot-field-input"
+              onChange={(e) => form.setValue('botField', e.target.value)}
             />
           </label>
-        </p>
+        </div>
 
         <FormField
           control={form.control}
