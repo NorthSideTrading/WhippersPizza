@@ -9,7 +9,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-[#333] text-[#FAFAFA] py-12">
+    <footer className="bg-[#1B2A41] text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -21,7 +21,7 @@ const Footer = () => {
             <p className="mb-4">
               <a 
                 href="tel:+12076233500" 
-                className="hover:text-[#8BC34A] transition-colors duration-200"
+                className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200"
               >
                 (207) 623-3500
               </a>
@@ -29,7 +29,7 @@ const Footer = () => {
             <p>
               <a 
                 href="mailto:whipperspizza@gmail.com" 
-                className="hover:text-[#8BC34A] transition-colors duration-200"
+                className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200"
               >
                 whipperspizza@gmail.com
               </a>
@@ -57,21 +57,21 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook" 
-                className="text-[#FAFAFA] hover:text-[#8BC34A] transition-colors duration-200"
+                className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200"
               >
                 <span className="text-2xl">Facebook</span>
               </a>
               <a 
                 href="#" 
                 aria-label="Instagram" 
-                className="text-[#FAFAFA] hover:text-[#8BC34A] transition-colors duration-200"
+                className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200"
               >
                 <span className="text-2xl">[IG]</span>
               </a>
               <a 
                 href="#" 
                 aria-label="Twitter" 
-                className="text-[#FAFAFA] hover:text-[#8BC34A] transition-colors duration-200"
+                className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200"
               >
                 <span className="text-2xl">[TW]</span>
               </a>
@@ -81,7 +81,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     href="/" 
-                    className="hover:text-[#8BC34A] transition-colors duration-200"
+                    className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200"
                   >
                     Home
                   </Link>
@@ -89,7 +89,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     href="/about" 
-                    className="hover:text-[#8BC34A] transition-colors duration-200"
+                    className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200"
                   >
                     About
                   </Link>
@@ -97,7 +97,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     href="/menu" 
-                    className="hover:text-[#8BC34A] transition-colors duration-200"
+                    className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200"
                   >
                     Menu
                   </Link>
@@ -105,7 +105,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     href="/contact" 
-                    className="hover:text-[#8BC34A] transition-colors duration-200"
+                    className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200"
                   >
                     Contact
                   </Link>
