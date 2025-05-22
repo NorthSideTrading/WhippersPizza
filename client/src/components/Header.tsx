@@ -45,8 +45,8 @@ const Header = () => {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg py-3' : 'bg-white shadow-md py-4'}`}>
       <nav aria-label="Main" className="container mx-auto px-4 flex flex-wrap items-center justify-between">
-        <Link href="/" className="text-2xl font-bold text-[hsl(212,40%,18%)] hover:text-[hsl(145,63%,49%)] transition-colors">
-          Whippers Pizza
+        <Link href="/" className="flex items-center">
+          <img src="/attached_assets/image_1747933098636.png" alt="Whippers Pizza Logo" className="h-14 w-auto" />
         </Link>
         
         <button 
