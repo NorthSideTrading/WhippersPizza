@@ -9,10 +9,13 @@ const About = () => {
       </Helmet>
 
       {/* Page Header */}
-      <div className="bg-[#B71C1C] py-16 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-          <p className="text-xl max-w-2xl mx-auto">Our story of passion, tradition, and the love for authentic pizza.</p>
+      <div className="bg-[hsl(212,40%,18%)] bg-opacity-95 py-24 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-pattern opacity-10"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Our Heritage</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">About Us</h1>
+          <p className="text-xl max-w-2xl mx-auto text-white/80">Our story of passion, tradition, and the love for authentic pizza since 1983.</p>
+          <div className="w-24 h-1 bg-[hsl(145,63%,49%)] mx-auto mt-8"></div>
         </div>
       </div>
 
@@ -39,39 +42,43 @@ const About = () => {
       </section>
 
       {/* Mission & Values Section */}
-      <section className="py-16 bg-[#FFF9C4] bg-opacity-50">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Mission & Values</h2>
+          <div className="text-center mb-16">
+            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">What Drives Us</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[hsl(212,40%,18%)]">Our Mission & Values</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">The principles that have guided our business for over four decades and built our reputation in Augusta.</p>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-[#B71C1C] text-white w-12 h-12 flex items-center justify-center rounded-full mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="bg-[hsl(145,63%,49%)]/10 text-[hsl(145,63%,49%)] w-16 h-16 flex items-center justify-center rounded-full mb-6 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Quality Ingredients</h3>
-              <p className="text-gray-700">Our mission is to continue the tradition of providing Augusta with high-quality, delicious food made with care. We make our dough fresh daily and prepare our signature sauce in-house, ensuring every bite delivers authentic flavor.</p>
+              <h3 className="text-xl font-bold mb-4 text-[hsl(212,40%,18%)] text-center">Quality Ingredients</h3>
+              <p className="text-gray-600 text-center">Our mission is to continue the tradition of providing Augusta with high-quality, delicious food made with care. We make our dough fresh daily and prepare our signature sauce in-house, ensuring every bite delivers authentic flavor.</p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-[#B71C1C] text-white w-12 h-12 flex items-center justify-center rounded-full mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="bg-[hsl(145,63%,49%)]/10 text-[hsl(145,63%,49%)] w-16 h-16 flex items-center justify-center rounded-full mb-6 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Family Values</h3>
-              <p className="text-gray-700">We believe in the importance of family, tradition, and supporting our local patrons who have made us a landmark for decades. Our family-run business brings a personal touch to every order.</p>
+              <h3 className="text-xl font-bold mb-4 text-[hsl(212,40%,18%)] text-center">Family Values</h3>
+              <p className="text-gray-600 text-center">We believe in the importance of family, tradition, and supporting our local patrons who have made us a landmark for decades. Our family-run business brings a personal touch to every order.</p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-[#B71C1C] text-white w-12 h-12 flex items-center justify-center rounded-full mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="bg-white p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="bg-[hsl(145,63%,49%)]/10 text-[hsl(145,63%,49%)] w-16 h-16 flex items-center justify-center rounded-full mb-6 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Community Service</h3>
-              <p className="text-gray-700">Augusta isn't just where our restaurant is located—it's our home. For over 40 years, we've been committed to serving our community with delicious food at a great price, making us a local landmark.</p>
+              <h3 className="text-xl font-bold mb-4 text-[hsl(212,40%,18%)] text-center">Community Service</h3>
+              <p className="text-gray-600 text-center">Augusta isn't just where our restaurant is located—it's our home. For over 40 years, we've been committed to serving our community with delicious food at a great price, making us a local landmark.</p>
             </div>
           </div>
         </div>

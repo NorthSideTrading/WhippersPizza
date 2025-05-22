@@ -9,26 +9,29 @@ const Menu = () => {
       </Helmet>
 
       {/* Page Header */}
-      <div className="bg-[#B71C1C] py-16 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Menu</h1>
-          <p className="text-xl max-w-2xl mx-auto">Hand-crafted with love and the finest ingredients</p>
+      <div className="bg-[hsl(212,40%,18%)] bg-opacity-95 py-24 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-pattern opacity-10"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Delicious Options</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Menu</h1>
+          <p className="text-xl max-w-2xl mx-auto text-white/80">Hand-crafted with love and the finest ingredients since 1983</p>
+          <div className="w-24 h-1 bg-[hsl(145,63%,49%)] mx-auto mt-8"></div>
         </div>
       </div>
 
       {/* Menu Navigation */}
       <div className="sticky top-[72px] z-20 bg-white shadow-md">
-        <div className="container mx-auto px-4 py-4">
-          <p className="text-center mb-4">All our pizzas feature homemade dough and sauce, made fresh daily! Discover our delicious pizzas, classic sandwiches, tasty sides, and refreshing drinks.</p>
-          <ul className="flex flex-wrap justify-center space-x-2 md:space-x-8">
-            <li><a href="#pizzas" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Pizza</a></li>
-            <li><a href="#gluten-free" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Gluten Free</a></li>
-            <li><a href="#calzones" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Calzones</a></li>
-            <li><a href="#hot-sandwiches" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Hot Sandwiches</a></li>
-            <li><a href="#cold-sandwiches" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Cold Sandwiches</a></li>
-            <li><a href="#salads" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Salads</a></li>
-            <li><a href="#sides" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Sides</a></li>
-            <li><a href="#drinks" className="px-3 py-2 text-[#B71C1C] font-bold hover:underline">Drinks</a></li>
+        <div className="container mx-auto px-4 py-6">
+          <p className="text-center mb-6 text-gray-700 max-w-3xl mx-auto">All our pizzas feature homemade dough and sauce, made fresh daily! Discover our delicious pizzas, classic sandwiches, tasty sides, and refreshing drinks.</p>
+          <ul className="flex flex-wrap justify-center gap-2 md:gap-4">
+            <li><a href="#pizzas" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Pizza</a></li>
+            <li><a href="#gluten-free" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Gluten Free</a></li>
+            <li><a href="#calzones" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Calzones</a></li>
+            <li><a href="#hot-sandwiches" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Hot Sandwiches</a></li>
+            <li><a href="#cold-sandwiches" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Cold Sandwiches</a></li>
+            <li><a href="#salads" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Salads</a></li>
+            <li><a href="#sides" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Sides</a></li>
+            <li><a href="#drinks" className="px-4 py-2 text-[hsl(212,40%,18%)] font-medium hover:text-[hsl(145,63%,49%)] transition-colors duration-200 border-b-2 border-transparent hover:border-[hsl(145,63%,49%)]">Drinks</a></li>
           </ul>
         </div>
       </div>
@@ -36,7 +39,11 @@ const Menu = () => {
       {/* Pizzas Section */}
       <section id="pizzas" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Pizza</h2>
+          <div className="mb-10">
+            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Our Specialty</span>
+            <h2 className="text-3xl font-bold mb-4 text-[hsl(212,40%,18%)]">Pizza</h2>
+            <div className="w-16 h-1 bg-[hsl(145,63%,49%)] mb-8"></div>
+          </div>
           
           <div className="mb-10">
             <h3 className="text-2xl font-bold mb-4">Cheese Pizza</h3>
@@ -172,7 +179,11 @@ const Menu = () => {
       {/* Gluten Free Pizza Section */}
       <section id="gluten-free" className="py-16 bg-[#FFF9C4] bg-opacity-30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 border-b-2 border-[#8BC34A] pb-2">Gluten Free Pizza</h2>
+          <div className="mb-10">
+            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Special Diet</span>
+            <h2 className="text-3xl font-bold mb-4 text-[hsl(212,40%,18%)]">Gluten Free Pizza</h2>
+            <div className="w-16 h-1 bg-[hsl(145,63%,49%)] mb-8"></div>
+          </div>
           
           <div className="mb-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
