@@ -77,50 +77,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Meet the Team Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Meet the Team</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" 
-                alt="Marco Romano - Head Chef" 
-                className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
-                loading="lazy"
-              />
-              <h3 className="text-xl font-bold">Marco Romano</h3>
-              <p className="text-[#B71C1C] font-medium mb-2">Head Chef</p>
-              <p className="text-gray-700">Marco learned pizza-making from his father Tony and brings 15 years of culinary expertise to every pie he creates.</p>
-            </div>
-            
-            <div className="text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" 
-                alt="Sofia Romano - Manager" 
-                className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
-                loading="lazy"
-              />
-              <h3 className="text-xl font-bold">Sofia Romano</h3>
-              <p className="text-[#B71C1C] font-medium mb-2">Manager</p>
-              <p className="text-gray-700">Sofia oversees daily operations and is dedicated to maintaining the warm, family atmosphere Whippers is known for.</p>
-            </div>
-            
-            <div className="text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" 
-                alt="James Mitchell - Sourcing Director" 
-                className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
-                loading="lazy"
-              />
-              <h3 className="text-xl font-bold">James Mitchell</h3>
-              <p className="text-[#B71C1C] font-medium mb-2">Sourcing Director</p>
-              <p className="text-gray-700">James works with local farms and suppliers to ensure we always have the freshest, highest-quality ingredients.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </>
   );
 };
