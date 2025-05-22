@@ -1,8 +1,30 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'wouter';
 import TestimonialSlider from '@/components/TestimonialSlider';
+import { useEffect } from 'react';
 
 const Home = () => {
+  // Initialize scroll reveal effect
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target); // Animate once
+          }
+        });
+      },
+      { threshold: 0.15 } // Fire when 15% of element is visible
+    );
+    
+    // Observe all reveal elements
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    
+    // Cleanup
+    return () => io.disconnect();
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -63,7 +85,7 @@ const Home = () => {
       </section>
 
       {/* Specials Section */}
-      <section id="specials" className="py-16 bg-gray-50">
+      <section id="specials" className="reveal py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">What's Hot</span>

@@ -300,7 +300,35 @@ button[class*="bg-"]:active {
 }
 
 /* Scroll animations */
-/* Animation classes removed to fix display issues */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide variants */
+.slide-left.reveal { 
+  transform: translateX(-40px); 
+}
+
+.slide-right.reveal { 
+  transform: translateX(40px); 
+}
+
+/* Accessibility: honor reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.in-view {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
 
 /* Create staggered animations for lists/grids */
 /* Staggered animation classes removed to fix display issues */
