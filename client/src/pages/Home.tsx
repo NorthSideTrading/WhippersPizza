@@ -58,78 +58,79 @@ const Home = () => {
       </section>
 
       {/* Specials Section */}
-      <section id="specials" className="py-12 bg-[hsl(220,14%,96%)]">
+      <section id="specials" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <span className="text-[hsl(196,100%,47%)] font-medium mb-2 block">What's Hot</span>
-            <h2 className="text-3xl font-bold mb-3">Today's Specials</h2>
-            <p className="text-[hsl(220,13%,18%)]/70 max-w-xl mx-auto">Experience our most popular dishes crafted with fresh ingredients and our secret family recipes</p>
+          <div className="text-center mb-12">
+            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">What's Hot</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[hsl(212,40%,18%)] relative inline-block">
+              Today's Specials
+              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[hsl(145,63%,49%)]"></span>
+            </h2>
+            <p className="text-[hsl(220,13%,18%)]/70 max-w-2xl mx-auto mt-6 text-lg">Experience our most popular dishes crafted with fresh ingredients and our secret family recipes</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl stagger-item">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
               <div className="relative overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                   alt="The Bangor Street Beast Pizza" 
-                  className="w-full h-48 object-cover transition-transform duration-700 hover:scale-110"
+                  className="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute top-3 right-3 bg-[hsl(3,92%,51%)] text-white text-xs font-bold px-2 py-1 rounded-full">
+                <div className="absolute top-4 right-4 bg-[hsl(145,63%,49%)] text-white text-xs font-bold px-3 py-1.5 rounded-full">
                   Popular
                 </div>
               </div>
-              <div className="p-4">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-lg font-bold">The Bangor Street Beast</h3>
-                  <span className="text-[hsl(3,92%,51%)] font-bold">$17.99</span>
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className="text-xl font-bold text-[hsl(212,40%,18%)]">The Bangor Street Beast</h3>
+                  <span className="text-[hsl(145,63%,49%)] font-bold">$17.99</span>
                 </div>
-                <div className="flex items-center text-yellow-400 mb-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                <div className="flex items-center text-yellow-400 mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
+                  <span className="ml-2 text-sm text-gray-600">(128)</span>
                 </div>
-                <p className="text-[hsl(220,13%,18%)]/70 mb-2 text-sm">Our signature creation loaded with pepperoni, sausage, bacon, ham, and extra cheese.</p>
-                <Link 
-                  href="/menu" 
-                  className="inline-flex items-center text-[hsl(196,100%,47%)] text-sm font-semibold hover:text-[hsl(196,100%,40%)] transition-colors"
-                >
+                <p className="text-gray-600 mb-4">Our signature creation loaded with pepperoni, sausage, bacon, ham, and extra cheese.</p>
+                <button className="w-full bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
                   View Details
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </Link>
+                </button>
               </div>
             </div>
             
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl stagger-item">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
               <div className="relative overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                   alt="Family Meal Deal" 
-                  className="w-full h-60 object-cover transition-transform duration-700 hover:scale-110"
+                  className="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute top-4 right-4 bg-[hsl(36,100%,50%)] text-white text-sm font-bold px-3 py-1 rounded-full">
+                <div className="absolute top-4 right-4 bg-[hsl(212,40%,18%)] text-white text-xs font-bold px-3 py-1.5 rounded-full">
                   Best Value
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-xl font-bold">Family Meal Deal</h3>
-                  <span className="text-[hsl(3,92%,51%)] font-bold">$29.99</span>
+                  <h3 className="text-xl font-bold text-[hsl(212,40%,18%)]">Family Meal Deal</h3>
+                  <span className="text-[hsl(145,63%,49%)] font-bold">$29.99</span>
                 </div>
                 <div className="flex items-center text-yellow-400 mb-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -147,37 +148,34 @@ const Home = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
-                  <span className="text-xs text-gray-500 ml-2">(86)</span>
+                  <span className="ml-2 text-sm text-gray-600">(86)</span>
                 </div>
-                <p className="text-[hsl(220,13%,18%)]/70 mb-4">One large 2-topping pizza, a dozen wings, garlic knots, and 2-liter soda. Perfect for feeding the whole family!</p>
-                <Link 
-                  href="/menu" 
-                  className="inline-flex items-center text-[hsl(196,100%,47%)] font-semibold hover:text-[hsl(196,100%,40%)] transition-colors"
-                >
+                <p className="text-gray-600 mb-4">One large 2-topping pizza, a dozen wings, garlic knots, and 2-liter soda. Perfect for feeding the whole family!</p>
+                <button className="w-full bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
                   View Details
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </Link>
+                </button>
               </div>
             </div>
             
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl stagger-item">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
               <div className="relative overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                   alt="Garden Veggie Delight Pizza" 
-                  className="w-full h-60 object-cover transition-transform duration-700 hover:scale-110"
+                  className="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute top-4 right-4 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                <div className="absolute top-4 right-4 bg-[hsl(145,63%,49%)] text-white text-xs font-bold px-3 py-1.5 rounded-full">
                   Veggie
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-xl font-bold">Garden Veggie Delight</h3>
-                  <span className="text-[hsl(3,92%,51%)] font-bold">$15.99</span>
+                  <h3 className="text-xl font-bold text-[hsl(212,40%,18%)]">Garden Veggie Delight</h3>
+                  <span className="text-[hsl(145,63%,49%)] font-bold">$15.99</span>
                 </div>
                 <div className="flex items-center text-yellow-400 mb-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -195,29 +193,26 @@ const Home = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
-                  <span className="text-xs text-gray-500 ml-2">(94)</span>
+                  <span className="ml-2 text-sm text-gray-600">(94)</span>
                 </div>
-                <p className="text-[hsl(220,13%,18%)]/70 mb-4">Fresh seasonal vegetables, roasted bell peppers, olives, and mushrooms on our signature herb-infused sauce.</p>
-                <Link 
-                  href="/menu" 
-                  className="inline-flex items-center text-[hsl(196,100%,47%)] font-semibold hover:text-[hsl(196,100%,40%)] transition-colors"
-                >
+                <p className="text-gray-600 mb-4">Fresh seasonal vegetables, roasted bell peppers, olives, and mushrooms on our signature herb-infused sauce.</p>
+                <button className="w-full bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
                   View Details
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </Link>
+                </button>
               </div>
             </div>
           </div>
           
-          <div className="text-center mt-8">
+          <div className="text-center mt-12">
             <Link 
               href="/menu" 
-              className="inline-flex items-center bg-[hsl(196,100%,47%)] text-white font-semibold py-2 px-6 rounded-full text-sm"
+              className="inline-flex items-center bg-[hsl(212,40%,18%)] hover:bg-[hsl(212,40%,25%)] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               View Full Menu
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
             </Link>
