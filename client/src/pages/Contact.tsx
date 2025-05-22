@@ -9,11 +9,20 @@ const Contact = () => {
         <meta name="description" content="Get in touch with Whippers Pizza in Augusta, Maine. Contact us for inquiries, feedback, or to place an order for pickup or delivery." />
       </Helmet>
 
-      {/* Modern Simple Header */}
-      <div className="bg-[#1B2A41] py-20 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl max-w-2xl mx-auto">We'd love to hear from you! Get in touch with any questions or feedback.</p>
+      {/* Page Header with Pizza Image */}
+      <div className="relative py-32 text-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+            alt="Fresh baked pizza" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
+          <p className="text-xl max-w-2xl mx-auto text-white/90">We'd love to hear from you! Get in touch with any questions or feedback.</p>
+          <div className="w-24 h-1 bg-[hsl(145,63%,49%)] mx-auto mt-8"></div>
         </div>
       </div>
 

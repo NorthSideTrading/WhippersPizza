@@ -8,13 +8,20 @@ const About = () => {
         <meta name="description" content="Learn about Whippers Pizza's journey, our mission, values, and the dedicated team behind Augusta's favorite pizza restaurant." />
       </Helmet>
 
-      {/* Page Header */}
-      <div className="bg-[hsl(212,40%,18%)] bg-opacity-95 py-24 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-pattern opacity-10"></div>
+      {/* Page Header with Pizza Image */}
+      <div className="relative py-32 text-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+            alt="Pizza preparation" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Our Heritage</span>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">About Us</h1>
-          <p className="text-xl max-w-2xl mx-auto text-white/80">Our story of passion, tradition, and the love for authentic pizza since 1983.</p>
+          <p className="text-xl max-w-2xl mx-auto text-white/90">Our story of passion, tradition, and the love for authentic pizza since 1983.</p>
           <div className="w-24 h-1 bg-[hsl(145,63%,49%)] mx-auto mt-8"></div>
         </div>
       </div>

@@ -8,13 +8,20 @@ const Menu = () => {
         <meta name="description" content="Explore our menu of delicious, hand-crafted pizzas, fresh calzones, savory sides, and beverages. Something for everyone at Whippers Pizza!" />
       </Helmet>
 
-      {/* Page Header */}
-      <div className="bg-[hsl(212,40%,18%)] bg-opacity-95 py-24 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-pattern opacity-10"></div>
+      {/* Page Header with Pizza Image */}
+      <div className="relative py-32 text-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+            alt="Delicious pizza with toppings" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Delicious Options</span>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Menu</h1>
-          <p className="text-xl max-w-2xl mx-auto text-white/80">Hand-crafted with love and the finest ingredients since 1983</p>
+          <p className="text-xl max-w-2xl mx-auto text-white/90">Hand-crafted with love and the finest ingredients since 1983</p>
           <div className="w-24 h-1 bg-[hsl(145,63%,49%)] mx-auto mt-8"></div>
         </div>
       </div>
