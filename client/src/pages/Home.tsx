@@ -372,70 +372,7 @@ const Home = () => {
       </section>
       
       {/* Image Gallery Section */}
-      <section className="py-10 bg-white overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-6">
-            <span className="text-[hsl(196,100%,47%)] font-medium mb-1 block text-sm">#WhippersPizza</span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">Fresh From Our Ovens</h2>
-            <p className="text-[hsl(220,13%,18%)]/70 max-w-xl mx-auto text-sm">Follow us on social media and tag your Whippers moments</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div className="relative overflow-hidden rounded-lg group stagger-item">
-              <img 
-                src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                alt="Fresh pizza" 
-                className="w-full h-40 object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-2">
-                  <p className="text-white font-medium text-sm">Fresh from the oven</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-lg group stagger-item">
-              <img 
-                src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                alt="Pizza slice" 
-                className="w-full h-40 object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-2">
-                  <p className="text-white font-medium text-sm">Perfect slice</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-lg group stagger-item">
-              <img 
-                src="https://images.unsplash.com/photo-1544982503-9f984c14501a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                alt="Pizza toppings" 
-                className="w-full h-40 object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-2">
-                  <p className="text-white font-medium text-sm">Fresh ingredients</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-lg group stagger-item">
-              <img 
-                src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                alt="Pizza maker" 
-                className="w-full h-40 object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-2">
-                  <p className="text-white font-medium text-sm">Crafted with love</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA Section */}
       <section className="py-12 bg-gradient-to-br from-[hsl(196,100%,47%)] to-[hsl(210,100%,40%)] text-white relative">
