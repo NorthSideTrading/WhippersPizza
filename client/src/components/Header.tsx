@@ -88,24 +88,7 @@ const Header = () => {
                 {location === '/menu' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(145,63%,49%)]"></span>}
               </Link>
             </li>
-            <li>
-              <a 
-                href="/#services" 
-                onClick={(e) => scrollToSection(e, 'services')}
-                className="block py-2 px-1 relative transition-colors duration-200 hover:text-[hsl(145,63%,49%)]"
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a 
-                href="/#testimonials" 
-                onClick={(e) => scrollToSection(e, 'testimonials')}
-                className="block py-2 px-1 relative transition-colors duration-200 hover:text-[hsl(145,63%,49%)]"
-              >
-                Testimonials
-              </a>
-            </li>
+
             <li>
               <Link 
                 href="/contact" 

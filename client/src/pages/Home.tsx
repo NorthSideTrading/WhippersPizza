@@ -253,11 +253,11 @@ const Home = () => {
             <div className="bg-white p-8 rounded-lg shadow-md text-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group">
               <div className="w-16 h-16 bg-[hsl(212,40%,18%)]/5 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-500 group-hover:bg-[hsl(145,63%,49%)]/20">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[hsl(212,40%,18%)] transition-all duration-500 group-hover:text-[hsl(145,63%,49%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[hsl(212,40%,18%)] transition-all duration-300 group-hover:text-[hsl(145,63%,49%)]">Fast Delivery</h3>
-              <p className="text-[hsl(220,13%,18%)]/70">We deliver throughout Augusta and surrounding areas. Hot and fresh pizza brought right to your door within our delivery zone.</p>
+              <h3 className="text-xl font-bold mb-3 text-[hsl(212,40%,18%)] transition-all duration-300 group-hover:text-[hsl(145,63%,49%)]">Quick Service</h3>
+              <p className="text-[hsl(220,13%,18%)]/70">Our efficient team ensures your dine-in experience is enjoyable and your takeout orders are ready when promised - hot and fresh every time.</p>
             </div>
           </div>
           
@@ -443,7 +443,7 @@ const Home = () => {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">Ready to Experience Augusta's Best Pizza?</h2>
-            <p className="text-base mb-6 text-white/80 max-w-2xl mx-auto">We're ready to serve you the most delicious pizza in Augusta, whether dining in, taking out, or delivery.</p>
+            <p className="text-base mb-6 text-white/80 max-w-2xl mx-auto">We're ready to serve you the most delicious pizza in Augusta, whether dining in or taking out.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
