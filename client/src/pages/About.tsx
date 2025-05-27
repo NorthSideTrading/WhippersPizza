@@ -20,9 +20,9 @@ const About = () => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <span className="text-[hsl(5,65%,40%)] font-medium mb-2 block uppercase tracking-wider">Our Heritage</span>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">About Us</h1>
-          <p className="text-xl max-w-2xl mx-auto text-white/90">Our story of passion, tradition, and the love for authentic pizza since 1983.</p>
+          <span className="text-[hsl(5,75%,55%)] font-medium mb-2 block uppercase tracking-wider drop-shadow-2xl">Our Heritage</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">About Us</h1>
+          <p className="text-xl max-w-2xl mx-auto text-white drop-shadow-lg">Our story of passion, tradition, and the love for authentic pizza since 1983.</p>
           <div className="w-24 h-1 bg-[hsl(5,65%,40%)] mx-auto mt-8"></div>
         </div>
       </div>
