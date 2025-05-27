@@ -53,12 +53,12 @@ export const CategoryNav = ({ isSidebar = false }: CategoryNavProps) => {
         const buttonClasses = isSidebar
           ? `${buttonBaseClasses} w-full text-left ${
               isActive
-                ? 'bg-[hsl(145,63%,49%)] text-white'
+                ? 'bg-[hsl(5,65%,40%)] text-white'
                 : 'text-gray-700 hover:bg-gray-100'
             }`
           : `${buttonBaseClasses} whitespace-nowrap ${
               isActive
-                ? 'bg-[hsl(145,63%,49%)] text-white'
+                ? 'bg-[hsl(5,65%,40%)] text-white'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`;
 

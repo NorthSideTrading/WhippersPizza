@@ -13,7 +13,7 @@ export const MenuItemRow = ({ item }: MenuItemRowProps) => {
           <p className="text-sm text-slate-600 leading-relaxed">{item.description}</p>
         )}
       </div>
-      <div className="ml-auto shrink-0 text-lg font-semibold text-[hsl(145,63%,49%)]">
+      <div className="ml-auto shrink-0 text-lg font-semibold text-[hsl(5,65%,40%)]">
         {item.price}
       </div>
     </div>

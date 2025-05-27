@@ -49,7 +49,7 @@ const Menu = () => {
           <p className="text-gray-600 mb-6">Call us for takeout or dine-in, or stop by for a fantastic experience!</p>
           <a 
             href="tel:+12076221471" 
-            className="bg-[hsl(145,63%,49%)] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block"
+            className="bg-[hsl(5,65%,40%)] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block"
           >
             Call Now: (207) 622-1471
           </a>
