@@ -40,8 +40,7 @@ const Home = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <div>WHIPPER'S FAMOUS</div>
-            <div>BIG WHIP</div>
+            FAMOUS BIG WHIP
           </motion.h1>
           <p className="text-lg lg:text-xl mb-6 font-medium drop-shadow-lg text-white text-center">
             Augusta's Legendary Italian Roll Sandwich Since 1960
