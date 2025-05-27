@@ -95,10 +95,10 @@ export default function Gallery() {
       {/* Call to Action */}
       <section className="py-16 bg-[hsl(212,40%,18%)] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white drop-shadow-2xl">
             Ready to Experience Whippers Pizza?
           </h2>
-          <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-white drop-shadow-lg max-w-2xl mx-auto">
             Come visit us at our Augusta location and taste the tradition that has made us a local favorite for over 40 years.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
