@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import { SPECIALS } from '@/data/homeSpecials';
 import whippersOwnerImage from "@assets/472788640_1125310129380643_5246298413575885458_n.jpg";
-import whippersHeroImage from "@assets/whippers-hero.png";
+import whippersHeroImage from "@assets/ChatGPT Image May 27, 2025, 01_21_38 PM.png";
 import partyPlatterImage from "@assets/party-platter.jpeg";
 
 const Home = () => {
