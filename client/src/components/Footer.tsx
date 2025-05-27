@@ -122,7 +122,7 @@ const Footer = () => {
                 <li className="col-span-2 mt-4">
                   <a 
                     href="tel:+12076221471" 
-                    className="inline-flex items-center justify-center px-5 py-2 bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
+                    className="inline-flex items-center justify-center px-5 py-2 bg-[hsl(5,65%,40%)] hover:bg-[hsl(5,65%,35%)] text-white font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
                   >
                     Call Now
                   </a>
@@ -130,14 +130,14 @@ const Footer = () => {
               </ul>
             </nav>
             
-            <h3 className="text-xl font-bold my-4 text-[hsl(145,63%,49%)]">Follow Us</h3>
+            <h3 className="text-xl font-bold my-4 text-[hsl(5,65%,40%)]">Follow Us</h3>
             <div className="flex">
               <a 
                 href="https://www.facebook.com/profile.php?id=100057050006369" 
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on Facebook" 
-                className="bg-white/10 hover:bg-[hsl(145,63%,49%)] text-white p-2 rounded-full transition-colors duration-200"
+                className="bg-white/10 hover:bg-[hsl(5,65%,40%)] text-white p-2 rounded-full transition-colors duration-200"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
