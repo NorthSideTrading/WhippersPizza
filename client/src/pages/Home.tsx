@@ -20,7 +20,7 @@ const Home = () => {
           <img 
             src={whippersHeroImage}
             alt="Whippers Pizza storefront - Home of Whipper's Pizza"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain object-center bg-gray-100"
             loading="eager"
             fetchPriority="high"
           />
