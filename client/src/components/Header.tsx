@@ -197,7 +197,7 @@ const Header = () => {
               <li>
                 <Link 
                   href="/about" 
-                  className={`flex items-center py-3 px-2 text-lg ${location === '/about' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'text-[hsl(212,40%,18%)]'}`}
+                  className={`flex items-center py-3 px-2 text-lg ${location === '/about' ? 'text-[hsl(5,65%,40%)] font-semibold' : 'text-[hsl(212,40%,18%)]'}`}
                   onClick={toggleMenu}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -209,7 +209,7 @@ const Header = () => {
               <li className="mt-4 pt-4 border-t border-gray-200">
                 <a 
                   href="tel:+12076221471" 
-                  className="flex items-center justify-center py-3 px-6 bg-[hsl(145,63%,49%)] text-white font-semibold rounded-lg text-lg"
+                  className="flex items-center justify-center py-3 px-6 bg-[hsl(5,65%,40%)] text-white font-semibold rounded-lg text-lg"
                   onClick={toggleMenu}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
