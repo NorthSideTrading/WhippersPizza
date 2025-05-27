@@ -59,10 +59,10 @@ export default function Gallery() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[hsl(212,40%,18%)] to-[hsl(212,35%,25%)] text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Our <span className="text-[hsl(5,65%,40%)]">Gallery</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">
+            Our <span className="text-[hsl(5,75%,55%)] drop-shadow-2xl">Gallery</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white drop-shadow-lg">
             Take a visual journey through Whippers Pizza - from our famous Big Whip to the faces behind Augusta's favorite pizza destination
           </p>
         </div>
