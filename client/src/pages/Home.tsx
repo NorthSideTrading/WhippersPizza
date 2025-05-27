@@ -48,7 +48,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link 
               href="/menu"
-              className="bg-[hsl(5,75%,55%)] hover:bg-[hsl(5,75%,50%)] text-white font-bold py-3 px-6 rounded-full transition duration-300 text-base shadow-lg"
+              className="bg-[hsl(5,65%,40%)] hover:bg-[hsl(5,65%,35%)] text-white font-bold py-3 px-6 rounded-full transition duration-300 text-base shadow-lg"
             >
               View Menu
             </Link>
@@ -100,7 +100,7 @@ const Home = () => {
 
             {/* The Big Whip - Center (Emphasized) */}
             <motion.div
-              className="bg-gradient-to-br from-[hsl(5,75%,55%)] to-[hsl(5,75%,50%)] rounded-2xl shadow-xl p-8 text-white scale-110 relative z-10"
+              className="bg-gradient-to-br from-[hsl(5,65%,40%)] to-[hsl(5,65%,35%)] rounded-2xl shadow-xl p-8 text-white scale-110 relative z-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -118,7 +118,7 @@ const Home = () => {
               <p className="text-xl font-bold mb-4">{SPECIALS[0].price}</p>
               <Link 
                 href="/menu#big-whip"
-                className="bg-white text-[hsl(5,75%,55%)] font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300"
+                className="bg-white text-[hsl(5,65%,40%)] font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300"
               >
                 Order The Big Whip
               </Link>
@@ -212,7 +212,7 @@ const Home = () => {
             >
               <Link 
                 href="/menu"
-                className="inline-flex items-center justify-center px-12 py-4 bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold text-xl rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
+                className="inline-flex items-center justify-center px-12 py-4 bg-[hsl(5,65%,40%)] hover:bg-[hsl(5,65%,35%)] text-white font-bold text-xl rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />

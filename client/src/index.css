@@ -48,9 +48,9 @@ html {
   /* Updated modern color scheme */
   --primary: 212 40% 18%; /* #1B2A41 - Deep Blue */
   --primary-foreground: 0 0% 100%;
-  --secondary: 5 75% 55%; /* #E74C3C - Friendly Red */
+  --secondary: 5 65% 40%; /* #B71C1C - Deep Red */
   --secondary-foreground: 0 0% 100%;
-  --accent: 5 75% 55%; /* #E74C3C - Friendly Red */
+  --accent: 5 65% 40%; /* #B71C1C - Deep Red */
   --accent-foreground: 0 0% 100%;
   
   --destructive: 0 84.2% 60.2%;
@@ -60,8 +60,8 @@ html {
   
   /* Custom design colors */
   --primary-blue: 212 40% 18%; /* #1B2A41 - Deep Blue */
-  --secondary-red: 5 75% 55%; /* #E74C3C - Friendly Red */
-  --accent-red: 5 75% 55%; /* #E74C3C - Friendly Red */
+  --secondary-red: 5 65% 40%; /* #B71C1C - Deep Red */
+  --accent-red: 5 65% 40%; /* #B71C1C - Deep Red */
   --dark-bg: 212 40% 18%; /* #1B2A41 - Deep Blue */
   --text-light: 0 0% 98%; /* #FAFAFA */
   --text-dark: 220 13% 18%; /* #252B36 */
