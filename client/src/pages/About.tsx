@@ -20,10 +20,10 @@ const About = () => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Our Heritage</span>
+          <span className="text-[hsl(5,65%,40%)] font-medium mb-2 block uppercase tracking-wider">Our Heritage</span>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">About Us</h1>
           <p className="text-xl max-w-2xl mx-auto text-white/90">Our story of passion, tradition, and the love for authentic pizza since 1983.</p>
-          <div className="w-24 h-1 bg-[hsl(145,63%,49%)] mx-auto mt-8"></div>
+          <div className="w-24 h-1 bg-[hsl(5,65%,40%)] mx-auto mt-8"></div>
         </div>
       </div>
 
@@ -53,7 +53,7 @@ const About = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">What Drives Us</span>
+            <span className="text-[hsl(5,65%,40%)] font-medium mb-2 block uppercase tracking-wider">What Drives Us</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[hsl(212,40%,18%)]">Our Mission & Values</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">The principles that have guided our business for over four decades and built our reputation in Augusta.</p>
           </div>

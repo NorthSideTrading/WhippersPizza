@@ -60,7 +60,7 @@ export default function Gallery() {
       <section className="bg-gradient-to-r from-[hsl(212,40%,18%)] to-[hsl(212,35%,25%)] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Our <span className="text-[hsl(145,63%,49%)]">Gallery</span>
+            Our <span className="text-[hsl(5,65%,40%)]">Gallery</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
             Take a visual journey through Whippers Pizza - from our famous Big Whip to the faces behind Augusta's favorite pizza destination
@@ -104,7 +104,7 @@ export default function Gallery() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
               href="tel:+12076221471" 
-              className="inline-flex items-center px-8 py-3 bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-8 py-3 bg-[hsl(5,65%,40%)] hover:bg-[hsl(5,65%,35%)] text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -115,7 +115,7 @@ export default function Gallery() {
               href="https://maps.google.com/?q=9+Bangor+St,+Augusta,+ME+04330" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-3 border-2 border-[hsl(145,63%,49%)] text-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,49%)] hover:text-white font-semibold rounded-full transition-all duration-300"
+              className="inline-flex items-center px-8 py-3 border-2 border-[hsl(5,65%,40%)] text-[hsl(5,65%,40%)] hover:bg-[hsl(5,65%,40%)] hover:text-white font-semibold rounded-full transition-all duration-300"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
