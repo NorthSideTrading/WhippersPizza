@@ -10,21 +10,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#1B2A41] text-white">
-      {/* Map Section */}
-      <div className="w-full h-[300px] relative">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.3018714249485!2d-69.75685432381578!3d44.32177827110995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb202b22ae129c1%3A0x3823da35730a8bb4!2s9%20Bangor%20St%2C%20Augusta%2C%20ME%2004330!5e0!3m2!1sen!2sus!4v1689981234567!5m2!1sen!2sus" 
-          width="100%" 
-          height="100%" 
-          style={{ border: 0 }} 
-          allowFullScreen={true} 
-          loading="lazy" 
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Whippers Pizza Location"
-          className="absolute top-0 left-0"
-        ></iframe>
-      </div>
-      
+
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row justify-between">
