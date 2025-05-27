@@ -3,6 +3,7 @@ import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import { SPECIALS } from '@/data/homeSpecials';
 import whippersOwnerImage from "@assets/472788640_1125310129380643_5246298413575885458_n.jpg";
+import bigWhipHeroImage from "@assets/500229768_1226622745916047_1080895992016072384_n.jpg";
 
 const Home = () => {
   return (
@@ -16,42 +17,43 @@ const Home = () => {
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-            alt="The Big Whip sandwich"
+            src={bigWhipHeroImage}
+            alt="The Big Whip sandwich with Whippers Pizza sign"
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
         
         <motion.div 
           className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto"
+          style={{ marginTop: '-10vh' }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.h1 
-            className="text-5xl lg:text-7xl font-extrabold uppercase tracking-wide mb-6"
+            className="text-4xl lg:text-6xl font-extrabold uppercase tracking-wide mb-4 drop-shadow-2xl"
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
             THE BIG WHIP
           </motion.h1>
-          <p className="text-xl lg:text-2xl mb-8 font-medium">
+          <p className="text-lg lg:text-xl mb-6 font-medium drop-shadow-lg">
             Since 1960 | Family-Owned | Augusta, ME
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link 
               href="/menu#big-whip"
-              className="bg-[hsl(145,63%,49%)] hover:bg-opacity-90 text-white font-bold py-4 px-8 rounded-full transition duration-300 text-lg"
+              className="bg-[hsl(145,63%,49%)] hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-base shadow-lg"
             >
               Order Now
             </Link>
             <Link 
               href="/menu"
-              className="border-2 border-white text-white hover:bg-white hover:text-[hsl(212,40%,18%)] font-bold py-4 px-8 rounded-full transition duration-300 text-lg"
+              className="border-2 border-white text-white hover:bg-white hover:text-[hsl(212,40%,18%)] font-bold py-3 px-6 rounded-full transition duration-300 text-base shadow-lg backdrop-blur-sm"
             >
               View Menu
             </Link>
