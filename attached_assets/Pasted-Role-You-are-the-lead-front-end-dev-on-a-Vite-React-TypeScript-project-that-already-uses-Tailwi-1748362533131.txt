@@ -1,0 +1,212 @@
+Role: You are the lead front-end dev on a Vite + React + TypeScript project that already uses Tailwind CSS and React-Router-DOM v6.
+Goal: Redesign /menu on the preview site (https://cee25194-ab02-4d33-8ad7-47985c711ada-00-he08hw2l5jjx.worf.replit.dev/menu) so it looks and behaves like the Frye House menu page (https://www.fryehousemaine.com/menu).
+Scope & Tasks
+
+Data structure
+
+Create src/data/menu.ts exporting an array of MenuSection objects:
+
+ts
+Copy
+Edit
+interface MenuItem { name: string; description?: string; price: string }
+interface MenuSection { id: string; title: string; items: MenuItem[] }
+export const MENU: MenuSection[] = [/* seed with real data */]
+Seed it with the same categories Frye House uses (“Dinner Baskets”, “Snacks”, “Pints”, “Specialties”, etc.) and at least four sample items per category (name, optional description, price). 
+fryehousemaine.com
+
+Components
+
+<MenuSection> – renders a section heading and a list of items.
+
+<MenuItemRow> – flex container: item name/description left, price right. Use border-b border-slate-200 pb-2 mb-2 for separation.
+
+<CategoryNav> – horizontal scroll-able pills on mobile, sticky sidebar on ≥ lg screens. Clicking a pill smooth-scrolls to the matching section (id anchor). Highlight active pill on intersection observer.
+
+Page layout (MenuPage.tsx)
+
+Mobile (<lg): single column, category nav top-sticky.
+
+Desktop (≥lg): 3-grid layout – left 1/5 for sticky <CategoryNav>, right 4/5 two-column masonry of <MenuSection> components. Use gap-10.
+
+Wrap all in <main className="mx-auto max-w-6xl px-4 pt-8">.
+
+Styling (Tailwind only)
+
+Section titles: text-3xl lg:text-4xl font-bold tracking-wide uppercase mb-4.
+
+Item name: text-lg font-medium. Description: text-sm text-slate-600. Price: ml-auto shrink-0 text-lg font-semibold.
+
+Add subtle fade-in animation with @keyframes fadeUp (opacity/translate-y) via animate-[fadeUp_.4s_ease-out].
+
+UX polish
+
+Enable smooth scrolling: add html { scroll-behavior: smooth; } via globals.css.
+
+Use Helmet (react-helmet-async already configured) to set page title “Menu | [Restaurant Name]” and meta description.
+
+Lighthouse targets: ≥ 90 Performance & Accessibility on mobile; no CLS on first load.
+
+Pass Axe-core audit with zero critical issues (aria-labels on nav pills, headings in order).
+
+Lazy-import MenuPage chunk with React.lazy; prefetch on hover in Navbar.
+
+Testing
+
+Add unit test MenuSection.test.tsx verifying render of title and items (Jest + @testing-library/react).
+
+Add Cypress e2e menu.cy.ts: visit /menu, click each category, assert corresponding section top is in viewport, no 404s.
+
+Clean-up & commit
+
+Remove any inline styles or unused CSS.
+
+Commit with message: feat(menu): redesign menu page to match Frye House style.
+
+Keep all existing project conventions (ESLint, Prettier, absolute imports). Output only changed / new files.
+
+Make it happen—no half-measures.
+
+
+
+Sources
+
+
+
+
+
+
+You said:
+good - now make the prompt include real menu items from the restaurant on their current original website 
+
+https://www.whipperspizza.com/menu
+
+
+ChatGPT said:
+
+Thought for 31 seconds
+Below is an updated prompt for your Replit agent.
+I ripped the real dishes and prices straight from Whipper’s Pizza’s public menu (source: Allmenus listing). 
+Allmenus
+
+Plug it in and let the agent do its thing.
+
+Prompt to the Replit AI Agent
+Role
+You’re the lead front-end dev on a Vite + React + TypeScript project with Tailwind and React-Router-DOM v6 already wired up.
+
+Goal
+Overhaul /menu on the preview site
+https://cee25194-ab02-4d33-8ad7-47985c711ada-00-he08hw2l5jjx.worf.replit.dev/menu
+so it matches the look-and-feel and UX of https://www.fryehousemaine.com/menu, but with Whipper’s Pizza’s real menu items.
+
+Scope & Tasks
+
+Data layer
+Create src/data/menu.ts exporting:
+
+ts
+Copy
+Edit
+export interface MenuItem { name: string; description?: string; price: string }
+export interface MenuSection { id: string; title: string; items: MenuItem[] }
+export const MENU: MenuSection[] = [
+  {
+    id: 'salads',
+    title: 'Salads',
+    items: [
+      { name: 'Caesar', price: '$7.99' },
+      { name: 'Grilled Chicken Caesar', price: '$8.99' },
+      { name: 'Greek', price: '$6.25' },
+      { name: 'Taco', price: '$6.25' }
+    ]
+  },
+  {
+    id: 'hot-sandwiches',
+    title: 'Hot Sandwiches',
+    items: [
+      { name: 'Meatball', price: '$6.50' },
+      { name: 'Chicken Parmesan', price: '$6.95' },
+      { name: 'Steak with Onions & Peppers', price: '$9.95' },
+      { name: 'Oven-Toasted Reuben', price: '$7.50' }
+    ]
+  },
+  {
+    id: 'pizza',
+    title: 'Pizza',
+    items: [
+      { name: 'Plain Pizza (8")', price: '$5.45' },
+      { name: 'Whipper’s Special (12")', price: '$14.30' },
+      { name: 'Buffalo Chicken (12")', price: '$15.55' },
+      { name: 'Vegetarian (12")', price: '$14.30' }
+    ]
+  },
+  {
+    id: 'dinner-baskets',
+    title: 'Dinner Baskets',
+    items: [
+      { name: 'Haddock Basket', price: '$10.75' },
+      { name: 'Shrimp Basket', price: '$10.75' },
+      { name: 'Chicken Tender Basket', price: '$11.61' },
+      { name: 'Sweet Chili Chicken Tenders Basket', price: '$10.95' }
+    ]
+  },
+  {
+    id: 'munchies',
+    title: 'Munchies',
+    items: [
+      { name: 'Mozzarella Sticks (6)', price: '$5.75' },
+      { name: 'Onion Rings', price: '$4.81' },
+      { name: 'Jalapeño Poppers', price: '$6.21' },
+      { name: 'Cheese Garlic Breadsticks', price: '$6.95' }
+    ]
+  }
+];
+Use the same TypeScript interfaces in components so we can reuse this data elsewhere.
+
+Components
+
+<MenuSection> – renders section heading + list of <MenuItemRow>.
+
+<MenuItemRow> – flex: name/description left, price right; bottom border.
+
+<CategoryNav> – scroll-spy pills (sticky top on mobile, sticky left sidebar on lg:).
+
+Layout & UX
+
+Mobile: single column; nav pills sticky at top.
+
+Desktop (lg:): grid with sticky sidebar nav and two-column masonry sections (mirrors Frye House).
+
+Smooth scrolling (html { scroll-behavior: smooth; }).
+
+Intersection Observer to highlight active pill.
+
+Styling (Tailwind only)
+
+Section heading: text-3xl lg:text-4xl font-bold tracking-wide uppercase mb-4.
+
+Item name: text-lg font-medium; desc: text-sm text-slate-600; price: ml-auto text-lg font-semibold.
+
+Row separator: border-b border-slate-200 pb-2 mb-2.
+
+Fade-in animation on section load (animate-[fadeUp_.4s_ease-out]).
+
+Performance & A11y targets
+Lighthouse mobile ≥ 90 for Perf & A11y; zero Axe-critical issues.
+
+Testing
+
+Unit: MenuSection.test.tsx – renders title + items.
+
+Cypress: click each nav pill, assert correct scroll, no 404s.
+
+Housekeeping
+
+Remove unused CSS & components.
+
+Lazy-load MenuPage chunk; prefetch on hover.
+
+Commit: feat(menu): redesign with Whipper’s Pizza items.
+
+Keep all current project conventions (ESLint/Prettier/etc.). Output only new/changed files.
