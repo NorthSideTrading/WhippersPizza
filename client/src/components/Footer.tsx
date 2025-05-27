@@ -28,7 +28,7 @@ const Footer = () => {
             <p className="mb-2">
               <a 
                 href="tel:+12076221471" 
-                className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200 flex items-center"
+                className="text-white hover:text-[hsl(5,65%,40%)] transition-colors duration-200 flex items-center"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -39,7 +39,7 @@ const Footer = () => {
             <p>
               <a 
                 href="mailto:whipperspizza@gmail.com" 
-                className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200 flex items-center"
+                className="text-white hover:text-[hsl(5,65%,40%)] transition-colors duration-200 flex items-center"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -51,7 +51,7 @@ const Footer = () => {
           
           {/* Hours */}
           <div className="mb-8 md:mb-0 md:w-1/3">
-            <h3 className="text-xl font-bold mb-4 text-[hsl(145,63%,49%)]">Hours</h3>
+            <h3 className="text-xl font-bold mb-4 text-[hsl(5,65%,40%)]">Hours</h3>
             <div className="grid grid-cols-2 gap-2 text-sm sm:text-base">
               <div className="font-semibold">Monday:</div>
               <div>11:00 AM - 9:00 PM</div>
@@ -72,13 +72,13 @@ const Footer = () => {
           
           {/* Navigation and Social Links */}
           <div className="md:w-1/3">
-            <h3 className="text-xl font-bold mb-4 text-[hsl(145,63%,49%)]">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-4 text-[hsl(5,65%,40%)]">Quick Links</h3>
             <nav aria-label="Footer navigation">
               <ul className="grid grid-cols-2 gap-3">
                 <li>
                   <Link 
                     href="/" 
-                    className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200 flex items-center"
+                    className="text-white hover:text-[hsl(5,65%,40%)] transition-colors duration-200 flex items-center"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -89,7 +89,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     href="/about" 
-                    className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200 flex items-center"
+                    className="text-white hover:text-[hsl(5,65%,40%)] transition-colors duration-200 flex items-center"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -100,7 +100,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     href="/menu" 
-                    className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200 flex items-center"
+                    className="text-white hover:text-[hsl(5,65%,40%)] transition-colors duration-200 flex items-center"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
@@ -111,7 +111,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     href="/gallery" 
-                    className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200 flex items-center"
+                    className="text-white hover:text-[hsl(5,65%,40%)] transition-colors duration-200 flex items-center"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
