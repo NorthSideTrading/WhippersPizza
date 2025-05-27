@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import whippersOwnerImage from "@assets/472788640_1125310129380643_5246298413575885458_n.jpg";
 
 const About = () => {
   return (
@@ -32,8 +33,8 @@ const About = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
               <img 
-                src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Pizza chef preparing dough" 
+                src={whippersOwnerImage} 
+                alt="Whippers Pizza owners" 
                 className="rounded-lg shadow-lg w-full"
                 loading="lazy"
               />
