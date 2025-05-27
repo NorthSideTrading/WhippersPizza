@@ -114,28 +114,16 @@ const Header = () => {
                   {location === '/about' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(145,63%,49%)]"></span>}
                 </Link>
               </li>
-              <li>
-                <Link 
-                  href="/contact" 
-                  className={`flex items-center py-2 px-1 relative transition-colors duration-200 ${location === '/contact' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'hover:text-[hsl(145,63%,49%)]'}`}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  Contact
-                  {location === '/contact' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(145,63%,49%)]"></span>}
-                </Link>
-              </li>
               <li className="ml-4">
-                <Link 
-                  href="/contact" 
+                <a 
+                  href="tel:+12076221471" 
                   className="flex items-center py-2 px-6 bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  Order Now
-                </Link>
+                  Call Now
+                </a>
               </li>
             </ul>
           </div>
@@ -194,29 +182,17 @@ const Header = () => {
                   About
                 </Link>
               </li>
-              <li>
-                <Link 
-                  href="/contact" 
-                  className={`flex items-center py-3 px-2 text-lg ${location === '/contact' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'text-[hsl(212,40%,18%)]'}`}
-                  onClick={toggleMenu}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  Contact
-                </Link>
-              </li>
               <li className="mt-4 pt-4 border-t border-gray-200">
-                <Link 
-                  href="/contact" 
+                <a 
+                  href="tel:+12076221471" 
                   className="flex items-center justify-center py-3 px-6 bg-[hsl(145,63%,49%)] text-white font-semibold rounded-lg text-lg"
                   onClick={toggleMenu}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  Order Now
-                </Link>
+                  Call Now
+                </a>
               </li>
             </ul>
           </div>
