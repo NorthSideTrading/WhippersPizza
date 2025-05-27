@@ -40,10 +40,10 @@ const Home = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            THE <span className="text-red-600">BIG</span> WHIP
+            WHIPPERS PIZZA
           </motion.h1>
           <p className="text-lg lg:text-xl mb-6 font-medium drop-shadow-lg text-white">
-            Since <span className="text-red-600">1960</span> | Family-Owned | <span className="text-red-600">Augusta</span>, ME
+            Home of the Famous <span className="text-red-600">Big</span> Whip
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link 
