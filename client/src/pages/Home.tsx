@@ -203,7 +203,7 @@ const Home = () => {
         </div>
         
         {/* Floating Menu CTA */}
-        <div className="relative -mb-8 z-10">
+        <div className="relative -mb-12 mt-8 z-10">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
