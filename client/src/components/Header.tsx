@@ -104,6 +104,18 @@ const Header = () => {
               </li>
               <li>
                 <Link 
+                  href="/gallery" 
+                  className={`flex items-center py-2 px-1 relative transition-colors duration-200 ${location === '/gallery' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'hover:text-[hsl(145,63%,49%)]'}`}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Gallery
+                  {location === '/gallery' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(145,63%,49%)]"></span>}
+                </Link>
+              </li>
+              <li>
+                <Link 
                   href="/about" 
                   className={`flex items-center py-2 px-1 relative transition-colors duration-200 ${location === '/about' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'hover:text-[hsl(145,63%,49%)]'}`}
                 >
@@ -168,6 +180,18 @@ const Header = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                   </svg>
                   Menu
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/gallery" 
+                  className={`flex items-center py-3 px-2 text-lg ${location === '/gallery' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'text-[hsl(212,40%,18%)]'}`}
+                  onClick={toggleMenu}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Gallery
                 </Link>
               </li>
               <li>

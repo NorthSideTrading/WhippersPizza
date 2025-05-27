@@ -108,24 +108,13 @@ const Footer = () => {
                     Menu
                   </Link>
                 </li>
-                <li>
-                  <Link 
-                    href="/contact" 
-                    className="text-white hover:text-[hsl(145,63%,49%)] transition-colors duration-200 flex items-center"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    Contact
-                  </Link>
-                </li>
                 <li className="col-span-2 mt-4">
-                  <Link 
-                    href="/contact" 
+                  <a 
+                    href="tel:+12076221471" 
                     className="inline-flex items-center justify-center px-5 py-2 bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
                   >
-                    Order Now
-                  </Link>
+                    Call Now
+                  </a>
                 </li>
               </ul>
             </nav>
