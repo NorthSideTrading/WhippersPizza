@@ -15,12 +15,12 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-end justify-center overflow-hidden">
+      <section className="relative h-[50vh] flex items-end justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={whippersHeroImage}
             alt="Whippers Pizza storefront - Home of Whipper's Pizza"
-            className="w-full h-full object-contain object-center bg-gray-100"
+            className="w-full h-full object-cover object-center"
             loading="eager"
             fetchPriority="high"
           />
