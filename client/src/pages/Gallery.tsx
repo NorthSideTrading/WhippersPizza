@@ -26,7 +26,6 @@ import ownersImage from "@assets/472788640_1125310129380643_5246298413575885458_
 
 // Additional Images
 import bigWhipImage from "@assets/500229768_1226622745916047_1080895992016072384_n.jpg";
-import whippersHero from "@assets/whippers-hero.png";
 
 export default function Gallery() {
   const galleryImages = [
@@ -47,8 +46,7 @@ export default function Gallery() {
     { id: 15, src: sandwichMain, alt: "Signature Sandwich" },
     { id: 16, src: teamGallery3, alt: "Kitchen Staff" },
     { id: 17, src: sandGallery5, alt: "Big Whip Special" },
-    { id: 18, src: bigWhipImage, alt: "The Famous Big Whip" },
-    { id: 19, src: whippersHero, alt: "Whippers Pizza Storefront" }
+    { id: 18, src: bigWhipImage, alt: "The Famous Big Whip" }
   ].sort(() => Math.random() - 0.5); // Randomize the order
 
   return (
