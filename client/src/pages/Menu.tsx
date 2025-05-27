@@ -596,15 +596,15 @@ const Menu = () => {
       </section>
 
       {/* Order CTA */}
-      <section className="py-16 bg-[#B71C1C] text-white">
+      <section className="py-16 bg-[hsl(212,40%,18%)] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Place Your Order?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">Call us for takeout or delivery, or stop by for a fantastic dine-in experience!</p>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">Call us for takeout or dine-in, or stop by for a fantastic experience!</p>
           <a 
-            href="tel:+12075557492" 
-            className="bg-[#8BC34A] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block"
+            href="tel:+12076221471" 
+            className="bg-[hsl(145,63%,49%)] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block"
           >
-            Call Now: (207) 555-PIZA
+            Call Now: (207) 622-1471
           </a>
         </div>
       </section>
