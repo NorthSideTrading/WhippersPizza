@@ -47,16 +47,16 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link 
-              href="/menu#big-whip"
+              href="/menu"
               className="bg-[hsl(145,63%,49%)] hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-base shadow-lg"
             >
-              Order Now
+              View Menu
             </Link>
             <Link 
-              href="/menu"
+              href="/menu#big-whip"
               className="border-2 border-white text-white hover:bg-white hover:text-[hsl(212,40%,18%)] font-bold py-3 px-6 rounded-full transition duration-300 text-base shadow-lg backdrop-blur-sm"
             >
-              View Menu
+              Order Now
             </Link>
           </div>
         </motion.div>
