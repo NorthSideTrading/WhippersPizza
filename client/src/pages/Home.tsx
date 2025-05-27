@@ -48,7 +48,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link 
               href="/menu"
-              className="bg-[hsl(145,63%,49%)] hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-base shadow-lg"
+              className="bg-[hsl(5,75%,55%)] hover:bg-[hsl(5,75%,50%)] text-white font-bold py-3 px-6 rounded-full transition duration-300 text-base shadow-lg"
             >
               View Menu
             </Link>
@@ -100,7 +100,7 @@ const Home = () => {
 
             {/* The Big Whip - Center (Emphasized) */}
             <motion.div
-              className="bg-gradient-to-br from-[hsl(145,63%,49%)] to-[hsl(145,63%,45%)] rounded-2xl shadow-xl p-8 text-white scale-110 relative z-10"
+              className="bg-gradient-to-br from-[hsl(5,75%,55%)] to-[hsl(5,75%,50%)] rounded-2xl shadow-xl p-8 text-white scale-110 relative z-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -118,7 +118,7 @@ const Home = () => {
               <p className="text-xl font-bold mb-4">{SPECIALS[0].price}</p>
               <Link 
                 href="/menu#big-whip"
-                className="bg-white text-[hsl(145,63%,49%)] font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300"
+                className="bg-white text-[hsl(5,75%,55%)] font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300"
               >
                 Order The Big Whip
               </Link>
