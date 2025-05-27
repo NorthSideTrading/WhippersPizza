@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import { SPECIALS } from '@/data/homeSpecials';
 import whippersOwnerImage from "@assets/472788640_1125310129380643_5246298413575885458_n.jpg";
-import bigWhipHeroImage from "@assets/500229768_1226622745916047_1080895992016072384_n.jpg";
+import whippersHeroImage from "@assets/whippers-hero.png";
 import partyPlatterImage from "@assets/party-platter.jpeg";
 
 const Home = () => {
@@ -18,13 +18,13 @@ const Home = () => {
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={bigWhipHeroImage}
-            alt="The Big Whip sandwich with Whippers Pizza sign"
+            src={whippersHeroImage}
+            alt="Whippers Pizza storefront - Home of Whipper's Pizza"
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         
         <motion.div 
@@ -40,10 +40,10 @@ const Home = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            WHIPPERS PIZZA
+            WHIPPER'S FAMOUS BIG WHIP
           </motion.h1>
           <p className="text-lg lg:text-xl mb-6 font-medium drop-shadow-lg text-white">
-            Home of the Famous <span className="text-red-600">Big</span> Whip
+            Augusta's Legendary Italian Roll Sandwich Since 1960
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link 
