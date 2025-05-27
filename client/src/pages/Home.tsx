@@ -6,6 +6,7 @@ import whippersOwnerImage from "@assets/472788640_1125310129380643_5246298413575
 import whippersHeroImage from "@assets/ChatGPT Image May 27, 2025, 01_21_38 PM.png";
 import partyPlatterImage from "@assets/party-platter.jpeg";
 import bigWhipImage from "@assets/big-whip.jpg";
+import steakBombsImage from "@assets/steak-boms.jpeg";
 
 const Home = () => {
   return (
@@ -83,8 +84,8 @@ const Home = () => {
             >
               <div className="aspect-[4/3] bg-gray-200 rounded-lg mb-4 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="The Whipper sandwich"
+                  src={steakBombsImage}
+                  alt="Steak Bombs sandwich"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -92,8 +93,8 @@ const Home = () => {
               <h3 className="text-xl font-bold text-[hsl(212,40%,18%)] mb-2">{SPECIALS[1].title}</h3>
               <p className="text-gray-600 mb-4">{SPECIALS[1].blurb}</p>
               <Link 
-                href="/menu#whipper"
-                className="text-[hsl(145,63%,49%)] font-semibold hover:underline"
+                href="/menu#steak-bombs"
+                className="text-[hsl(5,65%,40%)] font-semibold hover:underline"
               >
                 Learn More →
               </Link>

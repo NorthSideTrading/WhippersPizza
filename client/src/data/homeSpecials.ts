@@ -13,8 +13,8 @@ export const SPECIALS: Special[] = [
     price: 'From $18.95' 
   },
   { 
-    id: 'whipper',   
-    title: 'The Whipper',  
+    id: 'steak-bombs',   
+    title: 'Steak Bombs',  
     blurb: 'Ham, two salamis, bacon, cheese & mayo with onions on house bread.' 
   },
   { 
