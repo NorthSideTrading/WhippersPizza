@@ -1,461 +1,255 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'wouter';
-import TestimonialSlider from '@/components/TestimonialSlider';
-import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { SPECIALS } from '@/data/homeSpecials';
 
 const Home = () => {
-  // Initialize scroll reveal effect
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            io.unobserve(entry.target); // Animate once
-          }
-        });
-      },
-      { threshold: 0.15 } // Fire when 15% of element is visible
-    );
-    
-    // Observe all reveal elements
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-    
-    // Cleanup
-    return () => io.disconnect();
-  }, []);
-
   return (
     <>
       <Helmet>
-        <title>Whippers Pizza - Augusta, ME | Best Local Pizza</title>
-        <meta name="description" content="Whippers Pizza serves Augusta's best hometown pizza with fresh ingredients and authentic recipes. Order online or visit us today!" />
+        <title>Whipper's Pizza | Home of the Big Whip</title>
+        <meta name="description" content="Since 1960, Whipper's Pizza has been Augusta's home of The Big Whip - our legendary 16-inch Italian roll sandwich. Founded by Robert E. 'Whipper' Wheelock Sr., serving authentic family recipes for over 65 years." />
       </Helmet>
-      
-      {/* Hero Section - Full-width Modern Design */}
-      <section 
-        className="hero relative min-h-screen" 
-        id="home"
-      >
+
+      {/* Hero Section */}
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
-            alt="Pizza background" 
+            src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            alt="The Big Whip sandwich"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
           />
-          {/* No overlay for natural pizza colors */}
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
-        <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center relative z-10 text-center min-h-screen">
-          <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white text-sm font-medium mb-6 border border-white/20 animate-fade-in">
-            Augusta's Favorite Since 1983
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight max-w-4xl mx-auto slide-up text-shadow-lg">
-            Handcrafted <span className="text-[hsl(145,63%,49%)]">Pizza</span> Made With Passion
-          </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light slide-up text-shadow-lg px-3">
-            Family-owned for over 40 years, serving Augusta with homemade dough and signature sauce daily
+        
+        <motion.div 
+          className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h1 
+            className="text-5xl lg:text-7xl font-extrabold uppercase tracking-wide mb-6"
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          >
+            THE BIG WHIP
+          </motion.h1>
+          <p className="text-xl lg:text-2xl mb-8 font-medium">
+            Since 1960 | Family-Owned | Augusta, ME
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 w-full px-4 sm:px-0 sm:w-auto slide-up">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/menu" 
-              className="bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-5 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-lg w-full sm:w-auto flex items-center justify-center"
+              href="/menu#big-whip"
+              className="bg-[hsl(145,63%,49%)] hover:bg-opacity-90 text-white font-bold py-4 px-8 rounded-full transition duration-300 text-lg"
             >
-              View Our Menu
+              Order Now
             </Link>
             <Link 
-              href="/contact" 
-              className="bg-white hover:bg-white/90 text-[hsl(212,40%,18%)] font-bold py-5 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-lg w-full sm:w-auto flex items-center justify-center"
+              href="/menu"
+              className="border-2 border-white text-white hover:bg-white hover:text-[hsl(212,40%,18%)] font-bold py-4 px-8 rounded-full transition duration-300 text-lg"
             >
-              Order Online
+              View Menu
             </Link>
           </div>
-          
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce">
-            <a href="#services" onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-            }}>
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Specials Section */}
-      <section id="specials" className="reveal py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">What's Hot</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[hsl(212,40%,18%)] relative inline-block">
-              Today's Specials
-              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[hsl(145,63%,49%)]"></span>
-            </h2>
-            <p className="text-[hsl(220,13%,18%)]/70 max-w-2xl mx-auto mt-6 text-lg">Experience our most popular dishes crafted with fresh ingredients and our secret family recipes</p>
+            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Our Specialties</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[hsl(212,40%,18%)] mb-4">Signature Items</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">Three generations of perfected recipes, including our world-famous Big Whip</p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-2 sm:px-0">
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group reveal md:slide-left">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="The Bangor Street Beast Pizza" 
-                  className="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute top-4 right-4 bg-[hsl(145,63%,49%)] text-white text-xs font-bold px-3 py-1.5 rounded-full">
-                  Popular
-                </div>
-              </div>
-              <div className="p-5 sm:p-6">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-0 mb-3">
-                  <h3 className="text-lg sm:text-xl font-bold text-[hsl(212,40%,18%)]">The Bangor Street Beast</h3>
-                  <span className="text-[hsl(145,63%,49%)] font-bold text-lg">$17.99</span>
-                </div>
-                <div className="flex items-center text-yellow-400 mb-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <span className="ml-2 text-sm text-gray-600">(128)</span>
-                </div>
-                <p className="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">Our signature creation loaded with pepperoni, sausage, bacon, ham, and extra cheese.</p>
-                <button className="w-full bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
-                  View Details
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group reveal">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Family Meal Deal" 
-                  className="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute top-4 right-4 bg-[hsl(212,40%,18%)] text-white text-xs font-bold px-3 py-1.5 rounded-full">
-                  Best Value
-                </div>
-              </div>
-              <div className="p-5 sm:p-6">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-0 mb-3">
-                  <h3 className="text-lg sm:text-xl font-bold text-[hsl(212,40%,18%)]">Family Meal Deal</h3>
-                  <span className="text-[hsl(145,63%,49%)] font-bold text-lg">$29.99</span>
-                </div>
-                <div className="flex items-center text-yellow-400 mb-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <span className="ml-2 text-sm text-gray-600">(86)</span>
-                </div>
-                <p className="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">One large 2-topping pizza, a dozen wings, garlic knots, and 2-liter soda. Perfect for feeding the whole family!</p>
-                <button className="w-full bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
-                  View Details
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group reveal md:slide-right">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Garden Veggie Delight Pizza" 
-                  className="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute top-4 right-4 bg-[hsl(145,63%,49%)] text-white text-xs font-bold px-3 py-1.5 rounded-full">
-                  Veggie
-                </div>
-              </div>
-              <div className="p-5 sm:p-6">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-0 mb-3">
-                  <h3 className="text-lg sm:text-xl font-bold text-[hsl(212,40%,18%)]">Garden Veggie Delight</h3>
-                  <span className="text-[hsl(145,63%,49%)] font-bold text-lg">$15.99</span>
-                </div>
-                <div className="flex items-center text-yellow-400 mb-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <span className="ml-2 text-sm text-gray-600">(94)</span>
-                </div>
-                <p className="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">Fresh seasonal vegetables, roasted bell peppers, olives, and mushrooms on our signature herb-infused sauce.</p>
-                <button className="w-full bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
-                  View Details
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link 
-              href="/menu" 
-              className="inline-flex items-center bg-[hsl(212,40%,18%)] hover:bg-[hsl(212,40%,25%)] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+
+          {/* Desktop Layout - Big Whip emphasized in center */}
+          <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8 lg:items-start">
+            {/* The Whipper - Left */}
+            <motion.div
+              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
             >
-              View Full Menu
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </Link>
+              <div className="aspect-[4/3] bg-gray-200 rounded-lg mb-4 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="The Whipper sandwich"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[hsl(212,40%,18%)] mb-2">{SPECIALS[1].title}</h3>
+              <p className="text-gray-600 mb-4">{SPECIALS[1].blurb}</p>
+              <Link 
+                href="/menu#whipper"
+                className="text-[hsl(145,63%,49%)] font-semibold hover:underline"
+              >
+                Learn More →
+              </Link>
+            </motion.div>
+
+            {/* The Big Whip - Center (Emphasized) */}
+            <motion.div
+              className="bg-gradient-to-br from-[hsl(145,63%,49%)] to-[hsl(145,63%,45%)] rounded-2xl shadow-xl p-8 text-white scale-110 relative z-10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+            >
+              <div className="aspect-[4/3] bg-white/20 rounded-lg mb-6 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="The Big Whip - our signature 16-inch sandwich"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-3">{SPECIALS[0].title}</h3>
+              <p className="mb-4 text-white/90">{SPECIALS[0].blurb}</p>
+              <p className="text-xl font-bold mb-4">{SPECIALS[0].price}</p>
+              <Link 
+                href="/menu#big-whip"
+                className="bg-white text-[hsl(145,63%,49%)] font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300"
+              >
+                Order The Big Whip
+              </Link>
+            </motion.div>
+
+            {/* Party Platter - Right */}
+            <motion.div
+              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <div className="aspect-[4/3] bg-gray-200 rounded-lg mb-4 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Party platter with multiple sandwiches"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[hsl(212,40%,18%)] mb-2">{SPECIALS[2].title}</h3>
+              <p className="text-gray-600 mb-4">{SPECIALS[2].blurb}</p>
+              <Link 
+                href="/menu#party"
+                className="text-[hsl(145,63%,49%)] font-semibold hover:underline"
+              >
+                Learn More →
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="lg:hidden space-y-6">
+            {SPECIALS.map((special, index) => (
+              <motion.div
+                key={special.id}
+                className={`bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${
+                  special.id === 'big-whip' ? 'scale-105 bg-gradient-to-br from-[hsl(145,63%,49%)] to-[hsl(145,63%,45%)] text-white' : ''
+                }`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="aspect-[4/3] bg-gray-200 rounded-lg mb-4 overflow-hidden">
+                  <img 
+                    src={special.id === 'big-whip' 
+                      ? "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      : special.id === 'whipper'
+                      ? "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      : "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    }
+                    alt={`${special.title} - ${special.blurb}`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className={`text-xl font-bold mb-2 ${special.id === 'big-whip' ? 'text-white' : 'text-[hsl(212,40%,18%)]'}`}>
+                  {special.title}
+                </h3>
+                <p className={`mb-4 ${special.id === 'big-whip' ? 'text-white/90' : 'text-gray-600'}`}>
+                  {special.blurb}
+                </p>
+                {special.price && (
+                  <p className={`text-lg font-bold mb-4 ${special.id === 'big-whip' ? 'text-white' : 'text-[hsl(145,63%,49%)]'}`}>
+                    {special.price}
+                  </p>
+                )}
+                <Link 
+                  href={`/menu#${special.id}`}
+                  className={`font-semibold hover:underline ${
+                    special.id === 'big-whip' 
+                      ? 'bg-white text-[hsl(145,63%,49%)] py-2 px-4 rounded-full hover:bg-gray-100 transition duration-300 no-underline hover:no-underline' 
+                      : 'text-[hsl(145,63%,49%)]'
+                  }`}
+                >
+                  {special.id === 'big-whip' ? 'Order The Big Whip' : 'Learn More →'}
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-16 bg-white">
+      {/* Heritage Section */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block">OUR SERVICES</span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[hsl(212,40%,18%)]">How We Serve You</h2>
-            <p className="text-[hsl(220,13%,18%)]/70 max-w-xl mx-auto">Experience the best pizza service in Augusta with multiple ways to enjoy our fresh, homemade goodness</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-8 rounded-lg shadow-md text-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group">
-              <div className="w-16 h-16 bg-[hsl(212,40%,18%)]/5 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-500 group-hover:bg-[hsl(145,63%,49%)]/20">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[hsl(212,40%,18%)] transition-all duration-500 group-hover:text-[hsl(145,63%,49%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-[hsl(212,40%,18%)] transition-all duration-300 group-hover:text-[hsl(145,63%,49%)]">Dine In</h3>
-              <p className="text-[hsl(220,13%,18%)]/70">Enjoy our cozy restaurant atmosphere with friends and family. Experience our pizzas fresh from the oven in our welcoming dining space.</p>
+          <div className="lg:grid lg:grid-cols-2 lg:gap-10 items-center">
+            <div className="mb-8 lg:mb-0">
+              <img 
+                src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Historic photo of original Whipper's Pizza from 1960"
+                className="rounded-lg shadow-lg w-full sepia"
+                loading="lazy"
+              />
             </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md text-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group">
-              <div className="w-16 h-16 bg-[hsl(212,40%,18%)]/5 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-500 group-hover:bg-[hsl(145,63%,49%)]/20">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[hsl(212,40%,18%)] transition-all duration-500 group-hover:text-[hsl(145,63%,49%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-[hsl(212,40%,18%)] transition-all duration-300 group-hover:text-[hsl(145,63%,49%)]">Takeout</h3>
-              <p className="text-[hsl(220,13%,18%)]/70">Call ahead or order online for convenient pickup. We'll have your order hot and ready when you arrive at our Bangor Street location.</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md text-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group">
-              <div className="w-16 h-16 bg-[hsl(212,40%,18%)]/5 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-500 group-hover:bg-[hsl(145,63%,49%)]/20">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[hsl(212,40%,18%)] transition-all duration-500 group-hover:text-[hsl(145,63%,49%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-[hsl(212,40%,18%)] transition-all duration-300 group-hover:text-[hsl(145,63%,49%)]">Quick Service</h3>
-              <p className="text-[hsl(220,13%,18%)]/70">Our efficient team ensures your dine-in experience is enjoyable and your takeout orders are ready when promised - hot and fresh every time.</p>
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Order Now
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-      
-      {/* About Section */}
-      <section id="about" className="py-10 bg-[hsl(220,14%,96%)]">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
-              <div className="relative">
-                <img 
-                  src="/images/whippers-owners.jpg" 
-                  alt="The owners of Whippers Pizza in their restaurant kitchen" 
-                  className="rounded-lg shadow-lg w-full relative z-10"
-                  loading="lazy"
-                />
-                <div className="absolute -bottom-3 -right-3 w-3/4 h-3/4 bg-[hsl(196,100%,47%)]/10 rounded-lg -z-10"></div>
-                <div className="absolute top-3 left-3 p-2 bg-white/90 backdrop-blur-sm rounded-md shadow-md">
-                  <p className="text-[hsl(3,92%,51%)] font-bold text-base">40+ Years</p>
-                  <p className="text-xs text-[hsl(220,13%,18%)]/70">Of Excellence</p>
-                </div>
-              </div>
-            </div>
-            <div className="md:w-1/2">
-              <span className="text-[hsl(196,100%,47%)] font-medium mb-1 block text-sm">Our Story</span>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">About Whippers Pizza</h2>
-              <p className="text-[hsl(220,13%,18%)]/80 mb-3 text-sm">An Augusta, Maine Landmark for over 40 years, Whipper's Pizza offers delicious, homemade pizza and sandwiches. Our secret is in our fresh dough and signature sauce made daily.</p>
-              <p className="text-[hsl(220,13%,18%)]/80 mb-4 text-sm">A family-run local shop serving our community! We're proud to offer great taste at a great price, which is why generations of Augusta families have made us their favorite pizzeria.</p>
-              
-              <div className="grid grid-cols-2 gap-3 mb-4">
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-[hsl(196,100%,47%)]/10 rounded-full flex items-center justify-center mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[hsl(196,100%,47%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-sm">Fresh Ingredients</h3>
-                    <p className="text-xs text-[hsl(220,13%,18%)]/70">Locally sourced when possible</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-[hsl(196,100%,47%)]/10 rounded-full flex items-center justify-center mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[hsl(196,100%,47%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-sm">Fast Service</h3>
-                    <p className="text-xs text-[hsl(220,13%,18%)]/70">We value your time</p>
-                  </div>
-                </div>
-              </div>
-              
+            <div className="prose prose-lg max-w-none">
+              <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Our Heritage</span>
+              <h2 className="text-3xl font-bold text-[hsl(212,40%,18%)] mb-6">65+ Years of Tradition</h2>
+              <p className="text-gray-700 mb-4">
+                Founded in 1960 by Robert E. "Whipper" Wheelock Sr., we've been slinging pies & monster sandwiches for over 65 years. Three generations later, that same family recipe – and the famous Big Whip – still anchor every order.
+              </p>
+              <p className="text-gray-700 mb-6">
+                From our humble beginnings on Bangor Street to becoming Augusta's beloved landmark, Whipper's Pizza has remained true to our founder's vision: serve authentic, hearty food that brings families and friends together.
+              </p>
               <Link 
-                href="/about" 
-                className="inline-flex items-center bg-[hsl(196,100%,47%)] text-white font-semibold py-2 px-6 rounded-full text-sm"
+                href="/about"
+                className="inline-block bg-[hsl(145,63%,49%)] text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300"
               >
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
+                Our Story
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section id="testimonials" className="py-16 bg-[hsl(212,40%,18%)] text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block">TESTIMONIALS</span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">What Our Customers Say</h2>
-            <p className="text-white/80 max-w-xl mx-auto">Read what Augusta locals have to say about their favorite pizza spot</p>
-          </div>
-          
-          <div className="relative">
-            <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-16 h-16 bg-[hsl(145,63%,49%)]/10 rounded-full -z-10"></div>
-            <div className="absolute bottom-10 right-10 w-24 h-24 bg-[hsl(145,63%,49%)]/10 rounded-full -z-10"></div>
-            
-            <TestimonialSlider />
-          </div>
-          
-          <div className="flex justify-center mt-8">
-            <div className="flex space-x-3">
-              <span className="w-3 h-3 bg-white/30 rounded-full transition-all duration-300 hover:bg-[hsl(145,63%,49%)] cursor-pointer"></span>
-              <span className="w-3 h-3 bg-[hsl(145,63%,49%)] rounded-full"></span>
-              <span className="w-3 h-3 bg-white/30 rounded-full transition-all duration-300 hover:bg-[hsl(145,63%,49%)] cursor-pointer"></span>
-              <span className="w-3 h-3 bg-white/30 rounded-full transition-all duration-300 hover:bg-[hsl(145,63%,49%)] cursor-pointer"></span>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Image Gallery Section */}
-
-
-      {/* CTA Section */}
-      <section className="py-12 bg-gradient-to-br from-[hsl(196,100%,47%)] to-[hsl(210,100%,40%)] text-white relative">
-        <div className="absolute inset-0 overflow-hidden">
-          <svg className="absolute -bottom-1 left-0 w-full opacity-10" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="currentColor"></path>
-          </svg>
-        </div>
-        
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">Ready to Experience Augusta's Best Pizza?</h2>
-            <p className="text-base mb-6 text-white/80 max-w-2xl mx-auto">We're ready to serve you the most delicious pizza in Augusta, whether dining in or taking out.</p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <h3 className="text-base font-bold mb-1">Call Us</h3>
-                <a href="tel:+12076221471" className="text-white hover:underline text-sm">(207) 622-1471</a>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-base font-bold mb-1">Visit Us</h3>
-                <p className="text-white/80 text-sm">9 Bangor St, Augusta, ME</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-base font-bold mb-1">Hours</h3>
-                <p className="text-white/80 text-sm">11AM - 9PM Daily</p>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a 
-                href="tel:+12076221471" 
-                className="bg-white text-[hsl(212,40%,18%)] hover:bg-opacity-90 font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg text-sm"
-              >
-                Call Now
-              </a>
-              <Link 
-                href="/menu" 
-                className="bg-[hsl(3,92%,51%)] hover:bg-opacity-90 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg text-sm"
-              >
-                Order Online
-              </Link>
-            </div>
+      {/* Contact CTA */}
+      <section className="py-16 bg-[hsl(212,40%,18%)] text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready for The Big Whip?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Call ahead or visit us at 9 Bangor St in Augusta. We'll have your Big Whip ready!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:+12076221471"
+              className="bg-[hsl(145,63%,49%)] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition duration-300"
+            >
+              Call Now: (207) 622-1471
+            </a>
+            <Link 
+              href="/contact"
+              className="border-2 border-white text-white hover:bg-white hover:text-[hsl(212,40%,18%)] font-bold py-3 px-8 rounded-full transition duration-300"
+            >
+              Get Directions
+            </Link>
           </div>
         </div>
       </section>

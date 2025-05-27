@@ -1,0 +1,240 @@
+ROLE
+You are the lead front-end engineer on a Vite + React + TypeScript site that already uses Tailwind CSS and React-Router-DOM v6.
+
+GOAL
+Re-work the Home page (/) of the preview site
+https://cee25194-ab02-4d33-8ad7-47985c711ada-00-he08hw2l5jjx.worf.replit.dev/
+so it instantly tells visitors they’ve arrived at Whipper’s Pizza – Home of “The Big Whip.”
+
+NEW CONTENT to surface (with factual copy):
+
+Established 1960 – serving Augusta for 65 + years 
+Whippers Pizza
+Whippers Pizza
+
+Family-owned & founded by Robert E. “Whipper” Wheelock Sr. 
+Central Maine
+
+Tag-line: “Home of the Big Whip” 
+Facebook
+
+Specials to highlight up-front:
+
+The Big Whip – “Our legendary 16-inch toasted Italian roll piled so high it feeds two (or one brave soul).” From $18.95 
+Allmenus
+
+The Whipper – ham, two salamis, bacon, cheese, mayo & onions on our house-baked bread. 
+Tripadvisor
+
+Party Platter – three full Big Whips sliced & tray-packed for gatherings. 
+Facebook
+
+Salad Bowls – chef-built bowls for the green-minded crowd. 
+Facebook
+
+TASK BREAKDOWN
+
+Create data file – src/data/homeSpecials.ts
+
+ts
+Copy
+Edit
+export interface Special { id:string; title:string; blurb:string; price?:string }
+export const SPECIALS: Special[] = [
+  { id:'big-whip',   title:'The Big Whip', blurb:'16-inch toasted Italian roll stacked with meats, cheese & secret sauce. Feeds 2+', price:'From $18.95' },
+  { id:'whipper',    title:'The Whipper',  blurb:'Ham, two salamis, bacon, cheese, mayo & onions on house bread.' },
+  { id:'party',      title:'Party Platter', blurb:'Three full Big Whips sliced & tray-packed. Perfect for game day or office lunch.' },
+  { id:'salad-bowl', title:'Salad Bowls',  blurb:'Hearty chef-built bowls packed with crisp greens & toppings.' }
+];
+Same interface will feed future CMS hooks.
+
+Home page component (HomePage.tsx)
+
+Hero
+
+Full-width section with a background image (/assets/big-whip-hero.jpg – add placeholder Unsplash if none supplied) overlaid with:
+
+Heading text-5xl lg:text-7xl font-extrabold uppercase tracking-wide → “THE BIG WHIP”
+
+Sub-heading “Since 1960 | Family-Owned | Augusta, ME”
+
+CTA buttons: “Order Now” → /menu#big-whip & “View Menu” → /menu
+
+Add subtle pan/zoom using framer-motion (motion.div with scale keyframes).
+
+Specials Grid
+
+Map over SPECIALS → 4 cards (lg:grid-cols-4, gap-6).
+
+Card styling: rounded-2xl shadow-lg p-6 bg-white/80 backdrop-blur.
+
+Include img placeholders (/assets/{id}.jpg) and a Link to /menu#{id}.
+
+Heritage / About Strip
+
+Two-column layout (lg:grid lg:grid-cols-2 lg:gap-10).
+
+Left: sepia photo placeholder of the original 1960 shop.
+
+Right: copy block:
+
+“Founded in 1960 by Robert E. ‘Whipper’ Wheelock Sr., we’ve been slinging pies & monster sandwiches for over 65 years. Three generations later, that same family recipe – and the famous Big Whip – still anchor every order.”
+
+Use prose class for typography.
+
+Meta / SEO – with react-helmet-async set <title>Whipper’s Pizza | Home of the Big Whip</title> and meta description summarising heritage + Big Whip.
+
+Routing tweak – in App.tsx preload /menu chunk on first viewport entry of any Specials Link (import.meta.glob() + importMenu?.()).
+
+Accessibility & Perf
+
+Lighthouse mobile & desktop ≥ 90; CLS ≈ 0 (reserve hero image height with aspect-[16/9]).
+
+Add alt text to every img.
+
+Ensure color contrast meets AA.
+
+Lazy-load hero image with loading="eager" fetchpriority="high"; other images loading="lazy".
+
+Tests
+
+Jest test HomeHero.test.tsx ensuring hero renders heading & CTA.
+
+Cypress homepage.cy.ts verifying scroll to /menu#big-whip works and hero loads without 404s.
+
+Assets placeholder
+
+Drop four 1200×800 jpg placeholders into /public/assets named big-whip-hero.jpg, whipper.jpg, party.jpg, salad-bowl.jpg.
+
+Document in README that final photography must replace placeholders before production.
+
+House-keeping
+
+Remove any boilerplate sections no longer relevant.
+
+Run npm run lint --fix & npm run format.
+
+Commit: feat(home): add Big Whip hero, specials grid, heritage strip
+
+Keep existing project conventions. Output only the files you create or modify.
+
+
+
+
+
+
+
+Sources
+
+
+
+
+
+
+You said:
+remove salad bowl any redo the prompt. we will stick with 3 specials to highlight up front. Make "the big whip" the center special and slightly bigger than the other two since it is the focal point
+
+
+ChatGPT said:
+
+Thought for 32 seconds
+Updated prompt for the Replit AI Agent
+(Salad Bowls dropped, 3 specials only. “The Big Whip” is the oversized centerpiece.)
+
+Prompt to the Replit AI Agent
+ROLE
+You’re the lead front-end engineer on a Vite + React + TypeScript site that already uses Tailwind CSS and React-Router-DOM v6.
+
+GOAL
+Re-work the Home page (/) of the preview site
+https://cee25194-ab02-4d33-8ad7-47985c711ada-00-he08hw2l5jjx.worf.replit.dev/
+so visitors instantly know they’re at Whipper’s Pizza – Home of “The Big Whip.”
+
+FACTS to feature (verbatim):
+
+Established 1960 – serving Augusta for 65 + years 
+Whippers Pizza
+
+Founded by Robert E. “Whipper” Wheelock Sr. 
+Whippers Pizza
+
+Tag-line: “Home of the Big Whip” 
+Facebook
+
+Front-page specials (replace any existing promo grid):
+
+The Big Whip – 16-inch toasted Italian roll piled high with meats, cheese & secret sauce. Feeds two (or one brave soul). From $18.95 
+Allmenus
+
+The Whipper – ham, two kinds of salami, bacon, cheese & mayo with onions on house-baked bread. 
+Tripadvisor
+
+Party Platter – three full Big Whips sliced & tray-packed for crowds. Call for pricing. 
+Whippers Pizza
+
+TASKS
+
+Data file – create src/data/homeSpecials.ts
+
+ts
+Copy
+Edit
+export interface Special { id:string; title:string; blurb:string; price?:string }
+export const SPECIALS: Special[] = [
+  { id:'big-whip',  title:'The Big Whip', blurb:'16″ toasted Italian roll stacked with meats, cheese & secret sauce. Feeds 2+', price:'From $18.95' },
+  { id:'whipper',   title:'The Whipper',  blurb:'Ham, two salamis, bacon, cheese & mayo with onions on house bread.' },
+  { id:'party',     title:'Party Platter', blurb:'Three full Big Whips sliced & tray-packed. Perfect for game day or office lunch.' }
+];
+Home page component (HomePage.tsx)
+
+Hero
+
+Full-width background image (/assets/big-whip-hero.jpg placeholder) with:
+
+Heading: THE BIG WHIP (text-5xl lg:text-7xl font-extrabold uppercase)
+
+Sub-heading: Since 1960 | Family-Owned | Augusta, ME
+
+CTA buttons: “Order Now” → /menu#big-whip & “View Menu” → /menu
+
+Specials strip
+
+Desktop (lg:): CSS Grid 3 cols where the centre card (big-whip) has lg:col-span-2 lg:row-span-2 (or scale-[1.15]) so it appears larger and sits in the centre; the other two flank it.
+
+Mobile: vertical list – Big Whip card styled with scale-[1.05] to keep hierarchy.
+
+Card style: rounded-2xl shadow-lg p-6 bg-white/80 backdrop-blur transition hover:shadow-xl.
+
+Each card links to its section in /menu.
+
+Heritage strip
+
+Two-column (image + copy) describing 65-year story and Robert E. “Whipper” Wheelock Sr.
+
+SEO – Helmet title “Whipper’s Pizza | Home of the Big Whip” + meta description.
+
+Assets
+
+Placeholders: /public/assets/big-whip-hero.jpg, /whipper.jpg, /party.jpg.
+
+Performance & A11y
+
+Lighthouse mobile & desktop ≥ 90; CLS ~ 0 (reserve hero height with aspect-[16/9]).
+
+Alt text, keyboard focus on CTAs, AA contrast.
+
+Testing
+
+Jest: HomeHero.test.tsx verifies hero renders heading & CTA.
+
+Cypress: homepage.cy.ts checks /menu#big-whip scroll and no 404s.
+
+House-keeping
+
+Strip unused sections.
+
+npm run lint --fix & npm run format.
+
+Commit: feat(home): Big Whip hero + 3-special grid (Big Whip emphasized).
+
+Follow all existing project conventions. Output only the files you create or modify.
