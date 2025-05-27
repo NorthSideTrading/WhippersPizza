@@ -34,15 +34,15 @@ const Home = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.h1 
-            className="text-4xl lg:text-6xl font-extrabold uppercase tracking-wide mb-4 drop-shadow-2xl"
+            className="text-4xl lg:text-6xl font-extrabold uppercase tracking-wide mb-4 drop-shadow-2xl text-white"
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            THE BIG WHIP
+            THE <span className="text-red-600">BIG</span> WHIP
           </motion.h1>
-          <p className="text-lg lg:text-xl mb-6 font-medium drop-shadow-lg">
-            Since 1960 | Family-Owned | Augusta, ME
+          <p className="text-lg lg:text-xl mb-6 font-medium drop-shadow-lg text-white">
+            Since <span className="text-red-600">1960</span> | Family-Owned | <span className="text-red-600">Augusta</span>, ME
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link 
