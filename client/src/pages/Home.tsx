@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { SPECIALS } from '@/data/homeSpecials';
 import whippersOwnerImage from "@assets/472788640_1125310129380643_5246298413575885458_n.jpg";
 import bigWhipHeroImage from "@assets/500229768_1226622745916047_1080895992016072384_n.jpg";
+import partyPlatterImage from "@assets/party-platter.jpeg";
 
 const Home = () => {
   return (
@@ -132,8 +133,8 @@ const Home = () => {
             >
               <div className="aspect-[4/3] bg-gray-200 rounded-lg mb-4 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Party platter with multiple sandwiches"
+                  src={partyPlatterImage}
+                  alt="Party platter with multiple Big Whip sandwiches"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -167,7 +168,7 @@ const Home = () => {
                       ? "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                       : special.id === 'whipper'
                       ? "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                      : "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      : partyPlatterImage
                     }
                     alt={`${special.title} - ${special.blurb}`}
                     className="w-full h-full object-cover"
