@@ -417,7 +417,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <h3 className="text-base font-bold mb-1">Call Us</h3>
-                <a href="tel:+12076233500" className="text-white hover:underline text-sm">(207) 623-3500</a>
+                <a href="tel:+12076221471" className="text-white hover:underline text-sm">(207) 622-1471</a>
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
@@ -428,7 +428,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <h3 className="text-base font-bold mb-1">Visit Us</h3>
-                <p className="text-white/80 text-sm">97 Bangor St, Augusta, ME</p>
+                <p className="text-white/80 text-sm">9 Bangor St, Augusta, ME</p>
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
@@ -444,7 +444,7 @@ const Home = () => {
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a 
-                href="tel:+12076233500" 
+                href="tel:+12076221471" 
                 className="bg-white text-[hsl(212,40%,18%)] hover:bg-opacity-90 font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg text-sm"
               >
                 Call Now
