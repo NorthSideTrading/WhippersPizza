@@ -73,23 +73,21 @@ export default function Gallery() {
       {/* Gallery Grid */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {galleryImages.map((image, index) => (
               <div 
                 key={image.id} 
-                className="break-inside-avoid bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105"
-                style={{ 
-                  marginBottom: '1.5rem',
-                  display: 'inline-block',
-                  width: '100%'
-                }}
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
               >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    style={{ imageRendering: 'auto' }}
+                  />
+                </div>
               </div>
             ))}
           </div>
