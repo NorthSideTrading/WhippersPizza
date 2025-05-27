@@ -184,7 +184,7 @@ const Home = () => {
                   {special.blurb}
                 </p>
                 {special.price && (
-                  <p className={`text-lg font-bold mb-4 ${special.id === 'big-whip' ? 'text-white' : 'text-[hsl(145,63%,49%)]'}`}>
+                  <p className={`text-lg font-bold mb-4 ${special.id === 'big-whip' ? 'text-white' : 'text-[hsl(5,65%,40%)]'}`}>
                     {special.price}
                   </p>
                 )}
@@ -192,8 +192,8 @@ const Home = () => {
                   href={`/menu#${special.id}`}
                   className={`font-semibold hover:underline ${
                     special.id === 'big-whip' 
-                      ? 'bg-white text-[hsl(145,63%,49%)] py-2 px-4 rounded-full hover:bg-gray-100 transition duration-300 no-underline hover:no-underline' 
-                      : 'text-[hsl(145,63%,49%)]'
+                      ? 'bg-white text-[hsl(5,65%,40%)] py-2 px-4 rounded-full hover:bg-gray-100 transition duration-300 no-underline hover:no-underline' 
+                      : 'text-[hsl(5,65%,40%)]'
                   }`}
                 >
                   {special.id === 'big-whip' ? 'Order The Big Whip' : 'Learn More →'}
@@ -239,7 +239,7 @@ const Home = () => {
               />
             </div>
             <div className="prose prose-lg max-w-none">
-              <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Our Heritage</span>
+              <span className="text-[hsl(5,65%,40%)] font-medium mb-2 block uppercase tracking-wider">Our Heritage</span>
               <h2 className="text-3xl font-bold text-[hsl(212,40%,18%)] mb-6">65+ Years of Tradition</h2>
               <p className="text-gray-700 mb-4">
                 Founded in 1960 by Robert E. "Whipper" Wheelock Sr., we've been slinging pies & monster sandwiches for over 65 years. Three generations later, that same family recipe – and the famous Big Whip – still anchor every order.
@@ -249,7 +249,7 @@ const Home = () => {
               </p>
               <Link 
                 href="/about"
-                className="inline-block bg-[hsl(145,63%,49%)] text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300"
+                className="inline-block bg-[hsl(5,65%,40%)] text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300"
               >
                 Our Story
               </Link>
@@ -268,7 +268,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:+12076221471"
-              className="bg-[hsl(145,63%,49%)] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition duration-300"
+              className="bg-[hsl(5,65%,40%)] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition duration-300"
             >
               Call Now: (207) 622-1471
             </a>
