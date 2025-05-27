@@ -92,18 +92,6 @@ const Header = () => {
               </li>
               <li>
                 <Link 
-                  href="/about" 
-                  className={`flex items-center py-2 px-1 relative transition-colors duration-200 ${location === '/about' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'hover:text-[hsl(145,63%,49%)]'}`}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  About
-                  {location === '/about' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(145,63%,49%)]"></span>}
-                </Link>
-              </li>
-              <li>
-                <Link 
                   href="/menu" 
                   className={`flex items-center py-2 px-1 relative transition-colors duration-200 ${location === '/menu' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'hover:text-[hsl(145,63%,49%)]'}`}
                 >
@@ -112,6 +100,18 @@ const Header = () => {
                   </svg>
                   Menu
                   {location === '/menu' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(145,63%,49%)]"></span>}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/about" 
+                  className={`flex items-center py-2 px-1 relative transition-colors duration-200 ${location === '/about' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'hover:text-[hsl(145,63%,49%)]'}`}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  About
+                  {location === '/about' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[hsl(145,63%,49%)]"></span>}
                 </Link>
               </li>
               <li>
@@ -172,18 +172,6 @@ const Header = () => {
               </li>
               <li>
                 <Link 
-                  href="/about" 
-                  className={`flex items-center py-3 px-2 text-lg ${location === '/about' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'text-[hsl(212,40%,18%)]'}`}
-                  onClick={toggleMenu}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link 
                   href="/menu" 
                   className={`flex items-center py-3 px-2 text-lg ${location === '/menu' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'text-[hsl(212,40%,18%)]'}`}
                   onClick={toggleMenu}
@@ -192,6 +180,18 @@ const Header = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                   </svg>
                   Menu
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/about" 
+                  className={`flex items-center py-3 px-2 text-lg ${location === '/about' ? 'text-[hsl(145,63%,49%)] font-semibold' : 'text-[hsl(212,40%,18%)]'}`}
+                  onClick={toggleMenu}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  About
                 </Link>
               </li>
               <li>
