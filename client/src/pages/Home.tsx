@@ -201,27 +201,27 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Floating Menu CTA */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-md mx-auto"
-          >
-            <Link 
-              href="/menu"
-              className="inline-flex items-center justify-center px-12 py-4 bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold text-xl rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
+        
+        {/* Floating Menu CTA */}
+        <div className="relative -mb-8 z-10">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-md mx-auto"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-              </svg>
-              Our Menu
-            </Link>
-          </motion.div>
+              <Link 
+                href="/menu"
+                className="inline-flex items-center justify-center px-12 py-4 bg-[hsl(145,63%,49%)] hover:bg-[hsl(145,63%,45%)] text-white font-bold text-xl rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                </svg>
+                Our Menu
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
 
