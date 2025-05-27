@@ -15,7 +15,7 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-end justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={whippersHeroImage}
@@ -24,12 +24,11 @@ const Home = () => {
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         </div>
         
         <motion.div 
-          className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto"
-          style={{ marginTop: '-10vh' }}
+          className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto pb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
