@@ -1,32 +1,55 @@
 import { Helmet } from "react-helmet-async";
-import bigWhipImage from "@assets/party-platter.jpeg";
+// Pizza Images
+import pizzaGallery1 from "@assets/Pizza/pizza-gallery1.jpg";
+import pizzaGallery2 from "@assets/Pizza/pizza-galler2.jpg";
+import pizzaGallery3 from "@assets/Pizza/pizza-galler3.jpg";
+import pizzaGallery4 from "@assets/Pizza/pizza-gallery4.jpg";
+
+// Platter Images
+import partyPlatter from "@assets/party-platter.jpeg";
+import platterGallery1 from "@assets/Platters/platter-gallery1.jpg";
+import platterGallery2 from "@assets/Platters/platter-gallery2.jpg";
+import platterGallery3 from "@assets/Platters/platter-gallery3.jpg";
+
+// Sandwich Images
+import sandwichMain from "@assets/Sandwhiches/images.jpeg";
+import sandGallery1 from "@assets/Sandwhiches/sand-galler1.jpg";
+import sandGallery2 from "@assets/Sandwhiches/sand-galler2.jpg";
+import sandGallery3 from "@assets/Sandwhiches/sand-galler3.jpg";
+import sandGallery5 from "@assets/Sandwhiches/sand-gallery5.jpg";
+
+// Team Images
+import teamGallery1 from "@assets/Team/team-gallery1.jpg";
+import teamGallery2 from "@assets/Team/team-galler2.jpg";
+import teamGallery3 from "@assets/Team/team-galler3.jpg";
 import ownersImage from "@assets/472788640_1125310129380643_5246298413575885458_n.jpg";
-import pizzaImage from "@assets/500229768_1226622745916047_1080895992016072384_n.jpg";
+
+// Additional Images
+import bigWhipImage from "@assets/500229768_1226622745916047_1080895992016072384_n.jpg";
+import whippersHero from "@assets/whippers-hero.png";
 
 export default function Gallery() {
   const galleryImages = [
-    {
-      id: 1,
-      src: bigWhipImage,
-      alt: "The Famous Big Whip - Our signature party platter",
-      title: "The Famous Big Whip",
-      description: "Our legendary party platter that has been delighting Augusta families for decades"
-    },
-    {
-      id: 2,
-      src: ownersImage,
-      alt: "Whippers Pizza owners and staff",
-      title: "The Whippers Family",
-      description: "Meet the dedicated team that makes Whippers Pizza a local Augusta landmark"
-    },
-    {
-      id: 3,
-      src: pizzaImage,
-      alt: "Fresh Whippers Pizza",
-      title: "Authentic Pizza Craftsmanship",
-      description: "Hand-crafted pizzas made with the finest ingredients and 40+ years of tradition"
-    }
-  ];
+    { id: 1, src: pizzaGallery1, alt: "Authentic Whippers Pizza" },
+    { id: 2, src: platterGallery1, alt: "Whippers Pizza Platter" },
+    { id: 3, src: sandGallery1, alt: "Famous Big Whip Sandwich" },
+    { id: 4, src: teamGallery1, alt: "Whippers Pizza Team" },
+    { id: 5, src: pizzaGallery2, alt: "Fresh Pizza" },
+    { id: 6, src: ownersImage, alt: "Whippers Pizza Family" },
+    { id: 7, src: platterGallery2, alt: "Party Platter" },
+    { id: 8, src: sandGallery2, alt: "Big Whip Sandwich" },
+    { id: 9, src: pizzaGallery3, alt: "Delicious Pizza" },
+    { id: 10, src: partyPlatter, alt: "Famous Big Whip Platter" },
+    { id: 11, src: teamGallery2, alt: "Restaurant Team" },
+    { id: 12, src: sandGallery3, alt: "Italian Roll Sandwich" },
+    { id: 13, src: pizzaGallery4, alt: "Wood-Fired Pizza" },
+    { id: 14, src: platterGallery3, alt: "Family Platter" },
+    { id: 15, src: sandwichMain, alt: "Signature Sandwich" },
+    { id: 16, src: teamGallery3, alt: "Kitchen Staff" },
+    { id: 17, src: sandGallery5, alt: "Big Whip Special" },
+    { id: 18, src: bigWhipImage, alt: "The Famous Big Whip" },
+    { id: 19, src: whippersHero, alt: "Whippers Pizza Storefront" }
+  ].sort(() => Math.random() - 0.5); // Randomize the order
 
   return (
     <div className="min-h-screen bg-white">
@@ -50,27 +73,23 @@ export default function Gallery() {
       {/* Gallery Grid */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryImages.map((image) => (
+          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+            {galleryImages.map((image, index) => (
               <div 
                 key={image.id} 
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="break-inside-avoid bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105"
+                style={{ 
+                  marginBottom: '1.5rem',
+                  display: 'inline-block',
+                  width: '100%'
+                }}
               >
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[hsl(212,40%,18%)] mb-2">
-                    {image.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {image.description}
-                  </p>
-                </div>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
