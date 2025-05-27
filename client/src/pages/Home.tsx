@@ -68,7 +68,7 @@ const Home = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-[hsl(145,63%,49%)] font-medium mb-2 block uppercase tracking-wider">Our Specialties</span>
+            <span className="text-[hsl(5,65%,40%)] font-medium mb-2 block uppercase tracking-wider">Our Specialties</span>
             <h2 className="text-3xl md:text-4xl font-bold text-[hsl(212,40%,18%)] mb-4">Signature Items</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">Three generations of perfected recipes, including our world-famous Big Whip</p>
           </div>
@@ -145,7 +145,7 @@ const Home = () => {
               <p className="text-gray-600 mb-4">{SPECIALS[2].blurb}</p>
               <Link 
                 href="/menu#party"
-                className="text-[hsl(145,63%,49%)] font-semibold hover:underline"
+                className="text-[hsl(5,65%,40%)] font-semibold hover:underline"
               >
                 Learn More →
               </Link>
@@ -158,7 +158,7 @@ const Home = () => {
               <motion.div
                 key={special.id}
                 className={`bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${
-                  special.id === 'big-whip' ? 'scale-105 bg-gradient-to-br from-[hsl(145,63%,49%)] to-[hsl(145,63%,45%)] text-white' : ''
+                  special.id === 'big-whip' ? 'scale-105 bg-gradient-to-br from-[hsl(5,65%,40%)] to-[hsl(5,65%,35%)] text-white' : ''
                 }`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
