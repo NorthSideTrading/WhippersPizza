@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import { SPECIALS } from '@/data/homeSpecials';
+import whippersOwnerImage from "@assets/472788640_1125310129380643_5246298413575885458_n.jpg";
 
 const Home = () => {
   return (
@@ -204,9 +205,9 @@ const Home = () => {
           <div className="lg:grid lg:grid-cols-2 lg:gap-10 items-center">
             <div className="mb-8 lg:mb-0">
               <img 
-                src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Historic photo of original Whipper's Pizza from 1960"
-                className="rounded-lg shadow-lg w-full sepia"
+                src={whippersOwnerImage}
+                alt="The Whipper's Pizza family - continuing the tradition since 1960"
+                className="rounded-lg shadow-lg w-full"
                 loading="lazy"
               />
             </div>
