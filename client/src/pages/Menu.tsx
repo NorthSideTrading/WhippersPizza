@@ -596,10 +596,10 @@ const Menu = () => {
       </section>
 
       {/* Order CTA */}
-      <section className="py-16 bg-[hsl(212,40%,18%)] text-white">
+      <section className="py-16 bg-[hsl(212,40%,18%)]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Place Your Order?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">Call us for takeout or dine-in, or stop by for a fantastic experience!</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Place Your Order?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white">Call us for takeout or dine-in, or stop by for a fantastic experience!</p>
           <a 
             href="tel:+12076221471" 
             className="bg-[hsl(145,63%,49%)] hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block"
