@@ -274,7 +274,7 @@ const Home = () => {
             </a>
             <Link 
               href="/contact"
-              className="border-2 border-white text-white hover:bg-white hover:text-[hsl(212,40%,18%)] font-bold py-3 px-8 rounded-full transition duration-300"
+              className="border-2 border-[hsl(5,65%,40%)] text-[hsl(5,65%,40%)] hover:bg-[hsl(5,65%,40%)] hover:text-white font-bold py-3 px-8 rounded-full transition duration-300"
             >
               Get Directions
             </Link>
