@@ -5,6 +5,7 @@ import { SPECIALS } from '@/data/homeSpecials';
 import whippersOwnerImage from "@assets/472788640_1125310129380643_5246298413575885458_n.jpg";
 import whippersHeroImage from "@assets/ChatGPT Image May 27, 2025, 01_21_38 PM.png";
 import partyPlatterImage from "@assets/party-platter.jpeg";
+import bigWhipImage from "@assets/big-whip.jpg";
 
 const Home = () => {
   return (
@@ -107,7 +108,7 @@ const Home = () => {
             >
               <div className="aspect-[4/3] bg-white/20 rounded-lg mb-6 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src={bigWhipImage}
                   alt="The Big Whip - our signature 16-inch sandwich"
                   className="w-full h-full object-cover"
                   loading="lazy"
