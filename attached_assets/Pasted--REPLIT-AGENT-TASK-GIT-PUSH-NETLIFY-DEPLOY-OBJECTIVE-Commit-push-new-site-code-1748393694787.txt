@@ -1,0 +1,91 @@
+ REPLIT AGENT TASK: GIT PUSH & NETLIFY DEPLOY ────────────╮
+│ OBJECTIVE: Commit & push new site code to Git repo                 │
+│ https://github.com/NorthSideTrading/Whippers-Pizza.git,              │
+│ build & deploy to Netlify, and verify all common SPA gotchas.       │
+╰──────────────────────────────────────────────────────────────────────╯
+
+1️⃣ GIT REMOTE & BRANCH  
+ • Ensure `origin` points at the Whippers-Pizza repo:  
+   ```bash
+   git remote remove origin 2>/dev/null || true
+   git remote add origin https://github.com/NorthSideTrading/Whippers-Pizza.git
+• Check out a fresh deploy branch:
+
+bash
+Copy
+Edit
+git fetch origin
+git checkout -B deploy/netlify origin/main
+2️⃣ COMMIT CHANGES
+• Stage & commit everything:
+
+bash
+Copy
+Edit
+git add .
+git commit -m "chore: prepare Whippers-Pizza for Netlify deploy 🚀"
+3️⃣ ENSURE WILDCARD REDIRECT
+• Overwrite public/_redirects with exactly:
+
+bash
+Copy
+Edit
+/*  /index.html  200
+(Two spaces after /*, two spaces before 200, no BOM, LF line endings.)
+
+4️⃣ NETLIFY CONFIG CHECK
+• In netlify.toml, confirm no conflicting [redirects] blocks and:
+
+toml
+Copy
+Edit
+[build]
+  publish = "dist"
+5️⃣ BUILD & VALIDATE
+• Run prod build, fail on errors:
+
+bash
+Copy
+Edit
+npm ci && npm run build
+6️⃣ PUSH & TRIGGER DEPLOY
+• Push the deploy branch to origin:
+
+bash
+Copy
+Edit
+git push -u origin deploy/netlify --force
+7️⃣ CLEAR NETLIFY CACHE & FORCE DEPLOY
+• Using Netlify CLI (if linked):
+
+bash
+Copy
+Edit
+netlify deploy --prod --dir=dist --force
+8️⃣ VERIFY REDIRECTS
+• List latest deploy files & confirm _redirects exists:
+
+bash
+Copy
+Edit
+netlify deploy:list --json | jq '.[0].files[] | select(.path=="/_redirects")'
+9️⃣ UNREGISTER OLD SW
+• Ensure any PWA plugin is in prompt mode or disabled so no stale service worker.
+
+🔟 SMOKE TEST (NETWORK & ROUTES)
+• In Incognito Chrome (DevTools open, “Disable cache” ticked):
+
+Load / then click Home, Services, About, Portfolio, Contact once each.
+
+Confirm the HTML request and every .js chunk return 200, no 404s.
+
+📋 SUMMARY REPORT
+• Create deploy/netlify-report.md with pass/fail of:
+
+Build
+
+_redirects
+
+SW status
+
+Nav-404 checks
