@@ -168,7 +168,7 @@ const Home = () => {
                   <img 
                     src={special.id === 'big-whip' 
                       ? bigWhipImage
-                      : special.id === 'whipper'
+                      : special.id === 'steak-bombs'
                       ? steakBombsImage
                       : partyPlatterImage
                     }
