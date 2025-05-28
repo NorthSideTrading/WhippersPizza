@@ -22,11 +22,15 @@ const Home = () => {
           <img 
             src={whippersHeroImage}
             alt="Whippers Pizza storefront - Home of Whipper's Pizza"
-            className="w-full h-full object-cover object-center sm:object-[center_40%] lg:object-center"
+            className="w-full h-full object-cover object-[center_75%] xs:object-[center_65%] sm:object-[center_55%] md:object-[center_45%] lg:object-[center_35%] xl:object-center"
             loading="eager"
             fetchPriority="high"
+            style={{
+              transform: 'scale(1.1)',
+              transformOrigin: 'center center'
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/15"></div>
         </div>
         
         <motion.div 
