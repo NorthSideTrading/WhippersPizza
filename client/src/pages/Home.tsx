@@ -65,7 +65,7 @@ const Home = () => {
             </Link>
             <Link 
               href="/menu#big-whip"
-              className="border-2 border-white text-white hover:bg-white hover:text-[hsl(212,40%,18%)] font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition duration-300 text-base sm:text-lg shadow-lg backdrop-blur-sm hover:shadow-xl transform hover:scale-105 w-full sm:w-auto text-center"
+              className="bg-white text-[hsl(212,40%,18%)] hover:bg-gray-100 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition duration-300 text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto text-center"
             >
               Order Now
             </Link>
