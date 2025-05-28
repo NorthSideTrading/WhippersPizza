@@ -51,7 +51,7 @@ const Home = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            FAMOUS BIG WHIP
+            BIG <span className="text-red-600">WHIP</span>
           </motion.h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 font-medium drop-shadow-lg text-white text-center max-w-3xl mx-auto">
             Augusta's Legendary Italian Roll Sandwich Since 1960
