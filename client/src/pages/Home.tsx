@@ -6,7 +6,7 @@ import whippersOwnerImage from "@assets/472788640_1125310129380643_5246298413575
 import whippersHeroImage from "@assets/ChatGPT Image May 27, 2025, 01_21_38 PM.png";
 import partyPlatterImage from "@assets/party-platter.jpeg";
 import bigWhipImage from "@assets/big-whip.jpg";
-import steakBombsImage from "@assets/Sandwhiches/sand-galler1.jpg";
+import steakBombsImage from "@assets/steak-boms.jpeg";
 
 const Home = () => {
   return (
