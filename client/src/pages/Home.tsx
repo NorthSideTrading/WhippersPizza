@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import { SPECIALS } from '@/data/homeSpecials';
 import whippersOwnerImage from "@assets/472788640_1125310129380643_5246298413575885458_n.jpg";
-import whippersHeroImage from "@assets/ChatGPT Image May 27, 2025, 01_21_38 PM.png";
+import whippersHeroDesktopImage from "@assets/hero-image-desktop.png";
 import whippersHeroMobileImage from "@assets/hero-image-mobile.png";
 import partyPlatterImage from "@assets/party-platter.jpeg";
 import bigWhipImage from "@assets/big-whip.jpg";
@@ -22,9 +22,9 @@ const Home = () => {
         <div className="absolute inset-0 z-0">
           {/* Desktop Hero Image */}
           <img 
-            src={whippersHeroImage}
+            src={whippersHeroDesktopImage}
             alt="Whippers Pizza storefront - Home of Whipper's Pizza"
-            className="hidden md:block w-full h-full object-cover object-center scale-110"
+            className="hidden md:block w-full h-full object-cover object-center"
             loading="eager"
             fetchPriority="high"
           />
