@@ -17,46 +17,45 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-end justify-center overflow-hidden">
+      <section className="relative h-[60vh] sm:h-[70vh] lg:h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={whippersHeroImage}
             alt="Whippers Pizza storefront - Home of Whipper's Pizza"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center sm:object-[center_40%] lg:object-center"
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10"></div>
         </div>
         
         <motion.div 
-          className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto pb-4"
-          style={{ marginTop: 'auto', paddingTop: '2rem' }}
+          className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.h1 
-            className="text-4xl lg:text-6xl font-extrabold uppercase tracking-wide mb-4 drop-shadow-2xl text-white text-center"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold uppercase tracking-wide mb-4 sm:mb-6 drop-shadow-2xl text-white text-center leading-tight"
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
             FAMOUS BIG WHIP
           </motion.h1>
-          <p className="text-lg lg:text-xl mb-6 font-medium drop-shadow-lg text-white text-center">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 font-medium drop-shadow-lg text-white text-center max-w-3xl mx-auto">
             Augusta's Legendary Italian Roll Sandwich Since 1960
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
             <Link 
               href="/menu"
-              className="bg-[hsl(5,65%,40%)] hover:bg-[hsl(5,65%,35%)] text-white font-bold py-3 px-6 rounded-full transition duration-300 text-base shadow-lg"
+              className="bg-[hsl(5,65%,40%)] hover:bg-[hsl(5,65%,35%)] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition duration-300 text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto text-center"
             >
               View Menu
             </Link>
             <Link 
               href="/menu#big-whip"
-              className="border-2 border-white text-white hover:bg-white hover:text-[hsl(212,40%,18%)] font-bold py-3 px-6 rounded-full transition duration-300 text-base shadow-lg backdrop-blur-sm"
+              className="border-2 border-white text-white hover:bg-white hover:text-[hsl(212,40%,18%)] font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition duration-300 text-base sm:text-lg shadow-lg backdrop-blur-sm hover:shadow-xl transform hover:scale-105 w-full sm:w-auto text-center"
             >
               Order Now
             </Link>
@@ -65,12 +64,12 @@ const Home = () => {
       </section>
 
       {/* Specials Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="text-[hsl(5,65%,40%)] font-medium mb-2 block uppercase tracking-wider">Our Specialties</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[hsl(212,40%,18%)] mb-4">Signature Items</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Three generations of perfected recipes, including our world-famous Big Whip</p>
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <span className="text-[hsl(5,65%,40%)] font-medium mb-2 block uppercase tracking-wider text-sm sm:text-base">Our Specialties</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[hsl(212,40%,18%)] mb-3 sm:mb-4">Signature Items</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg">Three generations of perfected recipes, including our world-famous Big Whip</p>
           </div>
 
           {/* Desktop Layout - Big Whip emphasized in center */}
@@ -153,18 +152,18 @@ const Home = () => {
           </div>
 
           {/* Mobile Layout */}
-          <div className="lg:hidden space-y-6">
+          <div className="lg:hidden space-y-4 sm:space-y-6">
             {SPECIALS.map((special, index) => (
               <motion.div
                 key={special.id}
-                className={`bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${
-                  special.id === 'big-whip' ? 'scale-105 bg-gradient-to-br from-[hsl(5,65%,40%)] to-[hsl(5,65%,35%)] text-white' : ''
+                className={`bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300 ${
+                  special.id === 'big-whip' ? 'scale-[1.02] sm:scale-105 bg-gradient-to-br from-[hsl(5,65%,40%)] to-[hsl(5,65%,35%)] text-white' : ''
                 }`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="aspect-[4/3] bg-gray-200 rounded-lg mb-4 overflow-hidden">
+                <div className="aspect-[4/3] bg-gray-200 rounded-lg mb-3 sm:mb-4 overflow-hidden">
                   <img 
                     src={special.id === 'big-whip' 
                       ? bigWhipImage
@@ -177,22 +176,22 @@ const Home = () => {
                     loading="lazy"
                   />
                 </div>
-                <h3 className={`text-xl font-bold mb-2 ${special.id === 'big-whip' ? 'text-white' : 'text-[hsl(212,40%,18%)]'}`}>
+                <h3 className={`text-lg sm:text-xl font-bold mb-2 ${special.id === 'big-whip' ? 'text-white' : 'text-[hsl(212,40%,18%)]'}`}>
                   {special.title}
                 </h3>
-                <p className={`mb-4 ${special.id === 'big-whip' ? 'text-white/90' : 'text-gray-600'}`}>
+                <p className={`mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed ${special.id === 'big-whip' ? 'text-white/90' : 'text-gray-600'}`}>
                   {special.blurb}
                 </p>
                 {special.price && (
-                  <p className={`text-lg font-bold mb-4 ${special.id === 'big-whip' ? 'text-white' : 'text-[hsl(5,65%,40%)]'}`}>
+                  <p className={`text-base sm:text-lg font-bold mb-3 sm:mb-4 ${special.id === 'big-whip' ? 'text-white' : 'text-[hsl(5,65%,40%)]'}`}>
                     {special.price}
                   </p>
                 )}
                 <Link 
                   href={`/menu#${special.id}`}
-                  className={`font-semibold hover:underline ${
+                  className={`font-semibold text-sm sm:text-base hover:underline inline-block ${
                     special.id === 'big-whip' 
-                      ? 'bg-white text-[hsl(5,65%,40%)] py-2 px-4 rounded-full hover:bg-gray-100 transition duration-300 no-underline hover:no-underline' 
+                      ? 'bg-white text-[hsl(5,65%,40%)] py-2 sm:py-3 px-4 sm:px-6 rounded-full hover:bg-gray-100 transition duration-300 no-underline hover:no-underline' 
                       : 'text-[hsl(5,65%,40%)]'
                   }`}
                 >
