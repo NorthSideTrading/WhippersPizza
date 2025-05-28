@@ -167,9 +167,9 @@ const Home = () => {
                 <div className="aspect-[4/3] bg-gray-200 rounded-lg mb-4 overflow-hidden">
                   <img 
                     src={special.id === 'big-whip' 
-                      ? "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      ? bigWhipImage
                       : special.id === 'whipper'
-                      ? "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      ? steakBombsImage
                       : partyPlatterImage
                     }
                     alt={`${special.title} - ${special.blurb}`}
