@@ -42,9 +42,9 @@ export const CategoryNav = ({ isSidebar = false }: CategoryNavProps) => {
 
   const navClasses = isSidebar
     ? "space-y-2"
-    : "flex gap-3 overflow-x-auto scrollbar-hide py-4 px-4 bg-white shadow-sm";
+    : "grid grid-cols-2 sm:flex gap-2 sm:gap-3 py-4 px-4 bg-white shadow-sm sm:overflow-x-auto sm:scrollbar-hide";
 
-  const buttonBaseClasses = "px-4 py-2 rounded-full font-medium transition-all duration-200";
+  const buttonBaseClasses = "px-3 py-2 rounded-full font-medium transition-all duration-200 text-sm";
   
   return (
     <nav className={navClasses} aria-label="Menu categories">
@@ -56,7 +56,7 @@ export const CategoryNav = ({ isSidebar = false }: CategoryNavProps) => {
                 ? 'bg-[hsl(5,65%,40%)] text-white'
                 : 'text-gray-700 hover:bg-gray-100'
             }`
-          : `${buttonBaseClasses} whitespace-nowrap ${
+          : `${buttonBaseClasses} sm:whitespace-nowrap text-center ${
               isActive
                 ? 'bg-[hsl(5,65%,40%)] text-white'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
