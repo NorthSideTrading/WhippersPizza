@@ -18,13 +18,13 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] sm:h-[70vh] lg:h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] sm:h-[70vh] lg:h-[80vh] flex items-end justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           {/* Desktop Hero Image */}
           <img 
             src={whippersHeroImage}
             alt="Whippers Pizza storefront - Home of Whipper's Pizza"
-            className="hidden md:block w-full h-full object-cover object-center"
+            className="hidden md:block w-full h-full object-cover object-center scale-110"
             loading="eager"
             fetchPriority="high"
           />
@@ -36,11 +36,11 @@ const Home = () => {
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
         </div>
         
         <motion.div 
-          className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto"
+          className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto pb-8 md:pb-12 lg:pb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
