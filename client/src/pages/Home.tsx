@@ -18,7 +18,7 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] sm:h-[80vh] lg:h-[90vh] flex items-end justify-center overflow-hidden">
+      <section className="relative h-[70vh] sm:h-[80vh] lg:h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           {/* Desktop Hero Image */}
           <img 
@@ -40,7 +40,7 @@ const Home = () => {
         </div>
         
         <motion.div 
-          className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto pb-8 md:pb-32 lg:pb-40"
+          className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto mt-8 md:mt-32 lg:mt-40"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
