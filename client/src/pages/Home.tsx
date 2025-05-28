@@ -18,7 +18,7 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] sm:h-[70vh] lg:h-[80vh] flex items-end justify-center overflow-hidden">
+      <section className="relative h-[70vh] sm:h-[80vh] lg:h-[90vh] flex items-end justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           {/* Desktop Hero Image */}
           <img 
