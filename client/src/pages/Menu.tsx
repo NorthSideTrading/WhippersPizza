@@ -15,7 +15,7 @@ const Menu = () => {
         {/* Page Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-[hsl(212,40%,18%)] mb-4">Our Menu</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">Hand-crafted with love and the finest ingredients since 1983</p>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">Hand-crafted with love and the finest ingredients since 1960</p>
         </div>
 
         {/* Mobile Navigation */}
