@@ -40,7 +40,7 @@ const Home = () => {
         </div>
         
         <motion.div 
-          className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto mt-40 sm:mt-48 md:mt-32 lg:mt-40"
+          className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto mt-56 sm:mt-64 md:mt-32 lg:mt-40"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
