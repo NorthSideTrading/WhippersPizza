@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { SPECIALS } from '@/data/homeSpecials';
 import whippersOwnerImage from "@assets/472788640_1125310129380643_5246298413575885458_n.jpg";
 import whippersHeroImage from "@assets/ChatGPT Image May 27, 2025, 01_21_38 PM.png";
+import whippersHeroMobileImage from "@assets/hero-image-mobile.png";
 import partyPlatterImage from "@assets/party-platter.jpeg";
 import bigWhipImage from "@assets/big-whip.jpg";
 import steakBombsImage from "@assets/steak-boms.jpeg";
@@ -19,18 +20,23 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative h-[60vh] sm:h-[70vh] lg:h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
+          {/* Desktop Hero Image */}
           <img 
             src={whippersHeroImage}
             alt="Whippers Pizza storefront - Home of Whipper's Pizza"
-            className="w-full h-full object-cover object-[center_75%] xs:object-[center_65%] sm:object-[center_55%] md:object-[center_45%] lg:object-[center_35%] xl:object-center"
+            className="hidden md:block w-full h-full object-cover object-center"
             loading="eager"
             fetchPriority="high"
-            style={{
-              transform: 'scale(1.1)',
-              transformOrigin: 'center center'
-            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/15"></div>
+          {/* Mobile Hero Image */}
+          <img 
+            src={whippersHeroMobileImage}
+            alt="Whippers Pizza storefront - Home of Whipper's Pizza"
+            className="block md:hidden w-full h-full object-cover object-center"
+            loading="eager"
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         </div>
         
         <motion.div 
